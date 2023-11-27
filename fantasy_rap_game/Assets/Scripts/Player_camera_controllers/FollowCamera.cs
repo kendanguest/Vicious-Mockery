@@ -45,14 +45,7 @@ public class FollowCamera : MonoBehaviour
         if(target != null)
         {
             Vector3 targetPos;
-            if (Input.GetKey(KeyCode.Space))
-            {
-                targetPos = (target.transform.position + Camera.main.ScreenToWorldPoint(Input.mousePosition)) / 2;
-            }
-            else
-            {
-                targetPos = (target.transform.position);
-            }
+            targetPos = (target.transform.position);
             targetPos.z = transform.position.z;
             // Handle screen shake
             if(shakeDuration > 0.0f)
