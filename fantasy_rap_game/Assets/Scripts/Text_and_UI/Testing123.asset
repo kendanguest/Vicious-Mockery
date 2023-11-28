@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Testing123
   m_EditorClassIdentifier: 
   dialogueLines:
-  - dialogue: The World is ending.
-  - dialogue: Pog.
+  - dialogue: 1 3 5
+  BPM: 120

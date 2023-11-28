@@ -11,4 +11,5 @@ using UnityEngine;
 public class DialogueObject : ScriptableObject
 {
     public DialogueLine[] dialogueLines;
+    public int BPM;
 }
