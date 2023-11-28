@@ -1,7 +1,7 @@
 /*
  * Name: Jackson Miller
  * Date: 11/27/23
- * Desc: Attach to invisible triggers to allow the player to initiate conversation while inside
+ * Desc: Attach to invisible triggers to allow the player to initiate conversation while inside.
  */
 using System.Collections;
 using System.Collections.Generic;
