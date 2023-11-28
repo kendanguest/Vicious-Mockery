@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//11-28-23
 public class wordSelector : MonoBehaviour
 {
     private GameObject[] words;
@@ -34,8 +34,7 @@ public class wordSelector : MonoBehaviour
             };
 
         }
-        print(relativeMouse);
-
+        
         transform.position = relativeMouse;
         transform.localScale = new Vector3(1, 1, (difference).magnitude);
         transform.rotation = Quaternion.Euler(new Vector3((Mathf.Rad2Deg * (Mathf.Atan2(-difference.y, difference.x))), 90, 0));
