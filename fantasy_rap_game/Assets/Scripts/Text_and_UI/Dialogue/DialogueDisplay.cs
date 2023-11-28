@@ -25,7 +25,7 @@ public class DialogueDisplay : MonoBehaviour
         {
             dialogueText.text = dia.dialogueLines[i].dialogue;
             // The dialogue pauses while it waits for you to press E.
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.E));
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
             // Buffer to not skip lines.
             yield return null;
         }
