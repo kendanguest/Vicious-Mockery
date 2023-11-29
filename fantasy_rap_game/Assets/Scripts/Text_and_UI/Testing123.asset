@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Testing123
   m_EditorClassIdentifier: 
   dialogueLines:
-  - dialogue: This is a bar in a rap.
-  - dialogue: This is also a bar in a rap.
-  - dialogue: This is a third bar in a rap.
-  - dialogue: four.
+  - dialogue: Thy mother is a miscreant!
+  - dialogue: Her food is always boring.
+  - dialogue: My mother is a saint.
+  - dialogue: When she sleeps, it's never snoring.
   name1: Feffy
   name2: Jeffy
-  talking: 01000000000000000200000000000000
+  talking: 01000000010000000200000002000000
   BPM: 120
-  pressSpaceToContinue: 1
+  pressSpaceToContinue: 0

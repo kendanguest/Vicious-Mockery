@@ -99,7 +99,7 @@ public class DialogueDisplay : MonoBehaviour
                 {
                     if (dialogue.dialogueLines[i].dialogue[j] != ' ')
                     {
-                        word = word + dialogue.dialogueLines[i].dialogue[j];                 
+                        word = word + dialogue.dialogueLines[i].dialogue[j];              
                     }
                     else
                     {
