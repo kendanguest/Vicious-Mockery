@@ -16,5 +16,9 @@ MonoBehaviour:
   - dialogue: This is a bar in a rap.
   - dialogue: This is also a bar in a rap.
   - dialogue: This is a third bar in a rap.
+  - dialogue: four.
+  name1: Feffy
+  name2: Jeffy
+  talking: 01000000000000000200000000000000
   BPM: 120
-  pressSpaceToContinue: 0
+  pressSpaceToContinue: 1

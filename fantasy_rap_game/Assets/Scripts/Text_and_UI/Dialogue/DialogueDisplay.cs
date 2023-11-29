@@ -14,6 +14,7 @@ public class DialogueDisplay : MonoBehaviour
     // SerializeField makes the private variables actually storable.
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private TMP_Text dialogueText;
+    [SerializeField] private TMP_Text dialogueNameText;
     public TMP_Text spaceTooltip;
     public DialogueObject currentDialogue;
     private void Start()
@@ -33,6 +34,7 @@ public class DialogueDisplay : MonoBehaviour
     {
         for(int i = 0; i < dia.dialogueLines.Length; i++)
         {
+            nameDetermination(currentDialogue.name1, currentDialogue.name2, currentDialogue.talking[i]);
             dialogueText.text = dia.dialogueLines[i].dialogue;
             // The dialogue pauses while it waits for you to press E.
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
@@ -45,8 +47,13 @@ public class DialogueDisplay : MonoBehaviour
     {
         // Determines the interval between beats.
         float beat = 60.0f / BPM;
+        int j = 0;
         for (int i = 0; i < rap.Count; i++)
         {
+            if(i == 0)
+            {
+                nameDetermination(currentDialogue.name1, currentDialogue.name2, currentDialogue.talking[i]);
+            }
             // Waits the interval determined previously.
             yield return new WaitForSeconds(beat);
             // Checks if the current word in the list is a enter input.
@@ -62,7 +69,9 @@ public class DialogueDisplay : MonoBehaviour
                     yield return new WaitForSeconds(beat);
                 }
                 i++;
+                j++;
                 dialogueText.text = rap[i];
+                nameDetermination(currentDialogue.name1, currentDialogue.name2, currentDialogue.talking[j]);
             }
             else
             {
@@ -105,6 +114,21 @@ public class DialogueDisplay : MonoBehaviour
                 }
             }
             StartCoroutine(MoveThroughRap(rap, dialogue.BPM));
+        }
+    }
+    public void nameDetermination(string name1, string name2, int talking)
+    {
+        if(talking == 1)
+        {
+            dialogueNameText.text = name1;
+        }
+        else if(talking == 2)
+        {
+            dialogueNameText.text = name2;
+        }
+        else
+        {
+            dialogueNameText.text = "";
         }
     }
 }

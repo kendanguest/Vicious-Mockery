@@ -11,6 +11,9 @@ using UnityEngine;
 public class DialogueObject : ScriptableObject
 {
     public DialogueLine[] dialogueLines;
+    public string name1;
+    public string name2;
+    public int[] talking;
     public int BPM;
     public bool pressSpaceToContinue;
 }
