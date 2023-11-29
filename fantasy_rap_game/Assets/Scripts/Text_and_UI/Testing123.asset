@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Testing123
   m_EditorClassIdentifier: 
   dialogueLines:
-  - dialogue: The World Will End.
-  - dialogue: Life Is Sad.
-  - dialogue: Err'ything in life is real bad.
+  - dialogue: This is a bar in a rap.
+  - dialogue: This is also a bar in a rap.
+  - dialogue: This is a third bar in a rap.
   BPM: 120
   pressSpaceToContinue: 0
