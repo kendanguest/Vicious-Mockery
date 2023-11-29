@@ -240,6 +240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 939955101}
   dialogueText: {fileID: 674484601}
+  spaceTooltip: {fileID: 963861625}
   currentDialogue: {fileID: 11400000, guid: 2303ba8e35d3d3b4ebe8c859b383ae68, type: 2}
 --- !u!1 &519420028
 GameObject:
@@ -660,7 +661,7 @@ GameObject:
   - component: {fileID: 963861626}
   - component: {fileID: 963861625}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Space Tooltip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

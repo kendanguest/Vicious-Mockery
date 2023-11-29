@@ -14,9 +14,19 @@ public class DialogueDisplay : MonoBehaviour
     // SerializeField makes the private variables actually storable.
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private TMP_Text dialogueText;
+    public TMP_Text spaceTooltip;
     public DialogueObject currentDialogue;
     private void Start()
     {
+        // Activates or deactivates the "space to proeed" tooltip.
+        if(currentDialogue.pressSpaceToContinue)
+        {
+            spaceTooltip.text = "Press space to proceed";
+        }
+        else
+        {
+            spaceTooltip.text = "";
+        }
         DisplayDialogue(currentDialogue);
     }
     private IEnumerator MoveThroughDialogue(DialogueObject dia)
@@ -30,41 +40,69 @@ public class DialogueDisplay : MonoBehaviour
             yield return null;
         }
         // Deactivates the dialogue box on completion of the dialogue.
-        dialogueBox.SetActive(false);
     }
     private IEnumerator MoveThroughRap(List<string> rap, int BPM)
     {
+        // Determines the interval between beats.
         float beat = 60.0f / BPM;
         for (int i = 0; i < rap.Count; i++)
         {
-            yield return null;
+            // Waits the interval determined previously.
+            yield return new WaitForSeconds(beat);
+            // Checks if the current word in the list is a enter input.
+            if (rap[i] == "_")
+            {
+                // If it is, it will wait if you need to push space, either way, it will instantly clear and start the next line.
+                if (currentDialogue.pressSpaceToContinue)
+                {
+                    yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+                }
+                else
+                {
+                    yield return new WaitForSeconds(beat);
+                }
+                i++;
+                dialogueText.text = rap[i];
+            }
+            else
+            {
+                // Appends the current word to the line of dialogue.
+                dialogueText.text = dialogueText.text + " " + rap[i];
+            }
         }
     }
     public void DisplayDialogue(DialogueObject dialogue)
     {
-        if(dialogue.BPM < 1)
+        dialogueBox.SetActive(true);
+        // Checks to see if the line has a BPM, indicating it's a rap line.
+        if (dialogue.BPM < 1)
         {
             StartCoroutine(MoveThroughDialogue(dialogue));
         }
         else
         {
+            // Initializes and creates a list of all the words in the line of dialogue.
             List<string> rap = new List<string>();
             for (int i = 0; i < dialogue.dialogueLines.Length; i++)
             {
-                int start = 0;
+                string word = "";
                 for (int j = 0; j < dialogue.dialogueLines[i].dialogue.Length; j++)
                 {
-                    print(j);
-                    if (dialogue.dialogueLines[i].dialogue[j] == ' ')
+                    if (dialogue.dialogueLines[i].dialogue[j] != ' ')
                     {
-                        rap.Add(dialogue.dialogueLines[i].dialogue.Substring(start, j));
-                        start = j;                    
+                        word = word + dialogue.dialogueLines[i].dialogue[j];                 
+                    }
+                    else
+                    {
+                        rap.Add(word);
+                        word = "";
                     }
                 }
-                print(rap[0]);
-                print(rap[1]);
-                print(rap[2]);
-                print(rap[3]);
+                rap.Add(word);
+                if(i < dialogue.dialogueLines.Length - 1)
+                {
+                    rap.Add("_");
+                }
             }
             StartCoroutine(MoveThroughRap(rap, dialogue.BPM));
         }

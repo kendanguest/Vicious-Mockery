@@ -12,4 +12,5 @@ public class DialogueObject : ScriptableObject
 {
     public DialogueLine[] dialogueLines;
     public int BPM;
+    public bool pressSpaceToContinue;
 }
