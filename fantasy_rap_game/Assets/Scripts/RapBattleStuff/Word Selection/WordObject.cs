@@ -10,7 +10,13 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Dialogue/WordObject")]
 public class WordObject : ScriptableObject
 {
-    string word;
-    float value;
+    string wordO;
+    float valueO;
     string partOfSpeech;
+    public void selfUpdate(string word, float value, string POS)
+    {
+        wordO = word;
+        valueO = value;
+        partOfSpeech = POS;
+    }
 }

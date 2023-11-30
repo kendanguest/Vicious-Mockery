@@ -14,6 +14,8 @@ public class wordRandomizer : MonoBehaviour
     public string[] partSpeechI;
     public GameObject prefab;
     private Vector2 position;
+    public int BPM;
+    public int speed;
     public void createWord(int numWords)
     {
         for(int i = 0; i < numWords; i++)
@@ -23,6 +25,15 @@ public class wordRandomizer : MonoBehaviour
             position.x = x;
             position.y = y;
             var clone = Instantiate(prefab, position, Quaternion.identity);
+            moveRandomlyOnBeat clonebeat = clone.GetComponent<moveRandomlyOnBeat>();
+            clonebeat.beatsPerMinute = BPM;
+            clonebeat.speed = speed;
+            int rand = Random.Range(0, words.Length);
+            string word = words[rand];
+            float point = points[rand];
+            string PSI = partSpeechI[rand];
+            WordObject obj = clone.GetComponent<WordObject>();
+            obj.selfUpdate(word, point, PSI);
         }
     }
 }
