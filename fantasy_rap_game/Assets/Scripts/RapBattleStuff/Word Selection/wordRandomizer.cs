@@ -16,7 +16,7 @@ public class wordRandomizer : MonoBehaviour
     private Vector2 position;
     public void createWord(int numWords)
     {
-        for(int i = 0; i < numWords is ++)
+        for(int i = 0; i < numWords; i++)
         {
             float x = Random.Range(-10f, 10f);
             float y = Random.Range(0f, 10f);
