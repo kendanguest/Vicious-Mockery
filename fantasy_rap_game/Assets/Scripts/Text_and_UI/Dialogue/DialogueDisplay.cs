@@ -56,14 +56,10 @@ public class DialogueDisplay : MonoBehaviour
             }
             // Waits the interval determined previously.
             yield return new WaitForSeconds(beat);
-            // Checks if the current word in the list is a enter input.
-            if (rap[i] == "[Input] ")
+            // Checks if the current word in the list is a player input and removes it as time has run out.
+            if (rap[i].Substring(0, rap[i].Length - 1) == "[Input]")
             {
-                rap[i] = "Uhhhh ";
-            }
-            else if (rap[i].Substring(0, rap[i].Length-1) == "[Input]")
-            {
-                rap[i] = "Uhhhh" + rap[i].Substring(rap[i].Length-1);
+                rap[i] = "Uhhhh" + rap[i].Substring(rap[i].Length - 1);
             }
             if (rap[i] == "_")
             {
