@@ -1,7 +1,7 @@
 /*
  * Name: Jackson Miller
  * Date: 11/30/23
- * Desc: Attached to the instantiated objects to give them thier predetermined values.
+ * Desc: Attached to instantiated words to give them thier predetermined values.
  */
 using System.Collections;
 using System.Collections.Generic;
