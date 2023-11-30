@@ -17,6 +17,8 @@ public class DialogueDisplay : MonoBehaviour
     [SerializeField] private TMP_Text dialogueNameText;
     public TMP_Text spaceTooltip;
     public DialogueObject currentDialogue;
+    private List<string> rap = new List<string>();
+    private string input = "Uhhhh";
     private void Start()
     {
         // Activates or deactivates the "space to proeed" tooltip.
@@ -28,7 +30,7 @@ public class DialogueDisplay : MonoBehaviour
         {
             spaceTooltip.text = "";
         }
-        DisplayDialogue(currentDialogue);
+        dialogueBox.SetActive(false);
     }
     private IEnumerator MoveThroughDialogue(DialogueObject dia)
     {
@@ -42,12 +44,14 @@ public class DialogueDisplay : MonoBehaviour
             yield return null;
         }
         // Deactivates the dialogue box on completion of the dialogue.
+        dialogueBox.SetActive(false);
     }
     private IEnumerator MoveThroughRap(List<string> rap, int BPM)
     {
         // Determines the interval between beats.
         float beat = 60.0f / BPM;
         int j = 0;
+        input = "Uhhhh";
         for (int i = 0; i < rap.Count; i++)
         {
             if(i == 0)
@@ -59,7 +63,7 @@ public class DialogueDisplay : MonoBehaviour
             // Checks if the current word in the list is a player input and removes it as time has run out.
             if (rap[i].Substring(0, rap[i].Length - 1) == "[Input]")
             {
-                rap[i] = "Uhhhh" + rap[i].Substring(rap[i].Length - 1);
+                rap[i] = input + rap[i].Substring(rap[i].Length - 1);
             }
             if (rap[i] == "_")
             {
@@ -75,6 +79,7 @@ public class DialogueDisplay : MonoBehaviour
                 i++;
                 j++;
                 dialogueText.text = rap[i];
+                input = "Uhhhh";
                 nameDetermination(currentDialogue.name1, currentDialogue.name2, currentDialogue.talking[j]);
             }
             else
@@ -83,6 +88,8 @@ public class DialogueDisplay : MonoBehaviour
                 dialogueText.text = dialogueText.text + rap[i];
             }
         }
+        yield return new WaitForSeconds(beat);
+        dialogueBox.SetActive(false);
     }
     public void DisplayDialogue(DialogueObject dialogue)
     {
@@ -95,7 +102,6 @@ public class DialogueDisplay : MonoBehaviour
         else
         {
             // Initializes and creates a list of all the words in the line of dialogue.
-            List<string> rap = new List<string>();
             for (int i = 0; i < dialogue.dialogueLines.Length; i++)
             {
                 string word = "";
@@ -144,12 +150,9 @@ public class DialogueDisplay : MonoBehaviour
             dialogueNameText.text = "";
         }
     }
-    public void inputUpdate(List<string> rap, string word)
+    public void inputUpdate(string word)
     {
-        if(rap.IndexOf("[Input]") != -1)
-        {
-            rap[rap.IndexOf("[Input]")] = word;
-        }
+        input = word;
     }
 }
 
