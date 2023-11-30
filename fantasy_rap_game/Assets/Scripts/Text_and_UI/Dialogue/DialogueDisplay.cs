@@ -57,6 +57,14 @@ public class DialogueDisplay : MonoBehaviour
             // Waits the interval determined previously.
             yield return new WaitForSeconds(beat);
             // Checks if the current word in the list is a enter input.
+            if (rap[i] == "[Input] ")
+            {
+                rap[i] = "Uhhhh ";
+            }
+            else if (rap[i].Substring(0, rap[i].Length-1) == "[Input]")
+            {
+                rap[i] = "Uhhhh" + rap[i].Substring(rap[i].Length-1);
+            }
             if (rap[i] == "_")
             {
                 // If it is, it will wait if you need to push space, either way, it will instantly clear and start the next line.
@@ -76,7 +84,7 @@ public class DialogueDisplay : MonoBehaviour
             else
             {
                 // Appends the current word to the line of dialogue.
-                dialogueText.text = dialogueText.text + " " + rap[i];
+                dialogueText.text = dialogueText.text + rap[i];
             }
         }
     }
@@ -97,12 +105,20 @@ public class DialogueDisplay : MonoBehaviour
                 string word = "";
                 for (int j = 0; j < dialogue.dialogueLines[i].dialogue.Length; j++)
                 {
-                    if (dialogue.dialogueLines[i].dialogue[j] != ' ')
+                    if (dialogue.dialogueLines[i].dialogue[j] != ' ' && dialogue.dialogueLines[i].dialogue[j] != '-')
                     {
                         word = word + dialogue.dialogueLines[i].dialogue[j];              
                     }
                     else
                     {
+                        if(dialogue.dialogueLines[i].dialogue[j] == '-')
+                        {
+                            word = word + "-";
+                        }
+                        else
+                        {
+                            word = word + " ";
+                        }
                         rap.Add(word);
                         word = "";
                     }
@@ -118,6 +134,7 @@ public class DialogueDisplay : MonoBehaviour
     }
     public void nameDetermination(string name1, string name2, int talking)
     {
+        // This function simply determines who is speaking.
         if(talking == 1)
         {
             dialogueNameText.text = name1;
@@ -129,6 +146,13 @@ public class DialogueDisplay : MonoBehaviour
         else
         {
             dialogueNameText.text = "";
+        }
+    }
+    public void inputUpdate(List<string> rap, string word)
+    {
+        if(rap.IndexOf("[Input]") != -1)
+        {
+            rap[rap.IndexOf("[Input]")] = word;
         }
     }
 }

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Testing123
   m_EditorClassIdentifier: 
   dialogueLines:
-  - dialogue: Thy mother is a [Input]!
-  - dialogue: Her food is always [input].
-  - dialogue: My mother is a saint.
-  - dialogue: When she sleeps, it's never snoring.
+  - dialogue: You are an [Input]!
+  - dialogue: You should [Input] yourself.
+  - dialogue: doo-doo-doo
+  - dialogue: Bro-ken
   name1: Feffy
   name2: Jeffy
   talking: 01000000010000000200000002000000
