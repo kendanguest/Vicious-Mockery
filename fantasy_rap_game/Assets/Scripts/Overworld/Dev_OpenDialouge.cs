@@ -5,6 +5,7 @@ using UnityEngine;
 public class Dev_OpenDialouge : MonoBehaviour
 {
     public DialogueDisplay dialogue;
+    public wordRandomizer random;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,10 @@ public class Dev_OpenDialouge : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             dialogue.inputUpdate("Bruh");
+        }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            random.createWord(3);
         }
     }
     

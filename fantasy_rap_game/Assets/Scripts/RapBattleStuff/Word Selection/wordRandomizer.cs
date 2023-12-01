@@ -13,6 +13,7 @@ public class wordRandomizer : MonoBehaviour
     public float[] points;
     public string[] partSpeechI;
     public GameObject prefab;
+    public GameObject lineOBJ;
     private Vector2 position;
     public int BPM;
     public int speed;
@@ -32,8 +33,9 @@ public class wordRandomizer : MonoBehaviour
             string word = words[rand];
             float point = points[rand];
             string PSI = partSpeechI[rand];
-            WordObject obj = clone.GetComponent<WordObject>();
+            WordCustomizer obj = clone.GetComponent<WordCustomizer>();
             obj.selfUpdate(word, point, PSI);
         }
+        Instantiate(lineOBJ);
     }
 }

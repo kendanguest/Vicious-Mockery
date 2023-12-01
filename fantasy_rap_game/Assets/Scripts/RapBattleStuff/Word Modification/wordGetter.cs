@@ -28,4 +28,9 @@ public class wordGetter : MonoBehaviour
             text.inputUpdate(currentWord.name);
         };
     }
+
+    public void updateLine(GameObject newPointer)
+    {
+        pointer = newPointer;
+    }
 }

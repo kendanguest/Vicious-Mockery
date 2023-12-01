@@ -7,13 +7,19 @@ public class wordSelector : MonoBehaviour
 {
     private GameObject[] words;
     public GameObject closestWord;
+    public GameObject self;
     private Vector3 difference;
     private Vector3 relativeMouse;
     public GameObject cameraObject;
+    public GameObject getterOBJ;
     private Camera Cam;
     // Start is called before the first frame update
     void Start()
     {
+        cameraObject = GameObject.FindGameObjectWithTag("MainCamera");
+        getterOBJ = GameObject.FindGameObjectWithTag("Getter");
+        wordGetter getter = getterOBJ.GetComponent<wordGetter>();
+        getter.updateLine(self);
         words = GameObject.FindGameObjectsWithTag("Word");
         closestWord = words[0];
         Cam = cameraObject.GetComponent<Camera>();
