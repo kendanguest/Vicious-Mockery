@@ -21,12 +21,14 @@ public class wordGetter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentWord = pointer.GetComponent<wordSelector>().closestWord;
-        print(pointer.GetComponent<wordSelector>().closestWord);
-        if (Input.GetMouseButtonDown(0))
+        if(pointer != null)
         {
-            text.inputUpdate(currentWord.name);
-        };
+            currentWord = pointer.GetComponent<wordSelector>().closestWord;
+            if (Input.GetMouseButtonDown(0))
+            {
+                text.inputUpdate(currentWord.GetComponent<WordCustomizer>().wordO);
+            }
+        }
     }
 
     public void updateLine(GameObject newPointer)

@@ -21,8 +21,8 @@ public class wordRandomizer : MonoBehaviour
     {
         for(int i = 0; i < numWords; i++)
         {
-            float x = Random.Range(-10f, 10f);
-            float y = Random.Range(0f, 10f);
+            float x = Random.Range(-5f, 5f);
+            float y = Random.Range(0f, 4f);
             position.x = x;
             position.y = y;
             var clone = Instantiate(prefab, position, Quaternion.identity);
