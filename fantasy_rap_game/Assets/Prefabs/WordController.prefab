@@ -44,9 +44,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71cb3ee6d8a76d84a8f20e3f5016ede6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  words: []
-  points: []
-  partSpeechI: []
+  words:
+  - Britches
+  - Lute
+  - Coward
+  - Villain
+  - Rats
+  - Launder
+  - Ungentle
+  - Noggin
+  - Cottar
+  - Sumpter
+  - Hedge-born
+  - Sot
+  - Fraud
+  - Buffoon
+  - Servant
+  - Miscreant
+  - Lumberfooted
+  - Numpty
+  - Loon
+  points:
+  - 4
+  - 2
+  - 5
+  - 7
+  - 5
+  - 3
+  - 5
+  - 3
+  - 5
+  - 4
+  - 6
+  - 4
+  - 3
+  - 5
+  - 4
+  - 4
+  - 3
+  - 2
+  - 2
+  partSpeechI:
+  - Noun
+  - Noun
+  - ADJ
+  - ADJ
+  - Noun
+  - ADJ
+  - ADJ
+  - Noun
+  - ADJ
+  - ADJ
+  - ADJ
+  - ADJ
+  - Noun
+  - ADJ
+  - ADJ
+  - ADJ
+  - ADJ
+  - Noun
+  - Noun
   prefab: {fileID: 0}
   BPM: 0
   speed: 0
