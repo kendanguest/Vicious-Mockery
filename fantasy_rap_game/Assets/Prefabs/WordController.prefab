@@ -64,6 +64,12 @@ MonoBehaviour:
   - Lumberfooted
   - Numpty
   - Loon
+  - Bogus
+  - Churlish
+  - Vain
+  - Puny
+  - Craven
+  - Doghearted
   points:
   - 4
   - 2
@@ -84,6 +90,12 @@ MonoBehaviour:
   - 3
   - 2
   - 2
+  - 4
+  - 3
+  - 3
+  - 4
+  - 6
+  - 8
   partSpeechI:
   - Noun
   - Noun
@@ -104,6 +116,13 @@ MonoBehaviour:
   - ADJ
   - Noun
   - Noun
+  - ADJ
+  - ADJ
+  - ADJ
+  - ADJ
+  - ADJ
+  - ADJ
   prefab: {fileID: 0}
+  lineOBJ: {fileID: 0}
   BPM: 0
   speed: 0
