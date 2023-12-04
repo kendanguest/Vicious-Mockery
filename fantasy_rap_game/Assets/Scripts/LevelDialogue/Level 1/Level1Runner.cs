@@ -10,11 +10,20 @@ using UnityEngine;
 public class Level1Runner : MonoBehaviour
 {
     public DialogueDisplay dialogue;
+    public GameObject UI;
     public DialogueObject prefightDialogue;
     public DialogueObject rap;
     // Start is called before the first frame update
     void Start()
     {
+        UI.SetActive(false);
+        dialogue.DisplayDialogue(prefightDialogue);
+        StartCoroutine(startlevel());
+    }
+    IEnumerator startlevel()
+    {
+        yield return new WaitForSeconds(2);
+        UI.SetActive(true);
         dialogue.DisplayDialogue(prefightDialogue);
     }
 }

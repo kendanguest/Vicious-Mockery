@@ -300,14 +300,14 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40189b1e84899d24ab158e4e4234cf98, type: 3}
+--- !u!1 &1051951612 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1349566169737223308, guid: 3558b286b9bb3e344a57564bf4984d3b, type: 3}
+  m_PrefabInstance: {fileID: 1246182766}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1051951613 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2471117529567706585, guid: 3558b286b9bb3e344a57564bf4984d3b, type: 3}
-  m_PrefabInstance: {fileID: 1246182766}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1233331100 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5134834738621339543, guid: 3558b286b9bb3e344a57564bf4984d3b, type: 3}
   m_PrefabInstance: {fileID: 1246182766}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1246182766
@@ -447,7 +447,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7333682236949552987, guid: 3558b286b9bb3e344a57564bf4984d3b, type: 3}
   m_PrefabInstance: {fileID: 1246182766}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233331100}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c2e3180e68067340b127deb543a8ef8, type: 3}
@@ -738,7 +738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 1246182767}
-  dialogueBox: {fileID: 1233331100}
+  UI: {fileID: 1051951612}
   prefightDialogue: {fileID: 11400000, guid: 08582895e7600e24da796aa46dc68c15, type: 2}
   rap: {fileID: 11400000, guid: 2303ba8e35d3d3b4ebe8c859b383ae68, type: 2}
 --- !u!1 &1749271296

@@ -19,8 +19,6 @@ public class DialogueDisplay : MonoBehaviour
     public DialogueObject currentDialogue;
     private List<string> rap = new List<string>();
     private string input = "Uhhhh";
-    private Vector3 scale;
-    private RectTransform can;
 
     private void Start()
     {
@@ -33,8 +31,6 @@ public class DialogueDisplay : MonoBehaviour
         {
             spaceTooltip.text = "";
         }
-        can = dialogueBox.GetComponent<RectTransform>();
-        scale = can.localScale;
     }
     private IEnumerator MoveThroughDialogue(DialogueObject dia)
     {
@@ -97,7 +93,6 @@ public class DialogueDisplay : MonoBehaviour
     }
     public void DisplayDialogue(DialogueObject dialogue)
     {
-        dialogueBox.SetActive(true);
         // Checks to see if the line has a BPM, indicating it's a rap line.
         if (dialogue.BPM < 1)
         {
