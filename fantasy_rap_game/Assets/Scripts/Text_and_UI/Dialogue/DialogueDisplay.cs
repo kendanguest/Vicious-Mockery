@@ -10,7 +10,7 @@ using TMPro;
 
 public class DialogueDisplay : MonoBehaviour
 {
-    
+
     // SerializeField makes the private variables actually storable.
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private TMP_Text dialogueText;
@@ -19,6 +19,9 @@ public class DialogueDisplay : MonoBehaviour
     public DialogueObject currentDialogue;
     private List<string> rap = new List<string>();
     private string input = "Uhhhh";
+    private Vector3 scale;
+    private RectTransform can;
+
     private void Start()
     {
         // Activates or deactivates the "space to proeed" tooltip.
@@ -30,7 +33,8 @@ public class DialogueDisplay : MonoBehaviour
         {
             spaceTooltip.text = "";
         }
-        dialogueBox.SetActive(false);
+        can = dialogueBox.GetComponent<RectTransform>();
+        scale = can.localScale;
     }
     private IEnumerator MoveThroughDialogue(DialogueObject dia)
     {
