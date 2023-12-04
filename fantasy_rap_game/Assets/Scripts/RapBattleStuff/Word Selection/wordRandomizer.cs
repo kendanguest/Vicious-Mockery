@@ -12,29 +12,72 @@ public class wordRandomizer : MonoBehaviour
     public string[] words;
     public float[] points;
     public string[] partSpeechI;
+    private List<string> wordsN = new List<string>();
+    private List<float> pointsN = new List<float>();
+    private List<string> wordsA = new List<string>();
+    private List<float> pointsA = new List<float>();
     public GameObject prefab;
     public GameObject lineOBJ;
     private Vector2 position;
     public int BPM;
     public int speed;
-    public void createWord(int numWords)
+    public void Start()
     {
-        for(int i = 0; i < numWords; i++)
+        for(int i = 0; i < words.Length; i++)
         {
-            float x = Random.Range(-5f, 5f);
-            float y = Random.Range(0f, 4f);
-            position.x = x;
-            position.y = y;
-            var clone = Instantiate(prefab, position, Quaternion.identity);
-            moveRandomlyOnBeat clonebeat = clone.GetComponent<moveRandomlyOnBeat>();
-            clonebeat.beatsPerMinute = BPM;
-            clonebeat.speed = speed;
-            int rand = Random.Range(0, words.Length);
-            string word = words[rand];
-            float point = points[rand];
-            string PSI = partSpeechI[rand];
-            WordCustomizer obj = clone.GetComponent<WordCustomizer>();
-            obj.selfUpdate(word, point, PSI);
+            if (partSpeechI[i] == "Noun")
+            {
+                wordsN.Add(words[i]);
+                pointsN.Add(points[i]);
+            }
+            else if (partSpeechI[i] == "ADJ")
+            {
+                wordsA.Add(words[i]);
+                pointsA.Add(points[i]);
+            }
+        }
+    }
+    public void createWord(int numWords, string POS)
+    {
+        if(POS == "Noun")
+        {
+            for (int i = 0; i < numWords; i++)
+            {
+                float x = Random.Range(-5f, 5f);
+                float y = Random.Range(0f, 4f);
+                position.x = x;
+                position.y = y;
+                var clone = Instantiate(prefab, position, Quaternion.identity);
+                moveRandomlyOnBeat clonebeat = clone.GetComponent<moveRandomlyOnBeat>();
+                clonebeat.beatsPerMinute = BPM;
+                clonebeat.speed = speed;
+                int rand = Random.Range(0, words.Length);
+                string word = wordsN[rand];
+                float point = pointsN[rand];
+                string PSI = POS;
+                WordCustomizer obj = clone.GetComponent<WordCustomizer>();
+                obj.selfUpdate(word, point, PSI);
+            }
+        }
+        else if (POS == "ADJ")
+        {
+            for (int i = 0; i < numWords; i++)
+            {
+                float x = Random.Range(-5f, 5f);
+                float y = Random.Range(0f, 4f);
+                position.x = x;
+                position.y = y;
+                var clone = Instantiate(prefab, position, Quaternion.identity);
+                moveRandomlyOnBeat clonebeat = clone.GetComponent<moveRandomlyOnBeat>();
+                clonebeat.beatsPerMinute = BPM;
+                clonebeat.speed = speed;
+                int rand = Random.Range(0, words.Length);
+                string word = wordsA[rand];
+                float point = pointsA[rand];
+                string PSI = POS;
+                WordCustomizer obj = clone.GetComponent<WordCustomizer>();
+                obj.selfUpdate(word, point, PSI);
+            }
         }
         Instantiate(lineOBJ);
     }
