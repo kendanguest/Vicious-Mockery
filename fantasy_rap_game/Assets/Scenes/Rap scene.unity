@@ -431,6 +431,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7333682236949552987, guid: 3558b286b9bb3e344a57564bf4984d3b, type: 3}
+      propertyPath: textP
+      value: 
+      objectReference: {fileID: 1561931586}
+    - target: {fileID: 7333682236949552987, guid: 3558b286b9bb3e344a57564bf4984d3b, type: 3}
       propertyPath: currentDialogue
       value: 
       objectReference: {fileID: 11400000, guid: 08582895e7600e24da796aa46dc68c15, type: 2}
@@ -703,6 +707,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1561931584}
   - component: {fileID: 1561931585}
+  - component: {fileID: 1561931586}
   m_Layer: 0
   m_Name: DEMOrunner
   m_TagString: Untagged
@@ -740,7 +745,21 @@ MonoBehaviour:
   dialogue: {fileID: 1246182767}
   UI: {fileID: 1051951612}
   prefightDialogue: {fileID: 11400000, guid: 08582895e7600e24da796aa46dc68c15, type: 2}
-  rap: {fileID: 11400000, guid: 2303ba8e35d3d3b4ebe8c859b383ae68, type: 2}
+  rap: {fileID: 11400000, guid: 2ba623a97a7ab0d40b0c74dea1be7d67, type: 2}
+  progress: 0
+--- !u!114 &1561931586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561931583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7feadb5b6c444b140a479d30191c3a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level1: {fileID: 1561931585}
 --- !u!1 &1749271296
 GameObject:
   m_ObjectHideFlags: 0

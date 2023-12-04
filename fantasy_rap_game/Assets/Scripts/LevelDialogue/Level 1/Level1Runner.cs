@@ -13,6 +13,7 @@ public class Level1Runner : MonoBehaviour
     public GameObject UI;
     public DialogueObject prefightDialogue;
     public DialogueObject rap;
+    public bool progress;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,10 @@ public class Level1Runner : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         UI.SetActive(true);
-        dialogue.DisplayDialogue(prefightDialogue);
+        yield return new WaitUntil(() => (progress == true));
+        print("fire");
+        UI.SetActive(true);
+        progress = false;
+        dialogue.DisplayDialogue(rap);
     }
 }

@@ -17,6 +17,7 @@ public class DialogueDisplay : MonoBehaviour
     [SerializeField] private TMP_Text dialogueNameText;
     public TMP_Text spaceTooltip;
     public DialogueObject currentDialogue;
+    public TextProgressor textP;
     private List<string> rap = new List<string>();
     private string input = "Uhhhh";
 
@@ -89,10 +90,12 @@ public class DialogueDisplay : MonoBehaviour
             }
         }
         yield return new WaitForSeconds(beat);
+        textP.progressText();
         dialogueBox.SetActive(false);
     }
     public void DisplayDialogue(DialogueObject dialogue)
     {
+
         // Checks to see if the line has a BPM, indicating it's a rap line.
         if (dialogue.BPM < 1)
         {
