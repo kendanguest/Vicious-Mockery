@@ -25,7 +25,7 @@ public class Dev_OpenDialouge : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.B))
         {
-            random.createWord(3);
+            random.createWord(3, "ADJ");
         }
     }
     
