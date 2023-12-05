@@ -51,7 +51,7 @@ public class wordRandomizer : MonoBehaviour
                 moveRandomlyOnBeat clonebeat = clone.GetComponent<moveRandomlyOnBeat>();
                 clonebeat.beatsPerMinute = BPM;
                 clonebeat.speed = speed;
-                int rand = Random.Range(0, words.Length);
+                int rand = Random.Range(0, wordsN.Count);
                 string word = wordsN[rand];
                 float point = pointsN[rand];
                 string PSI = POS;
@@ -71,7 +71,7 @@ public class wordRandomizer : MonoBehaviour
                 moveRandomlyOnBeat clonebeat = clone.GetComponent<moveRandomlyOnBeat>();
                 clonebeat.beatsPerMinute = BPM;
                 clonebeat.speed = speed;
-                int rand = Random.Range(0, words.Length);
+                int rand = Random.Range(0, wordsA.Count);
                 string word = wordsA[rand];
                 float point = pointsA[rand];
                 string PSI = POS;

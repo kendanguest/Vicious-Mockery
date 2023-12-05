@@ -18,6 +18,7 @@ public class DialogueDisplay : MonoBehaviour
     public TMP_Text spaceTooltip;
     public DialogueObject currentDialogue;
     public TextProgressor textP;
+    public int level;
     private List<string> rap = new List<string>();
     private string input = "Uhhhh";
 
@@ -45,6 +46,8 @@ public class DialogueDisplay : MonoBehaviour
             yield return null;
         }
         // Deactivates the dialogue box on completion of the dialogue.
+        textP.progressText(level);
+        dialogueText.text = "";
         dialogueBox.SetActive(false);
     }
     private IEnumerator MoveThroughRap(List<string> rap, int BPM)
@@ -77,6 +80,7 @@ public class DialogueDisplay : MonoBehaviour
                 {
                     yield return new WaitForSeconds(beat);
                 }
+                textP.linecount();
                 i++;
                 j++;
                 dialogueText.text = rap[i];
@@ -90,7 +94,8 @@ public class DialogueDisplay : MonoBehaviour
             }
         }
         yield return new WaitForSeconds(beat);
-        textP.progressText();
+        textP.progressText(level);
+        print("fire");
         dialogueBox.SetActive(false);
     }
     public void DisplayDialogue(DialogueObject dialogue)

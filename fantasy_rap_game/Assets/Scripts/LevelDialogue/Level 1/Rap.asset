@@ -18,10 +18,11 @@ MonoBehaviour:
   - dialogue: Begone from here, your rhythm makes me shed a tear.
   - dialogue: Thy rhythm is so shabby it makes me wish I could not hear.
   - dialogue: Mine bars are so plentiful, they make thou seem [Input].
-  - dialogue: Thy incessant squawking reminds me of an [Input].
+  - dialogue: Thy incessant squawking brings to my mind images of an annoying [Input].
   - dialogue: The peasantry named me a prophet, they named you a [Input].
+  - dialogue: This rap battle reminds me of George Boole, i'm a one you're a [Input].
   name1: Fibache
   name2: Professor
-  talking: 02000000020000000200000002000000
-  BPM: 120
+  talking: 0200000002000000020000000200000001000000010000000100000001000000
+  BPM: 180
   pressSpaceToContinue: 0

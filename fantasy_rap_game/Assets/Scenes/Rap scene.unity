@@ -300,6 +300,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40189b1e84899d24ab158e4e4234cf98, type: 3}
+--- !u!114 &1031394314 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4545649452243678825, guid: 04642eeafbf766d4f9d70ec484b7cdf9, type: 3}
+  m_PrefabInstance: {fileID: 1903012570}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71cb3ee6d8a76d84a8f20e3f5016ede6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1051951612 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1349566169737223308, guid: 3558b286b9bb3e344a57564bf4984d3b, type: 3}
@@ -428,6 +439,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7038930290533309868, guid: 3558b286b9bb3e344a57564bf4984d3b, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333682236949552987, guid: 3558b286b9bb3e344a57564bf4984d3b, type: 3}
+      propertyPath: level
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7333682236949552987, guid: 3558b286b9bb3e344a57564bf4984d3b, type: 3}
@@ -746,7 +761,10 @@ MonoBehaviour:
   UI: {fileID: 1051951612}
   prefightDialogue: {fileID: 11400000, guid: 08582895e7600e24da796aa46dc68c15, type: 2}
   rap: {fileID: 11400000, guid: 2ba623a97a7ab0d40b0c74dea1be7d67, type: 2}
+  postRap: {fileID: 11400000, guid: 8f0eeec56c7254841b421a5aed52c047, type: 2}
+  random: {fileID: 1031394314}
   progress: 0
+  line: 0
 --- !u!114 &1561931586
 MonoBehaviour:
   m_ObjectHideFlags: 0

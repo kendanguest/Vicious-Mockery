@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 115169228763389997}
   - component: {fileID: 1894007875783037795}
   - component: {fileID: -1305009255841078261}
+  - component: {fileID: 39831807210214625}
+  - component: {fileID: 7990972319392912185}
   m_Layer: 0
   m_Name: Word
   m_TagString: Word
@@ -231,3 +233,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!33 &39831807210214625
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2682021411880824350}
+  m_Mesh: {fileID: 0}
+--- !u!114 &7990972319392912185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2682021411880824350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cb1947e777d99b47b76136fb2c59208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathTime: 3.5

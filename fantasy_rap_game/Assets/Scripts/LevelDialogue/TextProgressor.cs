@@ -10,8 +10,13 @@ using UnityEngine;
 public class TextProgressor : MonoBehaviour
 {
     public Level1Runner level1;
-    public void progressText()
+    public void progressText(int level)
     {
+        if(level == 1)
         level1.progress = true;
+    }
+    public void linecount()
+    {
+        level1.line += 1;
     }
 }
