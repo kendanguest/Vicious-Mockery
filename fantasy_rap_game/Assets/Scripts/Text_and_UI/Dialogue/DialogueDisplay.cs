@@ -18,6 +18,7 @@ public class DialogueDisplay : MonoBehaviour
     public TMP_Text spaceTooltip;
     public DialogueObject currentDialogue;
     public TextProgressor textP;
+    public RapShadowController RSC;
     public int level;
     private List<string> rap = new List<string>();
     private string input = "Uhhhh";
@@ -95,7 +96,7 @@ public class DialogueDisplay : MonoBehaviour
         }
         yield return new WaitForSeconds(beat);
         textP.progressText(level);
-        print("fire");
+        dialogueText.text = "";
         dialogueBox.SetActive(false);
     }
     public void DisplayDialogue(DialogueObject dialogue)
@@ -109,6 +110,7 @@ public class DialogueDisplay : MonoBehaviour
         else
         {
             // Initializes and creates a list of all the words in the line of dialogue.
+            RSC.recieveRapDialogue(dialogue);
             for (int i = 0; i < dialogue.dialogueLines.Length; i++)
             {
                 string word = "";

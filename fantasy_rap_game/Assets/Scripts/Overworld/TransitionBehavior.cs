@@ -14,6 +14,7 @@ public class TransitionBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // This script is really braindead, but it moves the black box out of the way essentially simulating a smooth transition.
         pos = square.GetComponent<Rigidbody2D>();
         fadeOut();
     }

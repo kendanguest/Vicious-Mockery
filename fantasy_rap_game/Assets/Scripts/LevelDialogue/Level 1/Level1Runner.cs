@@ -15,17 +15,20 @@ public class Level1Runner : MonoBehaviour
     public DialogueObject rap;
     public DialogueObject postRap;
     public wordRandomizer random;
+    public RapShadowController RSC;
     public bool progress;
     public int line;
     // Start is called before the first frame update
     void Start()
     {
+        // This starts the Coroutine.
         UI.SetActive(false);
         dialogue.DisplayDialogue(prefightDialogue);
         StartCoroutine(startlevel());
     }
     IEnumerator startlevel()
     {
+        // This IEnumerator controls when the dialogue spawns.
         yield return new WaitForSeconds(2);
         UI.SetActive(true);
         yield return new WaitUntil(() => (progress == true));
@@ -33,18 +36,26 @@ public class Level1Runner : MonoBehaviour
         progress = false;
         dialogue.currentDialogue = rap;
         dialogue.DisplayDialogue(rap);
+        // This is a very stupid solution, but for loops are even more work.
         yield return new WaitUntil(() => (line == 4));
-        random.createWord(7, "ADJ");
+        newPlayerTurn(line);
         yield return new WaitUntil(() => (line == 5));
-        random.createWord(7, "Noun");
+        newPlayerTurn(line);
         yield return new WaitUntil(() => (line == 6));
-        random.createWord(7, "ADJ");
+        newPlayerTurn(line);
         yield return new WaitUntil(() => (line == 7));
-        random.createWord(7, "ADJ");
+        newPlayerTurn(line);
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(true);
         progress = false;
         dialogue.currentDialogue = postRap;
         dialogue.DisplayDialogue(postRap);
+    }
+
+    private void newPlayerTurn(int line)
+    {
+        // Updates the shadow line and creates the words needed.
+        RSC.shadowRap(line);
+        random.createWord(7, "ADJ");
     }
 }

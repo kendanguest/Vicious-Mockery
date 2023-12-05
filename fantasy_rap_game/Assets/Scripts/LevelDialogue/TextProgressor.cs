@@ -12,11 +12,13 @@ public class TextProgressor : MonoBehaviour
     public Level1Runner level1;
     public void progressText(int level)
     {
+        // Progresses the dialogue further.
         if(level == 1)
         level1.progress = true;
     }
     public void linecount()
     {
+        // Increments the line count to help progress the dialogue.
         level1.line += 1;
     }
 }

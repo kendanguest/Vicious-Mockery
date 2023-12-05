@@ -23,6 +23,7 @@ public class wordRandomizer : MonoBehaviour
     public int speed;
     public void Start()
     {
+        // Sorts the words into nouns and adjectives.
         for(int i = 0; i < words.Length; i++)
         {
             if (partSpeechI[i] == "Noun")
@@ -39,18 +40,24 @@ public class wordRandomizer : MonoBehaviour
     }
     public void createWord(int numWords, string POS)
     {
+        // Checks if the words needed are nouns or adjectives.
         if(POS == "Noun")
         {
             for (int i = 0; i < numWords; i++)
             {
+                // This loop is repeated a number of times equal to the amount called for.
+                // Generates a random float within a range onscreen.
                 float x = Random.Range(-5f, 5f);
                 float y = Random.Range(0f, 4f);
                 position.x = x;
                 position.y = y;
+                // Creates a clone with the position taken from the floats.
                 var clone = Instantiate(prefab, position, Quaternion.identity);
+                // Grabs the moveRandomlyOnBeat from a clone and modifies it.
                 moveRandomlyOnBeat clonebeat = clone.GetComponent<moveRandomlyOnBeat>();
                 clonebeat.beatsPerMinute = BPM;
                 clonebeat.speed = speed;
+                // Generates a random word and it's point value and attaches it to the word.
                 int rand = Random.Range(0, wordsN.Count);
                 string word = wordsN[rand];
                 float point = pointsN[rand];
@@ -63,14 +70,19 @@ public class wordRandomizer : MonoBehaviour
         {
             for (int i = 0; i < numWords; i++)
             {
+                // This loop is repeated a number of times equal to the amount called for.
+                // Generates a random float within a range onscreen.
                 float x = Random.Range(-5f, 5f);
                 float y = Random.Range(0f, 4f);
                 position.x = x;
                 position.y = y;
+                // Creates a clone with the position taken from the floats.
                 var clone = Instantiate(prefab, position, Quaternion.identity);
+                // Grabs the moveRandomlyOnBeat from a clone and modifies it.
                 moveRandomlyOnBeat clonebeat = clone.GetComponent<moveRandomlyOnBeat>();
                 clonebeat.beatsPerMinute = BPM;
                 clonebeat.speed = speed;
+                // Generates a random word and it's point value and attaches it to the word.
                 int rand = Random.Range(0, wordsA.Count);
                 string word = wordsA[rand];
                 float point = pointsA[rand];
@@ -79,6 +91,7 @@ public class wordRandomizer : MonoBehaviour
                 obj.selfUpdate(word, point, PSI);
             }
         }
+        // Creates the linepointer object.
         Instantiate(lineOBJ);
     }
 }

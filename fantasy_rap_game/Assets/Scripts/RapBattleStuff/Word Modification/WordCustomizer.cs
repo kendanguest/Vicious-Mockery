@@ -16,6 +16,7 @@ public class WordCustomizer : MonoBehaviour
     public string partOfSpeech;
     public void selfUpdate(string word, float value, string POS)
     {
+        // Updates the word's values.
         text.text = word;
         wordO = word;
         valueO = value;
