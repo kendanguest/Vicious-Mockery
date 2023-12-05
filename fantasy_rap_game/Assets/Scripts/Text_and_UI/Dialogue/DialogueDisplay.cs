@@ -82,6 +82,7 @@ public class DialogueDisplay : MonoBehaviour
                     yield return new WaitForSeconds(beat);
                 }
                 textP.linecount();
+                RSC.eraseLine();
                 i++;
                 j++;
                 dialogueText.text = rap[i];
