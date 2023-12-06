@@ -22,6 +22,8 @@ public class DialogueDisplay : MonoBehaviour
     public int level;
     private List<string> rap = new List<string>();
     private string input = "Uhhhh";
+    private DeterminePointChange DPC;
+    private WordRemover wordRemove;
 
     private void Start()
     {
@@ -34,6 +36,9 @@ public class DialogueDisplay : MonoBehaviour
         {
             spaceTooltip.text = "";
         }
+        DPC = FindObjectOfType<DeterminePointChange>();
+        wordRemove = FindObjectOfType<WordRemover>();
+
     }
     private IEnumerator MoveThroughDialogue(DialogueObject dia)
     {
@@ -69,7 +74,12 @@ public class DialogueDisplay : MonoBehaviour
             if (rap[i].Substring(0, rap[i].Length - 1) == "[Input]")
             {
                 rap[i] = input + rap[i].Substring(rap[i].Length - 1);
+                DPC.implementPoints(FindObjectOfType<wordGetter>().currentWord.GetComponent<WordCustomizer>().valueO);
+                Destroy(GameObject.FindGameObjectWithTag("Line"));
+                wordRemove.refreshAllKnownWords();
+                wordRemove.destroyAllKnownWords();
             }
+            // Checks to see if the current word is the internal character for newline.
             if (rap[i] == "_")
             {
                 // If it is, it will wait if you need to push space, either way, it will instantly clear and start the next line.

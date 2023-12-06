@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 5027699403708056285}
   - component: {fileID: 6825748522825587463}
   - component: {fileID: 1678355448704233469}
-  - component: {fileID: 3396063760097098939}
   m_Layer: 0
   m_Name: Line
-  m_TagString: Untagged
+  m_TagString: Line
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,19 +163,6 @@ MonoBehaviour:
   self: {fileID: 2080722779992245779}
   cameraObject: {fileID: 0}
   getterOBJ: {fileID: 0}
---- !u!114 &3396063760097098939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2080722779992245779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cb1947e777d99b47b76136fb2c59208, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathTime: 3.5
 --- !u!1 &8575887497166910329
 GameObject:
   m_ObjectHideFlags: 0

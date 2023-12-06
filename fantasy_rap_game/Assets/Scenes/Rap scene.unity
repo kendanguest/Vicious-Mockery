@@ -678,8 +678,9 @@ GameObject:
   - component: {fileID: 1561931584}
   - component: {fileID: 1561931585}
   - component: {fileID: 1561931586}
+  - component: {fileID: 1561931587}
   m_Layer: 0
-  m_Name: DEMOrunner
+  m_Name: Level1Runner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -734,6 +735,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level1: {fileID: 1561931585}
+--- !u!114 &1561931587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561931583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b5f91f3842d41845a0dfdd58fbcb3c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1749271296
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,6 +867,10 @@ PrefabInstance:
       propertyPath: lineOBJ
       value: 
       objectReference: {fileID: 2080722779992245779, guid: 1de1e14e5dd85b14898bf8019edaf8a6, type: 3}
+    - target: {fileID: 7360866733548198088, guid: 04642eeafbf766d4f9d70ec484b7cdf9, type: 3}
+      propertyPath: arrow
+      value: 
+      objectReference: {fileID: 254343612}
     - target: {fileID: 8338461952666679709, guid: 04642eeafbf766d4f9d70ec484b7cdf9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.45369887
