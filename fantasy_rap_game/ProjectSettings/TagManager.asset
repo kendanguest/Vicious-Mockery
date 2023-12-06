@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Getter
   - Word
+  - Line
   layers:
   - Default
   - TransparentFX
