@@ -14,19 +14,21 @@ public class DeterminePointChange : MonoBehaviour
     private List<string> previous = new List<string>();
     public void implementPoints(float value, string word)
     {
-        arrow.points += value;
+        // Checks if the previous ending matches with the current ending. 
         if(previous.Count > 0)
         {
-            print(word.Substring(word.Length - 2));
             if(previous[previous.Count].Substring(previous[previous.Count].Length - 2) == word.Substring(word.Length - 2))
             {
-                mod = 2f;
+                // If it does, it doubles the modifier.
+                mod += 1f;
             }
             if (previous[previous.Count-1].Substring(previous[previous.Count-1].Length - 2) == word.Substring(word.Length - 2))
             {
+                // If it matches with the one before the last one, it is multiplied by 1.5.
                 mod *= 1.5f;
             }
         }
+        // adds and resets the point values.
         previous.Add(word);
         arrow.points += (value * mod);
         mod = 1f;
