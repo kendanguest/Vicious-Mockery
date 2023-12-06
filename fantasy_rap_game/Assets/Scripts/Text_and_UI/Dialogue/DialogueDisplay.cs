@@ -74,7 +74,7 @@ public class DialogueDisplay : MonoBehaviour
             if (rap[i].Substring(0, rap[i].Length - 1) == "[Input]")
             {
                 rap[i] = input + rap[i].Substring(rap[i].Length - 1);
-                DPC.implementPoints(FindObjectOfType<wordGetter>().currentWord.GetComponent<WordCustomizer>().valueO);
+                DPC.implementPoints(FindObjectOfType<wordGetter>().currentWord.GetComponent<WordCustomizer>().valueO, input);
                 Destroy(GameObject.FindGameObjectWithTag("Line"));
                 wordRemove.refreshAllKnownWords();
                 wordRemove.destroyAllKnownWords();
