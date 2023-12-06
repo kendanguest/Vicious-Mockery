@@ -107,7 +107,15 @@ public class DialogueDisplay : MonoBehaviour
     }
     public void DisplayDialogue(DialogueObject dialogue)
     {
-
+        // Activates or deactivates the "space to proeed" tooltip.
+        if (currentDialogue.pressSpaceToContinue)
+        {
+            spaceTooltip.text = "Press space to proceed";
+        }
+        else
+        {
+            spaceTooltip.text = "";
+        }
         // Checks to see if the line has a BPM, indicating it's a rap line.
         if (dialogue.BPM < 1)
         {
