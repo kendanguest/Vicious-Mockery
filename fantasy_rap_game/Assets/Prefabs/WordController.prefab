@@ -72,6 +72,11 @@ MonoBehaviour:
   - Puny
   - Craven
   - Doghearted
+  - Jester
+  - Toad
+  - Grotesque
+  - Hideous
+  - Spineless
   points:
   - 4
   - 2
@@ -98,6 +103,11 @@ MonoBehaviour:
   - 4
   - 6
   - 8
+  - 4
+  - 5
+  - 5
+  - 3
+  - 4
   partSpeechI:
   - Noun
   - Noun
@@ -121,6 +131,11 @@ MonoBehaviour:
   - ADJ
   - ADJ
   - ADJ
+  - ADJ
+  - ADJ
+  - ADJ
+  - Noun
+  - Noun
   - ADJ
   - ADJ
   - ADJ
@@ -153,9 +168,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9197f8e8eeec8b4db599e78be07b172, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordsC: []
-  pointsC: []
-  partSpeechIC: []
+  wordsC:
+  - Opulent
+  - Divine
+  - Enlightened
+  - Cunning
+  - Indubitable
+  - Paragon
+  - Virtuous
+  - Wellborn
+  - Illustrious
+  - Valiant
+  pointsC:
+  - -3
+  - -5
+  - -2
+  - -2
+  - -5
+  - -6
+  - -3
+  - -2
+  - -3
+  - -3
+  partSpeechIC:
+  - ADJ
+  - ADJ
+  - ADJ
+  - ADJ
+  - ADJ
+  - Noun
+  - ADJ
+  - ADJ
+  - ADJ
+  - ADJ
   prefab: {fileID: 2682021411880824350, guid: 73c2af4085c398748acbdb24181e634b, type: 3}
   BPM: 120
   speed: 3

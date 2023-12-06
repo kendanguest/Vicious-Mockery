@@ -785,22 +785,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WordController
       objectReference: {fileID: 0}
-    - target: {fileID: 4545649452243678825, guid: 04642eeafbf766d4f9d70ec484b7cdf9, type: 3}
-      propertyPath: BPM
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 4545649452243678825, guid: 04642eeafbf766d4f9d70ec484b7cdf9, type: 3}
-      propertyPath: speed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4545649452243678825, guid: 04642eeafbf766d4f9d70ec484b7cdf9, type: 3}
-      propertyPath: prefab
-      value: 
-      objectReference: {fileID: 2682021411880824350, guid: 73c2af4085c398748acbdb24181e634b, type: 3}
-    - target: {fileID: 4545649452243678825, guid: 04642eeafbf766d4f9d70ec484b7cdf9, type: 3}
-      propertyPath: lineOBJ
-      value: 
-      objectReference: {fileID: 2080722779992245779, guid: 1de1e14e5dd85b14898bf8019edaf8a6, type: 3}
     - target: {fileID: 8338461952666679709, guid: 04642eeafbf766d4f9d70ec484b7cdf9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.45369887
