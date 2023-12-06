@@ -80,6 +80,8 @@ public class DialogueDisplay : MonoBehaviour
                 else
                 {
                     yield return new WaitForSeconds(beat);
+                    yield return new WaitForSeconds(beat);
+                    yield return new WaitForSeconds(beat);
                 }
                 textP.linecount();
                 RSC.eraseLine();
@@ -95,6 +97,9 @@ public class DialogueDisplay : MonoBehaviour
                 dialogueText.text = dialogueText.text + rap[i];
             }
         }
+        RSC.eraseLine();
+        yield return new WaitForSeconds(beat);
+        yield return new WaitForSeconds(beat);
         yield return new WaitForSeconds(beat);
         textP.progressText(level);
         dialogueText.text = "";
@@ -163,6 +168,7 @@ public class DialogueDisplay : MonoBehaviour
     public void inputUpdate(string word)
     {
         input = word;
+        RSC.updateTextBoxWithSelectedWord(word);
     }
 }
 

@@ -12,6 +12,8 @@ public class RapShadowController : MonoBehaviour
 {
     public TMP_Text textBox;
     private List<DialogueLine> rap = new List<DialogueLine>();
+    private int inputPos;
+    private int previousWordLength;
     public void recieveRapDialogue(DialogueObject rapinput)
     {
         // Backlogs the dialogue to be accessed later.
@@ -23,11 +25,19 @@ public class RapShadowController : MonoBehaviour
     public void shadowRap(int line)
     {
         // Acesses the dialogue backloged previously.
-        textBox.text = rap[line].dialogue + "";
+        inputPos = rap[line].dialogue.IndexOf('[');
+        textBox.text = rap[line].dialogue.Substring(0, inputPos) + rap[line].dialogue.Substring(rap[line].dialogue.IndexOf(']') + 1) + "";
+    }
+    public void updateTextBoxWithSelectedWord(string word)
+    {
+        // Updates the text to include what word is selected.
+        textBox.text = textBox.text.Substring(0, inputPos) + word + textBox.text.Substring(inputPos + previousWordLength);
+        previousWordLength = word.Length;
     }
     public void eraseLine()
     {
         // Clears the textbox.
         textBox.text = "";
+        previousWordLength = 0;
     }
 }
