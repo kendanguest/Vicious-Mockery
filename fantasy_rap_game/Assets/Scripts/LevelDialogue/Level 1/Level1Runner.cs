@@ -38,13 +38,13 @@ public class Level1Runner : MonoBehaviour
         dialogue.DisplayDialogue(rap);
         // This is a very stupid solution, but for loops are even more work.
         yield return new WaitUntil(() => (line == 4));
-        newPlayerTurn(line);
+        newPlayerTurn(line, "ADJ");
         yield return new WaitUntil(() => (line == 5));
-        newPlayerTurn(line);
+        newPlayerTurn(line, "Noun");
         yield return new WaitUntil(() => (line == 6));
-        newPlayerTurn(line);
+        newPlayerTurn(line, "ADJ");
         yield return new WaitUntil(() => (line == 7));
-        newPlayerTurn(line);
+        newPlayerTurn(line, "ADJ");
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(true);
         progress = false;
@@ -52,10 +52,10 @@ public class Level1Runner : MonoBehaviour
         dialogue.DisplayDialogue(postRap);
     }
 
-    private void newPlayerTurn(int line)
+    private void newPlayerTurn(int line, string type)
     {
         // Updates the shadow line and creates the words needed.
         RSC.shadowRap(line);
-        random.createWord(7, "ADJ");
+        random.createWord(7, type);
     }
 }
