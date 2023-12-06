@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8338461952666679709}
   - component: {fileID: 4545649452243678825}
   - component: {fileID: 7360866733548198088}
+  - component: {fileID: 5541549518704818366}
   m_Layer: 0
   m_Name: WordController
   m_TagString: Untagged
@@ -123,10 +124,10 @@ MonoBehaviour:
   - ADJ
   - ADJ
   - ADJ
-  prefab: {fileID: 0}
-  lineOBJ: {fileID: 0}
-  BPM: 0
-  speed: 0
+  prefab: {fileID: 2682021411880824350, guid: 73c2af4085c398748acbdb24181e634b, type: 3}
+  lineOBJ: {fileID: 2080722779992245779, guid: 1de1e14e5dd85b14898bf8019edaf8a6, type: 3}
+  BPM: 120
+  speed: 3
 --- !u!114 &7360866733548198088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,3 +141,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrow: {fileID: 0}
+--- !u!114 &5541549518704818366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208465118582678407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9197f8e8eeec8b4db599e78be07b172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wordsC: []
+  pointsC: []
+  partSpeechIC: []
+  prefab: {fileID: 2682021411880824350, guid: 73c2af4085c398748acbdb24181e634b, type: 3}
+  BPM: 120
+  speed: 3
