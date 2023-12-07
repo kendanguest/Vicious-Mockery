@@ -622,7 +622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beatsPerMinute: 120
-  speed: 3
+  speed: 30
 --- !u!50 &1122786868
 Rigidbody2D:
   serializedVersion: 4
