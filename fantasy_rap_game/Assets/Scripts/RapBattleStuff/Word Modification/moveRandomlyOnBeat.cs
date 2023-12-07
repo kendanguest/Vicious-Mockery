@@ -26,12 +26,8 @@ public class moveRandomlyOnBeat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    private void FixedUpdate()
-    {
-        lastTimeInBeat = timeInBeat;
-        timeInBeat = (Time.fixedUnscaledTime % beatInterval)/(beatsPerMinute/60f);
+                lastTimeInBeat = timeInBeat;
+        timeInBeat = (Time.time % beatInterval)/(beatsPerMinute/60f);
         
         if (timeInBeat < lastTimeInBeat)
         {
@@ -39,7 +35,8 @@ public class moveRandomlyOnBeat : MonoBehaviour
             angle = Random.Range(0,2*Mathf.PI);
         };
         
-        rb.velocity += new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * speed * -(Mathf.Pow(timeInBeat-0.5f,3f));
+        rb.velocity += new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * speed * -(Mathf.Pow(timeInBeat-0.5f,3f))*Time.deltaTime;
             //Mathf.Cos(Mathf.PI * (timeInBeat));
     }
+  
 }
