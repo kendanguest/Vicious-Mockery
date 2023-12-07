@@ -10,19 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25a74498676d8404896b25905418fbbb, type: 3}
-  m_Name: Rap
+  m_Name: RapT1
   m_EditorClassIdentifier: 
   dialogueLines:
-  - dialogue: Thy lyrical prowess art lacking in heat.
-  - dialogue: Thy incessant yapping shall leave me beat.
-  - dialogue: Begone from here, your rhythm makes me shed a tear.
-  - dialogue: Thy rhythm is so shabby it makes me wish I could not hear.
   - dialogue: Mine bars are so plentiful, they make thou seem [Input].
+  - dialogue: You failed as a professor, your rhymes are [Input].
   - dialogue: Thy incessant squawking brings to my mind images of an annoying [Input].
   - dialogue: The peasantry named me a prophet, they named you a [Input].
-  - dialogue: This rap battle reminds me of George Boole, i'm a one you're a [Input].
   name1: Fibache
-  name2: Professor
-  talking: 0200000002000000020000000200000001000000010000000100000001000000
-  BPM: 180
+  name2: Prof. Didgeridoo
+  talking: 01000000010000000100000001000000
+  BPM: 120
   pressSpaceToContinue: 0

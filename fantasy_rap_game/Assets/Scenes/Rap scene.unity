@@ -591,6 +591,10 @@ PrefabInstance:
       propertyPath: textP
       value: 
       objectReference: {fileID: 1561931586}
+    - target: {fileID: 7333682236949552987, guid: 3558b286b9bb3e344a57564bf4984d3b, type: 3}
+      propertyPath: currentDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: ca2659eb9d3e33c4ab26d206816d80a7, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -823,8 +827,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: {fileID: 1246182767}
   UI: {fileID: 1051951612}
-  prefightDialogue: {fileID: 11400000, guid: 08582895e7600e24da796aa46dc68c15, type: 2}
-  rap: {fileID: 11400000, guid: 2ba623a97a7ab0d40b0c74dea1be7d67, type: 2}
+  prefightDialogue: {fileID: 11400000, guid: ca2659eb9d3e33c4ab26d206816d80a7, type: 2}
+  tutorial_1: {fileID: 11400000, guid: 387f96e522f8fd5408c72042959f4490, type: 2}
+  rap1: {fileID: 11400000, guid: ef4147ac2d0acdf42a62cdc8331a9879, type: 2}
+  tutorial_2: {fileID: 11400000, guid: 3117065ae26d0c3429f5849b60ce0215, type: 2}
+  rap2: {fileID: 11400000, guid: 04bf447ef9a4b4a40891636e5e62ecf2, type: 2}
   postRap: {fileID: 11400000, guid: 8f0eeec56c7254841b421a5aed52c047, type: 2}
   random: {fileID: 1031394314}
   RSC: {fileID: 2047909032}

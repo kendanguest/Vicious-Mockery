@@ -12,7 +12,10 @@ public class Level1Runner : MonoBehaviour
     public DialogueDisplay dialogue;
     public GameObject UI;
     public DialogueObject prefightDialogue;
-    public DialogueObject rap;
+    public DialogueObject tutorial_1;
+    public DialogueObject rap1;
+    public DialogueObject tutorial_2;
+    public DialogueObject rap2;
     public DialogueObject postRap;
     public wordRandomizer random;
     public RapShadowController RSC;
@@ -23,33 +26,38 @@ public class Level1Runner : MonoBehaviour
     {
         // This starts the Coroutine.
         UI.SetActive(false);
+        dialogue.currentDialogue = prefightDialogue;
         dialogue.DisplayDialogue(prefightDialogue);
         StartCoroutine(startlevel());
     }
     IEnumerator startlevel()
     {
         // This IEnumerator controls when the dialogue spawns.
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         UI.SetActive(true);
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(true);
         progress = false;
-        dialogue.currentDialogue = rap;
-        dialogue.DisplayDialogue(rap);
-        // This is a very stupid solution, but for loops are even more work.
-        yield return new WaitUntil(() => (line == 4));
+        dialogue.currentDialogue = tutorial_1;
+        dialogue.DisplayDialogue(tutorial_1);
+        yield return new WaitUntil(() => (progress == true));
+        UI.SetActive(true);
+        progress = false;
+        dialogue.currentDialogue = rap1;
+        yield return new WaitUntil(() => line == 1);
         newPlayerTurn(line, "ADJ");
-        yield return new WaitUntil(() => (line == 5));
+        yield return new WaitUntil(() => line == 2);
+        newPlayerTurn(line, "ADJ");
+        yield return new WaitUntil(() => line == 3);
         newPlayerTurn(line, "Noun");
-        yield return new WaitUntil(() => (line == 6));
-        newPlayerTurn(line, "ADJ");
-        yield return new WaitUntil(() => (line == 7));
+        yield return new WaitUntil(() => line == 4);
         newPlayerTurn(line, "ADJ");
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(true);
         progress = false;
-        dialogue.currentDialogue = postRap;
-        dialogue.DisplayDialogue(postRap);
+        dialogue.currentDialogue = tutorial_2;
+        dialogue.DisplayDialogue(tutorial_2);
+        yield return new WaitUntil(() => (progress == true));
     }
 
     private void newPlayerTurn(int line, string type)

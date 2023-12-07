@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a74498676d8404896b25905418fbbb, type: 3}
+  m_Name: Level1PreFight
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - dialogue: "So you\u2019ve come for thy\u2019s first letter?"
+  - dialogue: "I\u2019m just trying to graduate, I hasn\u2019t any intention of insulting
+      thee."
+  - dialogue: "Ha! Clearly this is thy\u2019s first battle."
+  - dialogue: "Don\u2019t worry I\u2019ll maketh this simple."
+  - dialogue: If thee doesn't defeat me, thee stands nay chance at leaving this school!
+  - dialogue: "Then I guess I hasn\u2019t a choice."
+  - dialogue: "I can\u2019t hold back!"
+  - dialogue: Oh my! This shall be fun!
+  - dialogue: Draw your lute young bard!
+  - dialogue: "Let\u2019s begin!"
+  name1: Fibache
+  name2: Prof. Didgeridoo
+  talking: 02000000010000000200000002000000020000000100000001000000020000000200000002000000
+  BPM: 0
+  pressSpaceToContinue: 1
