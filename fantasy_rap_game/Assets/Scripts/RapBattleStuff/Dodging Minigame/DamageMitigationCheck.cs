@@ -14,6 +14,7 @@ public class DamageMitigationCheck : MonoBehaviour
     private bool isCurrentlyDodging;
     public GameObject fibacheHead;
     public GameObject parent;
+    private float totalTime = 0;
 
     void Start()
     {
@@ -24,7 +25,8 @@ public class DamageMitigationCheck : MonoBehaviour
     void Update()
 
     {
-        if (Time.time >= timeUntilHit)
+        totalTime += Time.deltaTime;
+        if (totalTime >= timeUntilHit)
         {
             if (isCurrentlyDodging)
             {
