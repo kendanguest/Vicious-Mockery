@@ -443,6 +443,10 @@ PrefabInstance:
       propertyPath: meter
       value: 
       objectReference: {fileID: 889892798}
+    - target: {fileID: 3528413509801160123, guid: a929d36940a80e14593a01ec49daf65b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5066814691615731539, guid: a929d36940a80e14593a01ec49daf65b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
