@@ -9,7 +9,7 @@ public class DamageMitigationCheck : MonoBehaviour
     public int beatsTillTrigger;
     public float damageOnHit;
     public float damageOnDodge;
-    public GameObject meter;
+    public pointsArrow meter;
     private float timeUntilHit;
     private bool isCurrentlyDodging;
     public GameObject fibacheHead;
@@ -19,6 +19,7 @@ public class DamageMitigationCheck : MonoBehaviour
     void Start()
     {
         timeUntilHit = ( 60f/bpm) * beatsTillTrigger+(60f/bpm)/2;
+        meter = FindObjectOfType<pointsArrow>();
     }
 
     // Update is called once per frame
@@ -30,12 +31,12 @@ public class DamageMitigationCheck : MonoBehaviour
         {
             if (isCurrentlyDodging)
             {
-                meter.GetComponent<pointsArrow>().points -= damageOnDodge;
+                meter.points -= damageOnDodge;
 
             }
             else
             {
-                meter.GetComponent<pointsArrow>().points -= damageOnHit;
+                meter.points -= damageOnHit;
 
             };
 

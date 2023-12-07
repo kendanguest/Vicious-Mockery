@@ -18,13 +18,16 @@ public class Level1Runner : MonoBehaviour
     public DialogueObject rap2;
     public DialogueObject postRap;
     public wordRandomizer random;
+    public ComplimentRandomizer Crandom;
     public RapShadowController RSC;
+    public SpawnDodgeMinigame SDM;
     public bool progress;
     public int line;
     // Start is called before the first frame update
     void Start()
     {
         // This starts the Coroutine.
+        SDM = FindObjectOfType<SpawnDodgeMinigame>();
         UI.SetActive(false);
         dialogue.currentDialogue = prefightDialogue;
         dialogue.DisplayDialogue(prefightDialogue);
@@ -33,6 +36,7 @@ public class Level1Runner : MonoBehaviour
     IEnumerator startlevel()
     {
         // This IEnumerator controls when the dialogue spawns.
+        // 312 beats 180 BPM.
         yield return new WaitForSeconds(1);
         UI.SetActive(true);
         yield return new WaitUntil(() => (progress == true));
@@ -59,6 +63,20 @@ public class Level1Runner : MonoBehaviour
         dialogue.currentDialogue = tutorial_2;
         dialogue.DisplayDialogue(tutorial_2);
         yield return new WaitUntil(() => (progress == true));
+        UI.SetActive(true);
+        progress = false;
+        line = 0;
+        dialogue.currentDialogue = rap2;
+        dialogue.DisplayDialogue(rap2);
+        yield return new WaitUntil(() => line == 0);
+        SDM.startDodgeGame(6);
+        yield return new WaitUntil(() => line == 1);
+        SDM.startDodgeGame(6);
+        yield return new WaitUntil(() => line == 2);
+        SDM.startDodgeGame(9);
+        yield return new WaitUntil(() => line == 3);
+        SDM.startDodgeGame(11);
+
     }
 
     private void newPlayerTurn(int line, string type)
@@ -66,5 +84,6 @@ public class Level1Runner : MonoBehaviour
         // Updates the shadow line and creates the words needed.
         RSC.shadowRap(line);
         random.createWord(7, type);
+        Crandom.createCompliment(2, type);
     }
 }
