@@ -11,10 +11,16 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Test worlds/AugustTester.unity
     guid: 6629350f8e8b10341aa50754812a793b
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Scenes/Test worlds/TempMenu.unity
+    guid: 3cf8bdbe15733f043a7528fb32d0f76e
+  - enabled: 1
     path: Assets/Scenes/Rap scene.unity
     guid: 3f6d130bd115d8a44bc017523fdd07ac
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Test worlds/SpinyTestScene.unity
     guid: 426b0aa8978b7894ab5da23ce595d7c3
+  - enabled: 1
+    path: Assets/Scenes/Test worlds/CreditScene.unity
+    guid: a77d28d5f52c13746900ac578ceedce3
   m_configObjects: {}
