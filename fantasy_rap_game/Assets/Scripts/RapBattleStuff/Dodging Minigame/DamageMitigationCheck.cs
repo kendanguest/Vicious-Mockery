@@ -52,4 +52,10 @@ public class DamageMitigationCheck : MonoBehaviour
          isCurrentlyDodging = true;
     }
 
+    public void selfUpdate(int bpmO, int bTTO)
+    {
+        bpm = bpmO;
+        beatsTillTrigger = bTTO;
+    }
+
 }

@@ -69,13 +69,13 @@ public class Level1Runner : MonoBehaviour
         dialogue.currentDialogue = rap2;
         dialogue.DisplayDialogue(rap2);
         yield return new WaitUntil(() => line == 0);
-        SDM.startDodgeGame(6);
+        SDM.startDodgeGame(6, 120);
         yield return new WaitUntil(() => line == 1);
-        SDM.startDodgeGame(6);
+        SDM.startDodgeGame(6, 120);
         yield return new WaitUntil(() => line == 2);
-        SDM.startDodgeGame(9);
+        SDM.startDodgeGame(9, 120);
         yield return new WaitUntil(() => line == 3);
-        SDM.startDodgeGame(11);
+        SDM.startDodgeGame(11, 120);
 
     }
 

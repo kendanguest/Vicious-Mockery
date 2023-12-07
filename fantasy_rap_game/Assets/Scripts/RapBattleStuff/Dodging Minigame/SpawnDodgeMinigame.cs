@@ -10,14 +10,11 @@ using UnityEngine;
 public class SpawnDodgeMinigame : MonoBehaviour
 {
     public GameObject prefab;
-    public int bpm;
 
-    public void startDodgeGame(int bTT)
+    public void startDodgeGame(int bTT, int bpm)
     {
-        print("recieve");
         var clone = Instantiate(prefab);
-        DamageMitigationCheck DMC = clone.GetComponent<DamageMitigationCheck>();
-        DMC.bpm = bpm;
-        DMC.beatsTillTrigger = bTT;
+        DamageMitigationCheck DMC = clone.GetComponentInChildren<DamageMitigationCheck>();
+        DMC.selfUpdate(bpm, bTT);
     }
 }

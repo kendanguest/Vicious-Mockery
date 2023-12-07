@@ -501,7 +501,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 8159398327550616616, guid: a929d36940a80e14593a01ec49daf65b, type: 3}
-  bpm: 120
 --- !u!4 &920462368
 Transform:
   m_ObjectHideFlags: 0
@@ -610,6 +609,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71cb3ee6d8a76d84a8f20e3f5016ede6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1031394315 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5541549518704818366, guid: 04642eeafbf766d4f9d70ec484b7cdf9, type: 3}
+  m_PrefabInstance: {fileID: 1903012570}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9197f8e8eeec8b4db599e78be07b172, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1051951612 stripped
@@ -972,8 +982,9 @@ MonoBehaviour:
   rap2: {fileID: 11400000, guid: 04bf447ef9a4b4a40891636e5e62ecf2, type: 2}
   postRap: {fileID: 11400000, guid: 8f0eeec56c7254841b421a5aed52c047, type: 2}
   random: {fileID: 1031394314}
+  Crandom: {fileID: 1031394315}
   RSC: {fileID: 2047909032}
-  SDM: {fileID: 0}
+  SDM: {fileID: 920462367}
   progress: 0
   line: 0
 --- !u!114 &1561931586
