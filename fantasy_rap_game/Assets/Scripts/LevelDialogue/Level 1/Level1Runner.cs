@@ -44,13 +44,14 @@ public class Level1Runner : MonoBehaviour
         UI.SetActive(true);
         progress = false;
         dialogue.currentDialogue = rap1;
+        dialogue.DisplayDialogue(rap1);
+        yield return new WaitUntil(() => line == 0);
+        newPlayerTurn(line, "ADJ");
         yield return new WaitUntil(() => line == 1);
         newPlayerTurn(line, "ADJ");
         yield return new WaitUntil(() => line == 2);
-        newPlayerTurn(line, "ADJ");
-        yield return new WaitUntil(() => line == 3);
         newPlayerTurn(line, "Noun");
-        yield return new WaitUntil(() => line == 4);
+        yield return new WaitUntil(() => line == 3);
         newPlayerTurn(line, "ADJ");
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(true);

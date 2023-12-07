@@ -23,7 +23,10 @@ public class DialogueDisplay : MonoBehaviour
     private List<string> rap = new List<string>();
     private string input = "Uhhhh";
     private DeterminePointChange DPC;
+    private SpawnDodgeMinigame SDM;
     private WordRemover wordRemove;
+    private int beatsTillTrigger = 0;
+    private List<int> burnLoc = new List<int>();
 
     private void Start()
     {
@@ -37,6 +40,7 @@ public class DialogueDisplay : MonoBehaviour
             spaceTooltip.text = "";
         }
         DPC = FindObjectOfType<DeterminePointChange>();
+        SDM = FindObjectOfType<SpawnDodgeMinigame>();
         wordRemove = FindObjectOfType<WordRemover>();
 
     }
@@ -46,7 +50,7 @@ public class DialogueDisplay : MonoBehaviour
         {
             nameDetermination(currentDialogue.name1, currentDialogue.name2, currentDialogue.talking[i]);
             dialogueText.text = dia.dialogueLines[i].dialogue;
-            // The dialogue pauses while it waits for you to press E.
+            // The dialogue pauses while it waits for you to press Space.
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
             // Buffer to not skip lines.
             yield return null;
@@ -138,6 +142,10 @@ public class DialogueDisplay : MonoBehaviour
             for (int i = 0; i < dialogue.dialogueLines.Length; i++)
             {
                 string word = "";
+                if(dialogue.dialogueLines[i].dialogue.IndexOf("*") != -1)
+                {
+                    burnLoc.Add(dialogue.dialogueLines[i].dialogue.IndexOf("*"));
+                }
                 for (int j = 0; j < dialogue.dialogueLines[i].dialogue.Length; j++)
                 {
                     if (dialogue.dialogueLines[i].dialogue[j] != ' ' && dialogue.dialogueLines[i].dialogue[j] != '-')

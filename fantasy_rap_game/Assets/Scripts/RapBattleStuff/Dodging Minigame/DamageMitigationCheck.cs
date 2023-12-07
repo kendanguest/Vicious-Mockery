@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class DamageMitigationCheck : MonoBehaviour
 {
-    public float bpm;
-    public float beatsTillTrigger;
+    public int bpm;
+    public int beatsTillTrigger;
     public float damageOnHit;
     public float damageOnDodge;
     public GameObject meter;

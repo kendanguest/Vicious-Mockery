@@ -17,14 +17,14 @@ public class DeterminePointChange : MonoBehaviour
         // Checks if the previous ending matches with the current ending. 
         if(previous.Count > 0)
         {
-            if(previous[previous.Count].Substring(previous[previous.Count].Length - 2) == word.Substring(word.Length - 2))
+            if(previous[previous.Count-1].Substring(previous[previous.Count-1].Length - 2) == word.Substring(word.Length - 2))
             {
                 // If it does, it doubles the modifier.
                 mod += 1f;
             }
             if(previous.Count > 1)
             {
-                if (previous[previous.Count - 1].Substring(previous[previous.Count - 1].Length - 2) == word.Substring(word.Length - 2))
+                if (previous[previous.Count - 2].Substring(previous[previous.Count - 2].Length - 2) == word.Substring(word.Length - 2))
                 {
                     // If it matches with the one before the last one, it is multiplied by 1.5.
                     mod *= 1.5f;
