@@ -76,6 +76,7 @@ public class Level1Runner : MonoBehaviour
         SDM.startDodgeGame(9, 120);
         yield return new WaitUntil(() => line == 3);
         SDM.startDodgeGame(11, 120);
+        yield return new WaitUntil(() => (progress == true));
 
     }
 
