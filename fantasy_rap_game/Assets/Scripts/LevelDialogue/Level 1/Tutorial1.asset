@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Tutorial1
   m_EditorClassIdentifier: 
   dialogueLines:
-  - dialogue: Whenever it is thy's turn, select the word that you think would insult
-      me the most to fill in the rap.
+  - dialogue: Whenever it is thy's turn, click the word that you think would insult
+      me the most!
   - dialogue: Experience art the best teacher. Try it!
   name1: Fibache
   name2: Prof. Didgeridoo

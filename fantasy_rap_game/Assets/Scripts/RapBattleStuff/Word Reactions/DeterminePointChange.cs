@@ -32,7 +32,14 @@ public class DeterminePointChange : MonoBehaviour
             }
         }
         // adds and resets the point values.
-        previous.Add(word);
+        if(word == "Uhhhh")
+        {
+            value = -3f;
+        }
+        else
+        {
+            previous.Add(word);
+        }
         arrow.points += (value * mod);
         mod = 1f;
     }

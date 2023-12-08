@@ -134,6 +134,7 @@ public class DialogueDisplay : MonoBehaviour
         }
         else
         {
+            rap.Clear();
             // Initializes and creates a list of all the words in the line of dialogue.
             RSC.recieveRapDialogue(dialogue);
             for (int i = 0; i < dialogue.dialogueLines.Length; i++)

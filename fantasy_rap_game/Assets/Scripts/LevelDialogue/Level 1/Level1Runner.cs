@@ -16,6 +16,8 @@ public class Level1Runner : MonoBehaviour
     public DialogueObject rap1;
     public DialogueObject tutorial_2;
     public DialogueObject rap2;
+    public DialogueObject bridge;
+    public DialogueObject trueRap;
     public DialogueObject postRap;
     public wordRandomizer random;
     public ComplimentRandomizer Crandom;
@@ -60,24 +62,34 @@ public class Level1Runner : MonoBehaviour
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(true);
         progress = false;
+        line = 0;
         dialogue.currentDialogue = tutorial_2;
         dialogue.DisplayDialogue(tutorial_2);
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(true);
         progress = false;
-        line = 0;
         dialogue.currentDialogue = rap2;
         dialogue.DisplayDialogue(rap2);
         yield return new WaitUntil(() => line == 0);
-        SDM.startDodgeGame(6, 120);
+        SDM.startDodgeGame(7, 120);
         yield return new WaitUntil(() => line == 1);
         SDM.startDodgeGame(6, 120);
         yield return new WaitUntil(() => line == 2);
-        SDM.startDodgeGame(9, 120);
+        SDM.startDodgeGame(10, 120);
         yield return new WaitUntil(() => line == 3);
-        SDM.startDodgeGame(11, 120);
+        SDM.startDodgeGame(12, 120);
         yield return new WaitUntil(() => (progress == true));
-
+        UI.SetActive(true);
+        progress = false;
+        line = 0;
+        dialogue.currentDialogue = bridge;
+        dialogue.DisplayDialogue(bridge);
+        yield return new WaitUntil(() => (progress == true));
+        UI.SetActive(true);
+        progress = false;
+        dialogue.currentDialogue = trueRap;
+        dialogue.DisplayDialogue(trueRap);
+        yield return new WaitUntil(() => (progress == true));
     }
 
     private void newPlayerTurn(int line, string type)
