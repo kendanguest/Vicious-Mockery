@@ -27,7 +27,14 @@ public class RapShadowController : MonoBehaviour
     {
         // Acesses the dialogue backloged previously.
         inputPos = rap[line].dialogue.IndexOf('[');
-        textBox.text = rap[line].dialogue.Substring(0, inputPos) + rap[line].dialogue.Substring(rap[line].dialogue.IndexOf(']') + 1) + "";
+        if (inputPos == -1)
+        {
+            textBox.text = rap[line].dialogue;
+        }
+        else
+        {
+            textBox.text = rap[line].dialogue.Substring(0, inputPos) + rap[line].dialogue.Substring(rap[line].dialogue.IndexOf(']') + 1) + "";
+        }
     }
     public void updateTextBoxWithSelectedWord(string word)
     {
