@@ -1283,8 +1283,8 @@ MonoBehaviour:
   tutorial_2: {fileID: 11400000, guid: 3117065ae26d0c3429f5849b60ce0215, type: 2}
   rap2: {fileID: 11400000, guid: 04bf447ef9a4b4a40891636e5e62ecf2, type: 2}
   bridge: {fileID: 11400000, guid: 84072c73b1e9664489071d25afa94d48, type: 2}
-  trueRap: {fileID: 0}
-  postRap: {fileID: 11400000, guid: 8f0eeec56c7254841b421a5aed52c047, type: 2}
+  trueRap: {fileID: 11400000, guid: 1cc8f46ae05d3654c8a094d5390539e1, type: 2}
+  postRap: {fileID: 0}
   random: {fileID: 1031394314}
   Crandom: {fileID: 1031394315}
   RSC: {fileID: 2047909032}
