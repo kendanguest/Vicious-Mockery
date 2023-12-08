@@ -73,6 +73,7 @@ public class Level1Runner : MonoBehaviour
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(true);
         progress = false;
+        line = 0;
         dialogue.currentDialogue = rap2;
         dialogue.DisplayDialogue(rap2);
         yield return new WaitUntil(() => line == 0);
@@ -92,6 +93,7 @@ public class Level1Runner : MonoBehaviour
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(true);
         progress = false;
+        line = 0;
         dialogue.currentDialogue = trueRap;
         MusicController.jukeboxSwitch();
         dialogue.DisplayDialogue(trueRap);
@@ -156,7 +158,7 @@ public class Level1Runner : MonoBehaviour
         Crandom.createCompliment(2, type);
     }
     private void newEnemyTurn(int line, int beats, int bpm)
-    {
+    { 
         RSC.shadowRap(line);
         SDM.startDodgeGame(beats, bpm);
     }
