@@ -150,6 +150,7 @@ public class Level1Runner : MonoBehaviour
             dialogue.currentDialogue = postRapL;
             dialogue.DisplayDialogue(postRapL);
         }
+        yield return new WaitUntil(() => (progress == true));
         GetComponent<MenuFunctions>().PlayScene();
     }
 
