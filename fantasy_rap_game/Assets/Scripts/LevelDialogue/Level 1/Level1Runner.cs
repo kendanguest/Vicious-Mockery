@@ -82,9 +82,9 @@ public class Level1Runner : MonoBehaviour
         yield return new WaitUntil(() => line == 1);
         newEnemyTurn(line, 6, 120, "beat");
         yield return new WaitUntil(() => line == 2);
-        newEnemyTurn(line, 10, 120, "hear");
+        newEnemyTurn(line, 10, 120, "tear");
         yield return new WaitUntil(() => line == 3);
-        newEnemyTurn(line, 12, 120, "tear");
+        newEnemyTurn(line, 12, 120, "hear");
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(true);
         progress = false;
@@ -97,18 +97,18 @@ public class Level1Runner : MonoBehaviour
         line = 0;
         dialogue.currentDialogue = trueRap;
         MusicController.jukeboxSwitch();
-        yield return new WaitForSecondsRealtime(beat * 64);
+        yield return new WaitForSecondsRealtime(beat * 32);
         dialogue.DisplayDialogue(trueRap);
         yield return new WaitUntil(() => line == 0);
         RSC.shadowRap(line);
         yield return new WaitUntil(() => line == 1);
-        newEnemyTurn(line, 6, 120, "enough");
+        newEnemyTurn(line, 9, 120, "enough");
         yield return new WaitUntil(() => line == 2);
-        newEnemyTurn(line, 6, 120, "goodbye");
+        newEnemyTurn(line, 9, 120, "goodbye");
         yield return new WaitUntil(() => line == 3);
-        newEnemyTurn(line, 6, 120, "class");
+        newEnemyTurn(line, 8, 120, "class");
         yield return new WaitUntil(() => line == 4);
-        newEnemyTurn(line, 6, 120, "glass");
+        newEnemyTurn(line, 8, 120, "glass");
         yield return new WaitUntil(() => line == 5);
         newPlayerTurn(line, "ADJ");
         yield return new WaitUntil(() => line == 6);
@@ -120,13 +120,13 @@ public class Level1Runner : MonoBehaviour
         yield return new WaitUntil(() => line == 9);
         newPlayerTurn(line, "Noun");
         yield return new WaitUntil(() => line == 10);
-        newEnemyTurn(line, 6, 120, "start-ed");
+        newEnemyTurn(line, 9, 120, "start-ed");
         yield return new WaitUntil(() => line == 11);
-        newEnemyTurn(line, 6, 120, "part-eth");
+        newEnemyTurn(line, 11, 120, "apart-eth");
         yield return new WaitUntil(() => line == 12);
-        newEnemyTurn(line, 6, 120, "champion");
+        newEnemyTurn(line, 11, 120, "champion");
         yield return new WaitUntil(() => line == 13);
-        newEnemyTurn(line, 6, 120, "alien");
+        newEnemyTurn(line, 11, 120, "alien");
         yield return new WaitUntil(() => line == 14);
         newPlayerTurn(line, "ADJ");
         yield return new WaitUntil(() => line == 15);
@@ -139,6 +139,7 @@ public class Level1Runner : MonoBehaviour
         UI.SetActive(true);
         progress = false;
         line = 0;
+        MusicController.jukeboxSwitchBack();
         if (arrow.points > 10)
         {
             dialogue.currentDialogue = postRapW;
