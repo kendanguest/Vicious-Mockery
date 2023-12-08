@@ -1241,6 +1241,7 @@ GameObject:
   - component: {fileID: 1561931585}
   - component: {fileID: 1561931586}
   - component: {fileID: 1561931587}
+  - component: {fileID: 1561931588}
   m_Layer: 0
   m_Name: Level1Runner
   m_TagString: Untagged
@@ -1284,13 +1285,16 @@ MonoBehaviour:
   rap2: {fileID: 11400000, guid: 04bf447ef9a4b4a40891636e5e62ecf2, type: 2}
   bridge: {fileID: 11400000, guid: 84072c73b1e9664489071d25afa94d48, type: 2}
   trueRap: {fileID: 11400000, guid: 1cc8f46ae05d3654c8a094d5390539e1, type: 2}
-  postRap: {fileID: 0}
+  postRapW: {fileID: 11400000, guid: 3ed80eb21c586444493c08df20c24e2e, type: 2}
+  postRapL: {fileID: 11400000, guid: d74957b0088bfbe45955af9a9fa9533f, type: 2}
   random: {fileID: 1031394314}
   Crandom: {fileID: 1031394315}
   RSC: {fileID: 2047909032}
   SDM: {fileID: 920462367}
+  MusicController: {fileID: 1494987529}
   progress: 0
   line: 0
+  arrow: {fileID: 254343612}
 --- !u!114 &1561931586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1316,6 +1320,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b5f91f3842d41845a0dfdd58fbcb3c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1561931588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561931583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b56da7091285934daace67bba85c4e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: '"Title Screen"'
 --- !u!1 &1749271296
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,9 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25a74498676d8404896b25905418fbbb, type: 3}
   m_Name: RapSecondHalf
   m_EditorClassIdentifier: 
-  dialogueLines: []
-  name1: 
-  name2: 
-  talking: 
-  BPM: 0
+  dialogueLines:
+  - dialogue: This battle art over, I art fully fired up.
+  - dialogue: Spitting fire like a dragon, I don't have enough.
+  - dialogue: Thy melting point is nigh, it's time to say goodbye.
+  - dialogue: This battle art over, go back to class.
+  - dialogue: Do it now, before I break thee like glass.
+  - dialogue: Thou sayeth battle art over, thou art a [Input] for thinking so.
+  - dialogue: Mine bars are cold as ice, thee's art a [Input] drawl.
+  - dialogue: Thou face that of a ghoulish [Input],
+  - dialogue: Thou rhythm art comparable to a [Input] snail.
+  - dialogue: When it comes to spitting bars, I'm the king now hail, [Input]!
+  - dialogue: This battle ain't over, it's just getting start-ed.
+  - dialogue: Sure thine bars are chill but I can break them apart-eth.
+  - dialogue: Mine Rhymes art hard as diamonds, thou art facing a champion.
+  - dialogue: Gone in the winds art those of your thoughts, alien!
+  - dialogue: Putting words together, you're a [Input] fool.
+  - dialogue: Don't need iambic pentameter, you're a [Input] kid.
+  - dialogue: Going to the bank, you're still a [Input] failure.
+  - dialogue: Cashing out thine checks, turn you into [Input] vapor.
+  name1: Fibache
+  name2: Prof. Bard
+  talking: 020000000200000002000000020000000200000001000000010000000100000001000000010000000200000002000000020000000200000001000000010000000100000001000000
+  BPM: 180
   pressSpaceToContinue: 0

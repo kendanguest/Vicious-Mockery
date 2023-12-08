@@ -18,13 +18,16 @@ public class Level1Runner : MonoBehaviour
     public DialogueObject rap2;
     public DialogueObject bridge;
     public DialogueObject trueRap;
-    public DialogueObject postRap;
+    public DialogueObject postRapW;
+    public DialogueObject postRapL;
     public wordRandomizer random;
     public ComplimentRandomizer Crandom;
     public RapShadowController RSC;
     public SpawnDodgeMinigame SDM;
+    public MusicController MusicController;
     public bool progress;
     public int line;
+    public pointsArrow arrow;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +42,7 @@ public class Level1Runner : MonoBehaviour
     {
         // This IEnumerator controls when the dialogue spawns.
         // 312 beats 180 BPM.
+        // This code looks like YandereDev programmed it, but it's as we say in the buisness, "it functions."
         yield return new WaitForSeconds(1);
         UI.SetActive(true);
         yield return new WaitUntil(() => (progress == true));
@@ -88,8 +92,59 @@ public class Level1Runner : MonoBehaviour
         UI.SetActive(true);
         progress = false;
         dialogue.currentDialogue = trueRap;
+        MusicController.jukeboxSwitch();
         dialogue.DisplayDialogue(trueRap);
+        yield return new WaitUntil(() => line == 0);
+        SDM.startDodgeGame(7, 120);
+        yield return new WaitUntil(() => line == 1);
+        SDM.startDodgeGame(6, 120);
+        yield return new WaitUntil(() => line == 2);
+        SDM.startDodgeGame(10, 120);
+        yield return new WaitUntil(() => line == 3);
+        SDM.startDodgeGame(12, 120);
+        yield return new WaitUntil(() => line == 4);
+        SDM.startDodgeGame(12, 120);
+        yield return new WaitUntil(() => line == 5);
+        newPlayerTurn(line, "ADJ");
+        yield return new WaitUntil(() => line == 6);
+        newPlayerTurn(line, "ADJ");
+        yield return new WaitUntil(() => line == 7);
+        newPlayerTurn(line, "Noun");
+        yield return new WaitUntil(() => line == 8);
+        newPlayerTurn(line, "ADJ");
+        yield return new WaitUntil(() => line == 9);
+        newPlayerTurn(line, "Noun");
+        yield return new WaitUntil(() => line == 10);
+        SDM.startDodgeGame(7, 120);
+        yield return new WaitUntil(() => line == 11);
+        SDM.startDodgeGame(7, 120);
+        yield return new WaitUntil(() => line == 12);
+        SDM.startDodgeGame(7, 120);
+        yield return new WaitUntil(() => line == 13);
+        SDM.startDodgeGame(7, 120);
+        yield return new WaitUntil(() => line == 14);
+        newPlayerTurn(line, "ADJ");
+        yield return new WaitUntil(() => line == 15);
+        newPlayerTurn(line, "ADJ");
+        yield return new WaitUntil(() => line == 16);
+        newPlayerTurn(line, "ADJ");
+        yield return new WaitUntil(() => line == 17);
+        newPlayerTurn(line, "ADJ");
         yield return new WaitUntil(() => (progress == true));
+        UI.SetActive(true);
+        progress = false;
+        line = 0;
+        if (arrow.points > 10)
+        {
+            dialogue.currentDialogue = postRapW;
+            dialogue.DisplayDialogue(postRapW);
+        }
+        else
+        {
+            dialogue.currentDialogue = postRapL;
+            dialogue.DisplayDialogue(postRapL);
+        }
+        GetComponent<MenuFunctions>().PlayScene();
     }
 
     private void newPlayerTurn(int line, string type)
