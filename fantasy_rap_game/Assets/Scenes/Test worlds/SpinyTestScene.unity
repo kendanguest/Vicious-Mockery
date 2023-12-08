@@ -442,7 +442,11 @@ PrefabInstance:
     - target: {fileID: 1314122031576662555, guid: a929d36940a80e14593a01ec49daf65b, type: 3}
       propertyPath: meter
       value: 
-      objectReference: {fileID: 889892798}
+      objectReference: {fileID: 889892799}
+    - target: {fileID: 1314122031576662555, guid: a929d36940a80e14593a01ec49daf65b, type: 3}
+      propertyPath: beatsTillTrigger
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3528413509801160123, guid: a929d36940a80e14593a01ec49daf65b, type: 3}
       propertyPath: m_SortingOrder
       value: 2
@@ -510,7 +514,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 43059173188741561, guid: a929d36940a80e14593a01ec49daf65b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: a929d36940a80e14593a01ec49daf65b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
