@@ -11,7 +11,10 @@ using UnityEngine.SceneManagement;
 public class MenuFunctions : MonoBehaviour
 {
     public string sceneName = "Level1";
-
+    private void Start()
+    {
+        Cursor.visible = true;
+    }
     public void PlayScene()
     {
         SceneManager.LoadScene(sceneName);

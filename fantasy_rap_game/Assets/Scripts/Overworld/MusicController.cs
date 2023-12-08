@@ -14,12 +14,12 @@ public class MusicController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        jukebox1.mute = false; jukebox2.mute = true;
     }
 
     //Switches from jukebox 1 to jukebox 2.
     public void jukeboxSwitch()
     {
-        jukebox1.mute = true; jukebox2.mute = false;
+        jukebox1.Stop();
+        jukebox2.Play();
     }
 }

@@ -43,6 +43,7 @@ public class Level1Runner : MonoBehaviour
         // This IEnumerator controls when the dialogue spawns.
         // 312 beats 180 BPM.
         // This code looks like YandereDev programmed it, but it's as we say in the buisness, "it functions."
+        line = 0;
         yield return new WaitForSeconds(1);
         UI.SetActive(true);
         yield return new WaitUntil(() => (progress == true));
@@ -99,11 +100,11 @@ public class Level1Runner : MonoBehaviour
         yield return new WaitUntil(() => line == 1);
         SDM.startDodgeGame(6, 120);
         yield return new WaitUntil(() => line == 2);
-        SDM.startDodgeGame(10, 120);
+        SDM.startDodgeGame(6, 120);
         yield return new WaitUntil(() => line == 3);
-        SDM.startDodgeGame(12, 120);
+        SDM.startDodgeGame(6, 120);
         yield return new WaitUntil(() => line == 4);
-        SDM.startDodgeGame(12, 120);
+        SDM.startDodgeGame(6, 120);
         yield return new WaitUntil(() => line == 5);
         newPlayerTurn(line, "ADJ");
         yield return new WaitUntil(() => line == 6);
@@ -115,13 +116,13 @@ public class Level1Runner : MonoBehaviour
         yield return new WaitUntil(() => line == 9);
         newPlayerTurn(line, "Noun");
         yield return new WaitUntil(() => line == 10);
-        SDM.startDodgeGame(7, 120);
+        SDM.startDodgeGame(6, 120);
         yield return new WaitUntil(() => line == 11);
-        SDM.startDodgeGame(7, 120);
+        SDM.startDodgeGame(6, 120);
         yield return new WaitUntil(() => line == 12);
-        SDM.startDodgeGame(7, 120);
+        SDM.startDodgeGame(6, 120);
         yield return new WaitUntil(() => line == 13);
-        SDM.startDodgeGame(7, 120);
+        SDM.startDodgeGame(6, 120);
         yield return new WaitUntil(() => line == 14);
         newPlayerTurn(line, "ADJ");
         yield return new WaitUntil(() => line == 15);

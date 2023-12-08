@@ -16,6 +16,7 @@ public class RapShadowController : MonoBehaviour
     private int previousWordLength;
     public void recieveRapDialogue(DialogueObject rapinput)
     {
+        rap.Clear();
         // Backlogs the dialogue to be accessed later.
         for(int i = 0; i < rapinput.dialogueLines.Length; i++)
         {
