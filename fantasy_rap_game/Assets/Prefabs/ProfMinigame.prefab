@@ -365,8 +365,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bpm: 120
   beatsTillTrigger: 0
-  damageOnHit: 7
-  damageOnDodge: 3
+  damageOnHit: 5
+  damageOnDodge: 0
   meter: {fileID: 0}
   fibacheHead: {fileID: 1862622553791897153}
   parent: {fileID: 8159398327550616616}
