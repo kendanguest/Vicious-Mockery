@@ -16,8 +16,7 @@ public class SpawnDodgeMinigame : MonoBehaviour
     {
         var clone = Instantiate(prefab);
         DamageMitigationCheck DMC = clone.GetComponentInChildren<DamageMitigationCheck>();
-        clone.GetComponentInChildren<Text>().text = word;   
-
+        clone.GetComponent<recieveTextData>().recieveText(word); 
         DMC.selfUpdate(bpm, bTT);
     }
 }

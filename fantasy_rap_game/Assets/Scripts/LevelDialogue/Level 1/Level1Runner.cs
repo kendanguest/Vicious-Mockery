@@ -43,6 +43,7 @@ public class Level1Runner : MonoBehaviour
         // This IEnumerator controls when the dialogue spawns.
         // 312 beats 180 BPM.
         // This code looks like YandereDev programmed it, but it's as we say in the buisness, "it functions."
+        float beat = 60f / 180f;
         line = 0;
         yield return new WaitForSeconds(1);
         UI.SetActive(true);
@@ -96,8 +97,10 @@ public class Level1Runner : MonoBehaviour
         line = 0;
         dialogue.currentDialogue = trueRap;
         MusicController.jukeboxSwitch();
+        yield return new WaitForSecondsRealtime(beat * 64);
         dialogue.DisplayDialogue(trueRap);
         yield return new WaitUntil(() => line == 0);
+        RSC.shadowRap(line);
         yield return new WaitUntil(() => line == 1);
         newEnemyTurn(line, 6, 120, "enough");
         yield return new WaitUntil(() => line == 2);
