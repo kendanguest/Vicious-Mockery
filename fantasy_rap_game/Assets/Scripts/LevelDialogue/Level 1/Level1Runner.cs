@@ -41,7 +41,6 @@ public class Level1Runner : MonoBehaviour
     IEnumerator startlevel()
     {
         // This IEnumerator controls when the dialogue spawns.
-        // 312 beats 180 BPM.
         // This code looks like YandereDev programmed it, but it's as we say in the buisness, "it functions."
         float beat = 60f / 180f;
         line = 0;
@@ -162,7 +161,8 @@ public class Level1Runner : MonoBehaviour
         Crandom.createCompliment(2, type);
     }
     private void newEnemyTurn(int line, int beats, int bpm, string insultWord)
-    { 
+    {
+        // Updates the shadow line and spawns the dodge minigame.
         RSC.shadowRap(line);
         SDM.startDodgeGame(beats, bpm, insultWord);
     }

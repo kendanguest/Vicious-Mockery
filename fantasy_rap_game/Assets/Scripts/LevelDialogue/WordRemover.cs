@@ -12,11 +12,12 @@ public class WordRemover : MonoBehaviour
     private GameObject[] targets;
     public void refreshAllKnownWords()
     {
-        // Finds all instances of the DestroyOnCondition script
+        // Finds all instances of the preset tag.
         targets = GameObject.FindGameObjectsWithTag("Word");
     }
     public void destroyAllKnownWords()
     {
+        // Destroys all the targets gathered before.
         for (int i = 0; i < targets.Length; i++)
         {
             Destroy(targets[i]);
