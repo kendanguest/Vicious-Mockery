@@ -77,13 +77,13 @@ public class Level1Runner : MonoBehaviour
         dialogue.currentDialogue = rap2;
         dialogue.DisplayDialogue(rap2);
         yield return new WaitUntil(() => line == 0);
-        newEnemyTurn(line, 7, 120);
+        newEnemyTurn(line, 7, 120, "insult");
         yield return new WaitUntil(() => line == 1);
-        newEnemyTurn(line, 6, 120);
+        newEnemyTurn(line, 6, 120, "insult");
         yield return new WaitUntil(() => line == 2);
-        newEnemyTurn(line, 10, 120);
+        newEnemyTurn(line, 10, 120, "insult");
         yield return new WaitUntil(() => line == 3);
-        newEnemyTurn(line, 12, 120);
+        newEnemyTurn(line, 12, 120, "insult");
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(true);
         progress = false;
@@ -98,15 +98,15 @@ public class Level1Runner : MonoBehaviour
         MusicController.jukeboxSwitch();
         dialogue.DisplayDialogue(trueRap);
         yield return new WaitUntil(() => line == 0);
-        newEnemyTurn(line, 7, 120);
+        newEnemyTurn(line, 7, 120, "insult");
         yield return new WaitUntil(() => line == 1);
-        newEnemyTurn(line, 6, 120);
+        newEnemyTurn(line, 6, 120, "insult");
         yield return new WaitUntil(() => line == 2);
-        newEnemyTurn(line, 6, 120);
+        newEnemyTurn(line, 6, 120, "insult");
         yield return new WaitUntil(() => line == 3);
-        newEnemyTurn(line, 6, 120);
+        newEnemyTurn(line, 6, 120, "insult");
         yield return new WaitUntil(() => line == 4);
-        newEnemyTurn(line, 6, 120);
+        newEnemyTurn(line, 6, 120, "insult");
         yield return new WaitUntil(() => line == 5);
         newPlayerTurn(line, "ADJ");
         yield return new WaitUntil(() => line == 6);
@@ -118,13 +118,13 @@ public class Level1Runner : MonoBehaviour
         yield return new WaitUntil(() => line == 9);
         newPlayerTurn(line, "Noun");
         yield return new WaitUntil(() => line == 10);
-        newEnemyTurn(line, 6, 120);
+        newEnemyTurn(line, 6, 120, "insult");
         yield return new WaitUntil(() => line == 11);
-        newEnemyTurn(line, 6, 120);
+        newEnemyTurn(line, 6, 120, "insult");
         yield return new WaitUntil(() => line == 12);
-        newEnemyTurn(line, 6, 120);
+        newEnemyTurn(line, 6, 120, "insult");
         yield return new WaitUntil(() => line == 13);
-        newEnemyTurn(line, 6, 120);
+        newEnemyTurn(line, 6, 120, "insult");
         yield return new WaitUntil(() => line == 14);
         newPlayerTurn(line, "ADJ");
         yield return new WaitUntil(() => line == 15);
@@ -157,9 +157,9 @@ public class Level1Runner : MonoBehaviour
         random.createWord(7, type);
         Crandom.createCompliment(2, type);
     }
-    private void newEnemyTurn(int line, int beats, int bpm)
+    private void newEnemyTurn(int line, int beats, int bpm, string insultWord)
     { 
         RSC.shadowRap(line);
-        SDM.startDodgeGame(beats, bpm);
+        SDM.startDodgeGame(beats, bpm, insultWord);
     }
 }
