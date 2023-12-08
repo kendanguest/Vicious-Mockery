@@ -21,6 +21,6 @@ MonoBehaviour:
   - dialogue: These bars might burn, be ready!
   name1: Fibache
   name2: Prof. Didgeridoo
-  talking: 020000000200000002000000
+  talking: 02000000020000000200000002000000
   BPM: 0
   pressSpaceToContinue: 1

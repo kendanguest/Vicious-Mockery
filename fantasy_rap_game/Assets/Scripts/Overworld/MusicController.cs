@@ -22,4 +22,9 @@ public class MusicController : MonoBehaviour
         jukebox1.Stop();
         jukebox2.Play();
     }
+    public void jukeboxSwitchBack()
+    {
+        jukebox2.Stop();
+        jukebox1.Play();
+    }
 }
