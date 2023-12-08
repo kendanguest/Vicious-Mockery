@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Rapscallion: the Final Exam'
+  m_text: 'RAPscallion: the Final Exam'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c0776fec74acae74da96c1c6d92ecbb4, type: 2}
   m_sharedMaterial: {fileID: 3981569955167728084, guid: c0776fec74acae74da96c1c6d92ecbb4, type: 2}
