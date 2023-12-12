@@ -629,6 +629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 8159398327550616616, guid: a929d36940a80e14593a01ec49daf65b, type: 3}
+  dia: {fileID: 1246182767}
 --- !u!4 &920462368
 Transform:
   m_ObjectHideFlags: 0
@@ -723,7 +724,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.5, y: 4, z: 4.1}
+  m_LocalScale: {x: 4, y: 3.5, z: 3.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
