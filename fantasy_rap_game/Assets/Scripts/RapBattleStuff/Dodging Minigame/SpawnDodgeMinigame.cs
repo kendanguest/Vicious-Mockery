@@ -11,12 +11,13 @@ using UnityEngine.UI;
 public class SpawnDodgeMinigame : MonoBehaviour
 {
     public GameObject prefab;
+    public DialogueDisplay dia;
 
-    public void startDodgeGame(int bTT, int bpm, string word)
+    public void startDodgeGame(int bpm, string word)
     {
         var clone = Instantiate(prefab);
-        DamageMitigationCheck DMC = clone.GetComponentInChildren<DamageMitigationCheck>();
+        dia.updateLookoutVar(word);
+        clone.GetComponentInChildren<DamageMitigationCheck>().selfUpdate(bpm);
         clone.GetComponent<recieveTextData>().recieveText(word); 
-        DMC.selfUpdate(bpm, bTT);
     }
 }

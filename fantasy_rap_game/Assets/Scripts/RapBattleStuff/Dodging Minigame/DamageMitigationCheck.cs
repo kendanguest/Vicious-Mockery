@@ -6,19 +6,17 @@ using UnityEngine;
 public class DamageMitigationCheck : MonoBehaviour
 {
     public int bpm;
-    public int beatsTillTrigger;
     public float damageOnHit;
     public float damageOnDodge;
     public pointsArrow meter;
-    private float timeUntilHit;
     private bool isCurrentlyDodging;
     public GameObject fibacheHead;
     public GameObject parent;
-    private float totalTime = 0;
+    private bool terminate;
 
     void Start()
     {
-        timeUntilHit = ( 60f/bpm) * beatsTillTrigger+(60f/bpm)/2;
+        terminate = false;
         meter = FindObjectOfType<pointsArrow>();
     }
 
@@ -26,8 +24,8 @@ public class DamageMitigationCheck : MonoBehaviour
     void Update()
 
     {
-        totalTime += Time.deltaTime;
-        if (totalTime >= timeUntilHit)
+        
+        if (terminate)
         {
             if (isCurrentlyDodging)
             {
@@ -52,10 +50,14 @@ public class DamageMitigationCheck : MonoBehaviour
          isCurrentlyDodging = true;
     }
 
-    public void selfUpdate(int bpmO, int bTTO)
+    public void selfUpdate(int bpmO)
     {
         bpm = bpmO;
-        beatsTillTrigger = bTTO;
+    }
+
+    public void terminateMinigame()
+    {
+        terminate = true;
     }
 
 }

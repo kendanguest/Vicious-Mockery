@@ -77,13 +77,13 @@ public class Level1Runner : MonoBehaviour
         dialogue.currentDialogue = rap2;
         dialogue.DisplayDialogue(rap2);
         yield return new WaitUntil(() => line == 0);
-        newEnemyTurn(line, 7, 120, "heat");
+        newEnemyTurn(line, 120, "heat");
         yield return new WaitUntil(() => line == 1);
-        newEnemyTurn(line, 6, 120, "beat");
+        newEnemyTurn(line, 120, "beat");
         yield return new WaitUntil(() => line == 2);
-        newEnemyTurn(line, 10, 120, "tear");
+        newEnemyTurn(line, 120, "tear");
         yield return new WaitUntil(() => line == 3);
-        newEnemyTurn(line, 12, 120, "hear");
+        newEnemyTurn(line, 120, "hear");
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(true);
         progress = false;
@@ -101,13 +101,13 @@ public class Level1Runner : MonoBehaviour
         yield return new WaitUntil(() => line == 0);
         RSC.shadowRap(line);
         yield return new WaitUntil(() => line == 1);
-        newEnemyTurn(line, 9, 120, "enough");
+        newEnemyTurn(line, 120, "enough");
         yield return new WaitUntil(() => line == 2);
-        newEnemyTurn(line, 9, 120, "goodbye");
+        newEnemyTurn(line, 120, "goodbye");
         yield return new WaitUntil(() => line == 3);
-        newEnemyTurn(line, 8, 120, "class");
+        newEnemyTurn(line, 120, "class");
         yield return new WaitUntil(() => line == 4);
-        newEnemyTurn(line, 8, 120, "glass");
+        newEnemyTurn(line, 120, "glass");
         yield return new WaitUntil(() => line == 5);
         newPlayerTurn(line, "ADJ");
         yield return new WaitUntil(() => line == 6);
@@ -119,13 +119,13 @@ public class Level1Runner : MonoBehaviour
         yield return new WaitUntil(() => line == 9);
         newPlayerTurn(line, "Noun");
         yield return new WaitUntil(() => line == 10);
-        newEnemyTurn(line, 9, 120, "start-ed");
+        newEnemyTurn(line, 120, "start-ed");
         yield return new WaitUntil(() => line == 11);
-        newEnemyTurn(line, 11, 120, "apart-eth");
+        newEnemyTurn(line, 120, "apart-eth");
         yield return new WaitUntil(() => line == 12);
-        newEnemyTurn(line, 11, 120, "champion");
+        newEnemyTurn(line, 120, "champion");
         yield return new WaitUntil(() => line == 13);
-        newEnemyTurn(line, 11, 120, "alien");
+        newEnemyTurn(line, 120, "alien");
         yield return new WaitUntil(() => line == 14);
         newPlayerTurn(line, "ADJ");
         yield return new WaitUntil(() => line == 15);
@@ -160,10 +160,10 @@ public class Level1Runner : MonoBehaviour
         random.createWord(7, type);
         Crandom.createCompliment(2, type);
     }
-    private void newEnemyTurn(int line, int beats, int bpm, string insultWord)
+    private void newEnemyTurn(int line,int bpm, string insultWord)
     {
         // Updates the shadow line and spawns the dodge minigame.
         RSC.shadowRap(line);
-        SDM.startDodgeGame(beats, bpm, insultWord);
+        SDM.startDodgeGame(bpm, insultWord);
     }
 }

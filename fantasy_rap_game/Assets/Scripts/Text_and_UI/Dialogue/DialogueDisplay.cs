@@ -24,6 +24,7 @@ public class DialogueDisplay : MonoBehaviour
     private string input = "Uhhhh";
     private DeterminePointChange DPC;
     private WordRemover wordRemove;
+    private string lookoutWord;
     
 
     private void Start()
@@ -39,7 +40,6 @@ public class DialogueDisplay : MonoBehaviour
         }
         DPC = FindObjectOfType<DeterminePointChange>();
         wordRemove = FindObjectOfType<WordRemover>();
-
     }
     private IEnumerator MoveThroughDialogue(DialogueObject dia)
     {
@@ -80,6 +80,11 @@ public class DialogueDisplay : MonoBehaviour
                 wordRemove.refreshAllKnownWords();
                 wordRemove.destroyAllKnownWords();
             }
+            // Checks if the current word is the trigger word for the enemy minigame.
+            else if (rap[i].Substring(0, rap[i].Length - 1) == lookoutWord)
+            {
+                FindObjectOfType<DamageMitigationCheck>().terminateMinigame();
+            }
             // Checks to see if the current word is the internal character for newline.
             if (rap[i] == "_")
             {
@@ -90,11 +95,9 @@ public class DialogueDisplay : MonoBehaviour
                 }
                 else
                 {
-                    yield return new WaitForSeconds(beat);
-                    yield return new WaitForSeconds(beat);
-                    yield return new WaitForSeconds(beat);
+                    yield return new WaitForSeconds(beat * 3);
                 }
-                textP.linecount();
+                textP.linecount(level);
                 RSC.eraseLine();
                 i++;
                 j++;
@@ -109,9 +112,7 @@ public class DialogueDisplay : MonoBehaviour
             }
         }
         RSC.eraseLine();
-        yield return new WaitForSeconds(beat);
-        yield return new WaitForSeconds(beat);
-        yield return new WaitForSeconds(beat);
+        yield return new WaitForSeconds(beat * 3);
         textP.progressText(level);
         dialogueText.text = "";
         dialogueBox.SetActive(false);
@@ -189,6 +190,10 @@ public class DialogueDisplay : MonoBehaviour
     {
         input = word;
         RSC.updateTextBoxWithSelectedWord(word);
+    }
+    public void updateLookoutVar(string word)
+    {
+        lookoutWord = word;
     }
 }
 
