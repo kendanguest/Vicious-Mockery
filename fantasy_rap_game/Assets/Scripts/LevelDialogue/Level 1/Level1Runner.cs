@@ -119,9 +119,9 @@ public class Level1Runner : MonoBehaviour
         yield return new WaitUntil(() => line == 9);
         newPlayerTurn(line, "Noun");
         yield return new WaitUntil(() => line == 10);
-        newEnemyTurn(line, 120, "start-ed");
+        newEnemyTurn(line, 120, "start");
         yield return new WaitUntil(() => line == 11);
-        newEnemyTurn(line, 120, "apart-eth");
+        newEnemyTurn(line, 120, "apart");
         yield return new WaitUntil(() => line == 12);
         newEnemyTurn(line, 120, "champion");
         yield return new WaitUntil(() => line == 13);
