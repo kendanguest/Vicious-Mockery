@@ -40,10 +40,14 @@ public class wordRandomizer : MonoBehaviour
     }
     public void createWord(int numWords, string POS)
     {
-        // Checks if the words needed are nouns or adjectives.
+        // This loop is repeated a number of times equal to the amount called for.
         for (int i = 0; i < numWords; i++)
         {
-            // This loop is repeated a number of times equal to the amount called for.
+            // Will sacrifice the lack of duplicates to stop a crash if need be.
+            if(wordsN.Count == 0 || wordsA.Count == 0)
+            {
+                reShuffleWords();
+            }
             // Generates a random float within a range onscreen.
             float x = Random.Range(-5f, 5f);
             float y = Random.Range(0f, 4f);
@@ -59,6 +63,7 @@ public class wordRandomizer : MonoBehaviour
             int rand = Random.Range(0, wordsN.Count);
             string word = "";
             float point = 0.0f;
+            // Checks if the word is a noun or adjective and adjusts accordingly.
             if (POS == "Noun")
             {
                 word = wordsN[rand];

@@ -56,6 +56,8 @@ public class Level1Runner : MonoBehaviour
         progress = false;
         dialogue.currentDialogue = rap1;
         dialogue.DisplayDialogue(rap1);
+        random.speed = 10;
+        Crandom.speed = 10;
         yield return new WaitUntil(() => line == 0);
         newPlayerTurn(line, "ADJ");
         yield return new WaitUntil(() => line == 1);
@@ -96,6 +98,8 @@ public class Level1Runner : MonoBehaviour
         line = 0;
         dialogue.currentDialogue = trueRap;
         MusicController.jukeboxSwitch();
+        random.speed = 100;
+        Crandom.speed = 100;
         yield return new WaitForSecondsRealtime(beat * 32);
         dialogue.DisplayDialogue(trueRap);
         yield return new WaitUntil(() => line == 0);

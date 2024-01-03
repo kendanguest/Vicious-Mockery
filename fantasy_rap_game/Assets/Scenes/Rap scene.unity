@@ -1611,7 +1611,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4545649452243678825, guid: 04642eeafbf766d4f9d70ec484b7cdf9, type: 3}
       propertyPath: speed
-      value: 150
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545649452243678825, guid: 04642eeafbf766d4f9d70ec484b7cdf9, type: 3}
+      propertyPath: words.Array.data[2]
+      value: Cowardly
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545649452243678825, guid: 04642eeafbf766d4f9d70ec484b7cdf9, type: 3}
+      propertyPath: words.Array.data[3]
+      value: Villainous
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545649452243678825, guid: 04642eeafbf766d4f9d70ec484b7cdf9, type: 3}
+      propertyPath: words.Array.data[4]
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 4545649452243678825, guid: 04642eeafbf766d4f9d70ec484b7cdf9, type: 3}
       propertyPath: points.Array.data[0]
@@ -1695,7 +1707,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5541549518704818366, guid: 04642eeafbf766d4f9d70ec484b7cdf9, type: 3}
       propertyPath: speed
-      value: 150
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7360866733548198088, guid: 04642eeafbf766d4f9d70ec484b7cdf9, type: 3}
       propertyPath: arrow
