@@ -12,6 +12,7 @@ public class wordRandomizer : MonoBehaviour
     public string[] words;
     public float[] points;
     public string[] partSpeechI;
+    public string[] suffix;
     private List<string> wordsN = new List<string>();
     private List<float> pointsN = new List<float>();
     private List<string> wordsA = new List<string>();
