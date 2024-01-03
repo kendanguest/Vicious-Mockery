@@ -103,7 +103,7 @@ public class Level1Runner : MonoBehaviour
         yield return new WaitForSecondsRealtime(beat * 32);
         dialogue.DisplayDialogue(trueRap);
         yield return new WaitUntil(() => line == 0);
-        RSC.shadowRap(line);
+        newEnemyTurn(line, 120, "up");
         yield return new WaitUntil(() => line == 1);
         newEnemyTurn(line, 120, "enough");
         yield return new WaitUntil(() => line == 2);
