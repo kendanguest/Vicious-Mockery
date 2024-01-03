@@ -100,6 +100,7 @@ public class Level1Runner : MonoBehaviour
         MusicController.jukeboxSwitch();
         random.speed = 100;
         Crandom.speed = 100;
+        dialogue.forceTooltipchange(false);
         yield return new WaitForSecondsRealtime(beat * 32);
         dialogue.DisplayDialogue(trueRap);
         yield return new WaitUntil(() => line == 0);

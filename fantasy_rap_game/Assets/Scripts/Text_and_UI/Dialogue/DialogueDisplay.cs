@@ -188,12 +188,27 @@ public class DialogueDisplay : MonoBehaviour
     }
     public void inputUpdate(string word)
     {
+        // Updates the word that will be submitted with the current word selected.
         input = word;
         RSC.updateTextBoxWithSelectedWord(word);
     }
     public void updateLookoutVar(string word)
     {
+        // Updates the lookoutWord, for some reason it needs to be done this way.
         lookoutWord = word;
+    }
+
+    public void forceTooltipchange(bool t)
+    {
+        // Forces the space to proceed tooltip to update in real time.
+        if (t)
+        {
+            spaceTooltip.text = "Press space to proceed";
+        }
+        else
+        {
+            spaceTooltip.text = "";
+        }
     }
 }
 
