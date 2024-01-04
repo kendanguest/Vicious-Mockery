@@ -9,15 +9,10 @@ using UnityEngine;
 
 public class wordRandomizer : MonoBehaviour
 {
-    public string[] words;
-    public float[] points;
-    public string[] partSpeechI;
-    public string[] suffix;
-    private List<string> wordsN = new List<string>();
-    private List<float> pointsN = new List<float>();
-    private List<string> wordsA = new List<string>();
-    private List<float> pointsA = new List<float>();
-    private List<string> suffixL = new List<string>();
+    
+    public WordObject[] words;
+    private List<WordObject> wordsN = new List<WordObject>();
+    private List<WordObject> wordsA = new List<WordObject>();
     public GameObject prefab;
     public GameObject lineOBJ;
     private Vector2 position;
@@ -28,17 +23,14 @@ public class wordRandomizer : MonoBehaviour
         // Sorts the words into nouns and adjectives.
         for(int i = 0; i < words.Length; i++)
         {
-            if (partSpeechI[i] == "Noun")
+            if (words[i].partOfSpeech == "Noun")
             {
                 wordsN.Add(words[i]);
-                pointsN.Add(points[i]);
             }
-            else if (partSpeechI[i] == "ADJ")
+            else if (words[i].partOfSpeech == "ADJ")
             {
                 wordsA.Add(words[i]);
-                pointsA.Add(points[i]);
             }
-            suffixL.Add(suffix[i]);
         }
     }
     public void createWord(int numWords, string POS, bool append)
@@ -63,35 +55,39 @@ public class wordRandomizer : MonoBehaviour
             clonebeat.beatsPerMinute = BPM;
             clonebeat.speed = speed;
             // Generates a random word and it's point value and attaches it to the word.
-            int rand = Random.Range(0, wordsN.Count);
+            int rand = 0;
+            if (POS == "Noun")
+            {
+                rand = Random.Range(0, wordsN.Count);
+            }
+            else
+            {
+                rand = Random.Range(0, wordsA.Count);
+            }
             string word = "";
             float point = 0.0f;
             // Checks if the word is a noun or adjective and adjusts accordingly.
             if (POS == "Noun")
             {
-                word = wordsN[rand];
-                point = pointsN[rand];
+                point = wordsN[rand].points;
                 if (append)
                 {
-                    print("append entered");
-                    word = word + suffixL[rand];
-                    suffixL.RemoveAt(rand);
+                    word = wordsN[rand].word + wordsN[rand].suffix;
                 }
+                else
+                    word = wordsN[rand].word;
                 wordsN.RemoveAt(rand);
-                pointsN.RemoveAt(rand);
             }
             else
             {
-                word = wordsA[rand];
-                point = pointsA[rand];
+                point = wordsA[rand].points;
                 if (append)
                 {
-                    print("append entered");
-                    word = word + suffixL[rand];
-                    suffixL.RemoveAt(rand);
+                    word = wordsA[rand].word + wordsA[rand].suffix;
                 }
+                else
+                    word = wordsA[rand].word;
                 wordsA.RemoveAt(rand);
-                pointsA.RemoveAt(rand);
             }
             string PSI = POS;
             WordCustomizer obj = clone.GetComponent<WordCustomizer>();
@@ -105,24 +101,18 @@ public class wordRandomizer : MonoBehaviour
     {
         // Clears the current word list to prepare to re-apply them all again.
         wordsN.Clear();
-        pointsN.Clear();
         wordsA.Clear();
-        pointsA.Clear();
-        suffixL.Clear();
         // Sorts the words into nouns and adjectives.
         for (int i = 0; i < words.Length; i++)
         {
-            if (partSpeechI[i] == "Noun")
+            if (words[i].partOfSpeech == "Noun")
             {
                 wordsN.Add(words[i]);
-                pointsN.Add(points[i]);
             }
-            else if (partSpeechI[i] == "ADJ")
+            else if (words[i].partOfSpeech == "ADJ")
             {
                 wordsA.Add(words[i]);
-                pointsA.Add(points[i]);
             }
-            suffixL.Add(suffix[i]);
         }
     }
 }

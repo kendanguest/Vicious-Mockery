@@ -59,7 +59,7 @@ public class Level1Runner : MonoBehaviour
         random.speed = 10;
         Crandom.speed = 10;
         yield return new WaitUntil(() => line == 0);
-        newPlayerTurn(line, "ADJ", false);
+        newPlayerTurn(line, "ADJ", true);
         yield return new WaitUntil(() => line == 1);
         newPlayerTurn(line, "ADJ", true);
         yield return new WaitUntil(() => line == 2);
