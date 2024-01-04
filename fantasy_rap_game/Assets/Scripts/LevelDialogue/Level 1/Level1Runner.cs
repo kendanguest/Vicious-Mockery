@@ -59,13 +59,13 @@ public class Level1Runner : MonoBehaviour
         random.speed = 10;
         Crandom.speed = 10;
         yield return new WaitUntil(() => line == 0);
-        newPlayerTurn(line, "ADJ");
+        newPlayerTurn(line, "ADJ", false);
         yield return new WaitUntil(() => line == 1);
-        newPlayerTurn(line, "ADJ");
+        newPlayerTurn(line, "ADJ", true);
         yield return new WaitUntil(() => line == 2);
-        newPlayerTurn(line, "Noun");
+        newPlayerTurn(line, "Noun", false);
         yield return new WaitUntil(() => line == 3);
-        newPlayerTurn(line, "ADJ");
+        newPlayerTurn(line, "ADJ", false);
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(true);
         progress = false;
@@ -114,15 +114,15 @@ public class Level1Runner : MonoBehaviour
         yield return new WaitUntil(() => line == 4);
         newEnemyTurn(line, 120, "glass");
         yield return new WaitUntil(() => line == 5);
-        newPlayerTurn(line, "ADJ");
+        newPlayerTurn(line, "ADJ", false);
         yield return new WaitUntil(() => line == 6);
-        newPlayerTurn(line, "ADJ");
+        newPlayerTurn(line, "ADJ", true);
         yield return new WaitUntil(() => line == 7);
-        newPlayerTurn(line, "Noun");
+        newPlayerTurn(line, "Noun", false);
         yield return new WaitUntil(() => line == 8);
-        newPlayerTurn(line, "ADJ");
+        newPlayerTurn(line, "ADJ", true);
         yield return new WaitUntil(() => line == 9);
-        newPlayerTurn(line, "Noun");
+        newPlayerTurn(line, "Noun", false);
         yield return new WaitUntil(() => line == 10);
         newEnemyTurn(line, 120, "start");
         yield return new WaitUntil(() => line == 11);
@@ -132,13 +132,13 @@ public class Level1Runner : MonoBehaviour
         yield return new WaitUntil(() => line == 13);
         newEnemyTurn(line, 120, "alien");
         yield return new WaitUntil(() => line == 14);
-        newPlayerTurn(line, "ADJ");
+        newPlayerTurn(line, "ADJ", true);
         yield return new WaitUntil(() => line == 15);
-        newPlayerTurn(line, "ADJ");
+        newPlayerTurn(line, "ADJ", true);
         yield return new WaitUntil(() => line == 16);
-        newPlayerTurn(line, "ADJ");
+        newPlayerTurn(line, "ADJ", true);
         yield return new WaitUntil(() => line == 17);
-        newPlayerTurn(line, "ADJ");
+        newPlayerTurn(line, "ADJ", true);
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(true);
         progress = false;
@@ -158,11 +158,12 @@ public class Level1Runner : MonoBehaviour
         GetComponent<MenuFunctions>().PlayScene();
     }
 
-    private void newPlayerTurn(int line, string type)
+    private void newPlayerTurn(int line, string type, bool append)
     {
         // Updates the shadow line and creates the words needed.
         RSC.shadowRap(line);
-        random.createWord(7, type);
+        print(append);
+        random.createWord(7, type, append);
         Crandom.createCompliment(2, type);
     }
     private void newEnemyTurn(int line,int bpm, string insultWord)

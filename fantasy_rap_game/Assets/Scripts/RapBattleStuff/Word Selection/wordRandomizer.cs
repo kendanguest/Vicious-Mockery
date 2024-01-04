@@ -17,6 +17,7 @@ public class wordRandomizer : MonoBehaviour
     private List<float> pointsN = new List<float>();
     private List<string> wordsA = new List<string>();
     private List<float> pointsA = new List<float>();
+    private List<string> suffixL = new List<string>();
     public GameObject prefab;
     public GameObject lineOBJ;
     private Vector2 position;
@@ -37,9 +38,10 @@ public class wordRandomizer : MonoBehaviour
                 wordsA.Add(words[i]);
                 pointsA.Add(points[i]);
             }
+            suffixL.Add(suffix[i]);
         }
     }
-    public void createWord(int numWords, string POS)
+    public void createWord(int numWords, string POS, bool append)
     {
         // This loop is repeated a number of times equal to the amount called for.
         for (int i = 0; i < numWords; i++)
@@ -69,6 +71,12 @@ public class wordRandomizer : MonoBehaviour
             {
                 word = wordsN[rand];
                 point = pointsN[rand];
+                if (append)
+                {
+                    print("append entered");
+                    word = word + suffixL[rand];
+                    suffixL.RemoveAt(rand);
+                }
                 wordsN.RemoveAt(rand);
                 pointsN.RemoveAt(rand);
             }
@@ -76,6 +84,12 @@ public class wordRandomizer : MonoBehaviour
             {
                 word = wordsA[rand];
                 point = pointsA[rand];
+                if (append)
+                {
+                    print("append entered");
+                    word = word + suffixL[rand];
+                    suffixL.RemoveAt(rand);
+                }
                 wordsA.RemoveAt(rand);
                 pointsA.RemoveAt(rand);
             }
@@ -94,6 +108,7 @@ public class wordRandomizer : MonoBehaviour
         pointsN.Clear();
         wordsA.Clear();
         pointsA.Clear();
+        suffixL.Clear();
         // Sorts the words into nouns and adjectives.
         for (int i = 0; i < words.Length; i++)
         {
@@ -107,6 +122,7 @@ public class wordRandomizer : MonoBehaviour
                 wordsA.Add(words[i]);
                 pointsA.Add(points[i]);
             }
+            suffixL.Add(suffix[i]);
         }
     }
 }
