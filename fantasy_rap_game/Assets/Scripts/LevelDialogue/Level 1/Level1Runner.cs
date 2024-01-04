@@ -65,7 +65,7 @@ public class Level1Runner : MonoBehaviour
         yield return new WaitUntil(() => line == 2);
         newPlayerTurn(line, "Noun", false);
         yield return new WaitUntil(() => line == 3);
-        newPlayerTurn(line, "ADJ", false);
+        newPlayerTurn(line, "Noun", false);
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(true);
         progress = false;
@@ -163,7 +163,7 @@ public class Level1Runner : MonoBehaviour
         // Updates the shadow line and creates the words needed.
         RSC.shadowRap(line);
         print(append);
-        random.createWord(7, type, append);
+        random.createInsult(7, type, append);
         Crandom.createCompliment(2, type);
     }
     private void newEnemyTurn(int line,int bpm, string insultWord)
