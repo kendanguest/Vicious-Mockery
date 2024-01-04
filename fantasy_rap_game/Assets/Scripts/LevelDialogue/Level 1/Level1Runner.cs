@@ -162,7 +162,6 @@ public class Level1Runner : MonoBehaviour
     {
         // Updates the shadow line and creates the words needed.
         RSC.shadowRap(line);
-        print(append);
         random.createInsult(7, type, append);
         Crandom.createCompliment(2, type);
     }
