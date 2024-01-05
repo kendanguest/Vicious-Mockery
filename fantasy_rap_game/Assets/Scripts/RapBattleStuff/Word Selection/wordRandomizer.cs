@@ -86,12 +86,16 @@ public class wordRandomizer : MonoBehaviour
                 if (POS == "Noun")
                 {
                     point = wordsN[rand].points;
+                    // Checks if the suffix needs to be appended to the end of the word.
                     if (append)
                     {
                         word = wordsN[rand].word + wordsN[rand].suffix;
                     }
                     else
+                    {
                         word = wordsN[rand].word;
+                    }
+                    // Removes the word from the list after it gets used once.
                     wordsN.RemoveAt(rand);
                 }
                 else
@@ -102,7 +106,10 @@ public class wordRandomizer : MonoBehaviour
                         word = wordsA[rand].word + wordsA[rand].suffix;
                     }
                     else
+                    {
                         word = wordsA[rand].word;
+                    }
+                    // Removes the word from the list after it gets used once.
                     wordsA.RemoveAt(rand);
                 }
                 string PSI = POS;
@@ -114,7 +121,7 @@ public class wordRandomizer : MonoBehaviour
                 // Will sacrifice the lack of duplicates to stop a crash if need be.
                 if (complimentsN.Count == 0 || complimentsA.Count == 0)
                 {
-                    reShuffleWords(1);
+                    reShuffleWords(2);
                 }
                 // Generates a random float within a range onscreen.
                 float x = Random.Range(-5f, 5f);
@@ -143,23 +150,31 @@ public class wordRandomizer : MonoBehaviour
                 if (POS == "Noun")
                 {
                     point = complimentsN[rand].points;
+                    // Checks if the suffix needs to be appended to the end of the word.
                     if (append)
                     {
                         word = complimentsN[rand].word + complimentsN[rand].suffix;
                     }
                     else
+                    {
                         word = complimentsN[rand].word;
+                    }
+                    // Removes the word from the list after it gets used once.
                     complimentsN.RemoveAt(rand);
                 }
                 else
                 {
                     point = complimentsA[rand].points;
+
                     if (append)
                     {
                         word = complimentsA[rand].word + complimentsA[rand].suffix;
                     }
                     else
+                    {
                         word = complimentsA[rand].word;
+                    }
+                    // Removes the word from the list after it gets used once.
                     complimentsA.RemoveAt(rand);
                 }
                 string PSI = POS;
@@ -170,6 +185,7 @@ public class wordRandomizer : MonoBehaviour
     
     }
 
+    // This specifically creates insults
     public void createInsult(int numWords, string POS, bool append)
     {
         createWord(numWords, POS, append, 1);
@@ -177,11 +193,13 @@ public class wordRandomizer : MonoBehaviour
         Instantiate(lineOBJ);
         reShuffleWords(1);
     }
+    // This specifically creates compliments
     public void createCompliment(int numWords, string POS, bool append)
     {
         createWord(numWords, POS, append, 2);
         reShuffleWords(2);
     }
+    // This will reShuffle all the words back into the list, 1 is insults, 2 is compliments.
     public void reShuffleWords(int type)
     {
         if(type == 1)
@@ -204,8 +222,10 @@ public class wordRandomizer : MonoBehaviour
         }
         else if (type == 2)
         {
+            // Clears the current word list to prepare to re-apply them all again.
             complimentsN.Clear();
             complimentsA.Clear();
+            // Sorts the words into nouns and adjectives.
             for (int i = 0; i < compliments.Length; i++)
             {
                 if (compliments[i].partOfSpeech == "Noun")
