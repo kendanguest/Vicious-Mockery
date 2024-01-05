@@ -10,6 +10,7 @@ using UnityEngine;
 public class DeterminePointChange : MonoBehaviour
 {
     public pointsArrow arrow;
+    public PointsUIController controller;
     private float mod = 1f;
     private List<string> previous = new List<string>();
     public void implementPoints(float value, string word)
@@ -41,6 +42,7 @@ public class DeterminePointChange : MonoBehaviour
             previous.Add(word);
         }
         arrow.points += (value * mod);
+        controller.displayPointChange(value * mod);
         mod = 1f;
     }
 }

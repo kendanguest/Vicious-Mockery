@@ -33,11 +33,15 @@ public class RapShadowController : MonoBehaviour
         }
         else
         {
-            textBox.text = rap[line].dialogue.Substring(0, inputPos) + rap[line].dialogue.Substring(rap[line].dialogue.IndexOf(']') + 1) + "";
+            textBox.text = rap[line].dialogue.Substring(0, inputPos) + "_____" + rap[line].dialogue.Substring(rap[line].dialogue.IndexOf(']') + 1) + "";
         }
     }
     public void updateTextBoxWithSelectedWord(string word)
     {
+        if(previousWordLength == 0)
+        {
+            previousWordLength = 5;
+        }
         // Updates the text to include what word is selected.
         textBox.text = textBox.text.Substring(0, inputPos) + word + textBox.text.Substring(inputPos + previousWordLength);
         previousWordLength = word.Length;
