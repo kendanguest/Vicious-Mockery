@@ -21,7 +21,6 @@ public class Level1Runner : MonoBehaviour
     public DialogueObject postRapW;
     public DialogueObject postRapL;
     public wordRandomizer random;
-    public ComplimentRandomizer Crandom;
     public RapShadowController RSC;
     public SpawnDodgeMinigame SDM;
     public MusicController MusicController;
@@ -36,9 +35,9 @@ public class Level1Runner : MonoBehaviour
         UI.SetActive(false);
         dialogue.currentDialogue = prefightDialogue;
         dialogue.DisplayDialogue(prefightDialogue);
-        StartCoroutine(startlevel());
+        StartCoroutine(Startlevel());
     }
-    IEnumerator startlevel()
+    IEnumerator Startlevel()
     {
         // This IEnumerator controls when the dialogue spawns.
         // This code looks like YandereDev programmed it, but it's as we say in the buisness, "it functions."
@@ -57,7 +56,6 @@ public class Level1Runner : MonoBehaviour
         dialogue.currentDialogue = rap1;
         dialogue.DisplayDialogue(rap1);
         random.speed = 10;
-        Crandom.speed = 10;
         yield return new WaitUntil(() => line == 0);
         newPlayerTurn(line, "ADJ", true);
         yield return new WaitUntil(() => line == 1);
@@ -99,7 +97,6 @@ public class Level1Runner : MonoBehaviour
         dialogue.currentDialogue = trueRap;
         MusicController.jukeboxSwitch();
         random.speed = 100;
-        Crandom.speed = 100;
         dialogue.forceTooltipchange(false);
         yield return new WaitForSecondsRealtime(beat * 32);
         dialogue.DisplayDialogue(trueRap);
@@ -163,7 +160,7 @@ public class Level1Runner : MonoBehaviour
         // Updates the shadow line and creates the words needed.
         RSC.shadowRap(line);
         random.createInsult(7, type, append);
-        Crandom.createCompliment(2, type);
+        random.createCompliment(2, type, append);
     }
     private void newEnemyTurn(int line,int bpm, string insultWord)
     {
