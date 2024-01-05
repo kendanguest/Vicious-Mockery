@@ -24,19 +24,23 @@ public class PointsUIController : MonoBehaviour
         gameState1.text = "Dead";
         gameState2.text = "even!";
     }
+    // Called when the pointer updates, and adjusts UI accordingly.
     public void displayPointChange(float points, List<int> mod, string word)
     {
         enemyPointsZone.text = "";
         playerPointsZone.text = "";
+        // Determines if the point change is positive or negative and adds it to the combo text.
         if(points > 0)
         {
             currentCombo = currentCombo + "+";
         }
         currentCombo = currentCombo + points.ToString() + "!";
+        // Determines if the word is the filled-in response and adds a new line to the combo text.
         if (word == "Uhhhh")
         {
             currentCombo = currentCombo + "\nslip up!";
         }
+        // Adds new data to the combo text for all of the modifiers applied to the word.
         for (int i = 0; i < mod.Count; i++)
         {
             if(mod[i] > 0)
@@ -53,7 +57,8 @@ public class PointsUIController : MonoBehaviour
             }
 
         }
-        if(pointsA.points < 0)
+        // Checks one more time if it's a negative or positive bonus and applies it to the correct area.
+        if(points < 0)
         {
             enemyPointsZone.text = currentCombo;
         }
@@ -62,6 +67,7 @@ public class PointsUIController : MonoBehaviour
             playerPointsZone.text = currentCombo;
         }
         currentCombo = "";
+        // This block of if statements will update the flavor text in the middle depending on how good or bad the player is doing.
         if(pointsA.points > 10)
         {
             if(pointsA.points > 50)
