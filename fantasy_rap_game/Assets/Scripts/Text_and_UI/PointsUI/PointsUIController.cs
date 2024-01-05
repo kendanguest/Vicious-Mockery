@@ -15,12 +15,12 @@ public class PointsUIController : MonoBehaviour
     public TMP_Text enemyPointsZone;
     public TMP_Text gameState1;
     public TMP_Text gameState2;
-    private pointsArrow points;
+    private pointsArrow pointsA;
     private string currentCombo;
     // Start is called before the first frame update
     void Start()
     {
-        points = FindObjectOfType<pointsArrow>();
+        pointsA = FindObjectOfType<pointsArrow>();
         gameState1.text = "Dead";
         gameState2.text = "even!";
     }
@@ -53,7 +53,7 @@ public class PointsUIController : MonoBehaviour
             }
 
         }
-        if(points < 0)
+        if(pointsA.points < 0)
         {
             enemyPointsZone.text = currentCombo;
         }
@@ -62,9 +62,9 @@ public class PointsUIController : MonoBehaviour
             playerPointsZone.text = currentCombo;
         }
         currentCombo = "";
-        if(points > 10)
+        if(pointsA.points > 10)
         {
-            if(points > 50)
+            if(pointsA.points > 50)
             {
                 gameState1.text = "Total";
                 gameState2.text = "slaughter!";
@@ -75,9 +75,9 @@ public class PointsUIController : MonoBehaviour
                 gameState2.text = "winning!";
             }
         }
-        else if (points < -10)
+        else if (pointsA.points < -10)
         {
-            if (points < -50)
+            if (pointsA.points < -50)
             {
                 gameState1.text = "Complete";
                 gameState2.text = "loss!";
