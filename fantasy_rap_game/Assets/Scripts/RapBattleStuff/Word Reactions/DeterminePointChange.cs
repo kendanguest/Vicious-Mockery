@@ -59,6 +59,7 @@ public class DeterminePointChange : MonoBehaviour
         }
         arrow.points += (value * mod);
         controller.displayPointChange(value * mod, mods, word);
+        mods.Clear();
         mod = 1f;
     }
 }
