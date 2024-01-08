@@ -1,3 +1,7 @@
+/* Auth: Vincent Hayes
+ * LED: 12/1/23
+ * Desc:Moves player character in minigame
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -1,7 +1,7 @@
 /*
  *August Rossano (And the Header author)
  *LED:11/30/23
- *DESC:
+ *DESC: Allows player to click on words
  */
 using System.Collections;
 using System.Collections.Generic;
@@ -19,6 +19,7 @@ public class wordGetter : MonoBehaviour
     }
 
     // Update is called once per frame
+    //if like it uh it it checks and syas "i'm looking at this word" and other scripts can see
     void Update()
     {
         if(pointer != null)
