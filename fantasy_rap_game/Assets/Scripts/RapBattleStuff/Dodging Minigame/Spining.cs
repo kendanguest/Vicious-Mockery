@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//August Rossano
+//date unknown
+//makes things spin on beat
 public class Spining : MonoBehaviour
 {
     public int beatsPerMinute;
@@ -27,8 +30,9 @@ public class Spining : MonoBehaviour
         {
             rb.angularVelocity = 0;
         };
+        //moves like a clock
         rb.angularVelocity += Time.deltaTime * Mathf.Cos(Mathf.PI * (timeInBeat)) *speed;
-
+       
 
     }
 
