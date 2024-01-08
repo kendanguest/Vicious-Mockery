@@ -4,7 +4,7 @@ using System.IO;
 using UnityEngine;
 
 //August Rossano
-//date unknown
+//12-11-23
 //Tells other parts of the game is the player got hit
 
 public class DamageMitigationCheck : MonoBehaviour
