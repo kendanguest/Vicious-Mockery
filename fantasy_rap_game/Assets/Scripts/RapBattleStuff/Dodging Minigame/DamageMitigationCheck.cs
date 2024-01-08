@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
+//August Rossano
+//date unknown
+//Tells other parts of the game is the player got hit
+
 public class DamageMitigationCheck : MonoBehaviour
 {
     public int bpm;
