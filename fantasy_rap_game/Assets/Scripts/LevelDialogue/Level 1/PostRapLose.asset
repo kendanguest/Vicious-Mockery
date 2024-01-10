@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - dialogue: Pathetic!
-  - dialogue: "Your \u201Cinsults\u201D were laughable!"
-  - dialogue: "I\u2019ll see you in class tomorrow, lout."
+  - dialogue: "Thy \u201Cinsults\u201D were laughable!"
+  - dialogue: "I\u2019ll see thou in class tomorrow, lout."
   name1: Fibache
-  name2: Prof. Didgeridoo
+  name2: Professor Wrest
   talking: 020000000200000002000000
   BPM: 0
   pressSpaceToContinue: 1

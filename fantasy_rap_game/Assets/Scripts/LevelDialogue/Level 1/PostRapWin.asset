@@ -15,15 +15,15 @@ MonoBehaviour:
   dialogueLines:
   - dialogue: Im-
   - dialogue: Impossible!
-  - dialogue: "Don\u2019t misperceive me, your rhymes are nay more than mediocre."
-  - dialogue: However, I has't nay choice but to award thee with thy letter.
+  - dialogue: "Don\u2019t misperceive me, thy rhymes are nay more than mediocre."
+  - dialogue: However, I has't a choice but to award thou with mine stamp.
   - dialogue: That was fairly easy!
   - dialogue: One step closer to escaping this hell.
-  - dialogue: "Don\u2019t get thys hopes up my insufferable apprentice."
-  - dialogue: Your future challengers will not be as kind.
-  - dialogue: Now go, your next competitor awaits!
+  - dialogue: "Don\u2019t get thy hopes up mine insufferable apprentice."
+  - dialogue: Thou future challengers will not be as kind.
+  - dialogue: Now go, don't tarry, thy has an appointment with the Headmaster.
   name1: Fibache
-  name2: Prof. Digeridoo
+  name2: Professor Wrest
   talking: 020000000200000002000000020000000100000001000000020000000200000002000000
   BPM: 0
   pressSpaceToContinue: 1

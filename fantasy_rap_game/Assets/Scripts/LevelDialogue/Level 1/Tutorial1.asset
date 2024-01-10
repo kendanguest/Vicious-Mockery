@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Tutorial1
   m_EditorClassIdentifier: 
   dialogueLines:
-  - dialogue: Whenever it is thy's turn, click the word that you think would insult
+  - dialogue: Whenever it is thou's turn, click the word that thou think would insult
       me the most!
   - dialogue: Try and select words that will allow thy future bars to rhyme off of
       it.
-  - dialogue: Experience art the best teacher. Try it!
+  - dialogue: Experience eart the best teacher. Try it!
   name1: Fibache
-  name2: Prof. Didgeridoo
+  name2: Professor Wrest
   talking: 020000000200000002000000
   BPM: 0
   pressSpaceToContinue: 1

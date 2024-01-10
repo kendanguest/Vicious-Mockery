@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: RapT2
   m_EditorClassIdentifier: 
   dialogueLines:
-  - dialogue: Thy lyrical prowess art lacking in heat.
+  - dialogue: Thy lyrical prowess eart lacking in heat.
   - dialogue: Thy incessant yapping shall leave me beat.
-  - dialogue: Begone from here, your rhythm makes me shed a tear.
+  - dialogue: Begone from here, thy rhythm makes me shed a tear.
   - dialogue: Thy rhythm is so shabby it makes me wish I could not hear.
   name1: Fibache
-  name2: Prof. Didgeridoo
+  name2: Professor Wrest
   talking: 02000000020000000200000002000000
   BPM: 120
   pressSpaceToContinue: 0
