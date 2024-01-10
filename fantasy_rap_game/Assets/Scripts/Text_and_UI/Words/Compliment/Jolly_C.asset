@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Jolly_C
   m_EditorClassIdentifier: 
   word: Jolly
-  points: 4
+  points: -4
   partOfSpeech: ADJ
   suffix: 

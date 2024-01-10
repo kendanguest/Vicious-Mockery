@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - dialogue: Pathetic!
-  - dialogue: "Thy \u201Cinsults\u201D were laughable!"
+  - dialogue: "Thine \u201Cinsults\u201D were laughable!"
   - dialogue: "I\u2019ll see thou in class tomorrow, lout."
   name1: Fibache
   name2: Professor Wrest

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1077e25b5cf71f4aba163dfacfa7cc1, type: 3}
-  m_Name: Dogheart
+  m_Name: Doghearted
   m_EditorClassIdentifier: 
   word: Doghearted
   points: 8
