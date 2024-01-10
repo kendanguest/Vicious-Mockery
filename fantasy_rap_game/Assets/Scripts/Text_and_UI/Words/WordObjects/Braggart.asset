@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1077e25b5cf71f4aba163dfacfa7cc1, type: 3}
   m_Name: Braggart
   m_EditorClassIdentifier: 
-  word: 
-  points: 0
-  partOfSpeech: 
+  word: Braggart
+  points: 6
+  partOfSpeech: Noun
   suffix: 
