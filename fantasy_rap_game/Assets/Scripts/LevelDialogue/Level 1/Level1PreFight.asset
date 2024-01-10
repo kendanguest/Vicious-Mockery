@@ -13,19 +13,20 @@ MonoBehaviour:
   m_Name: Level1PreFight
   m_EditorClassIdentifier: 
   dialogueLines:
-  - dialogue: "So you\u2019ve come for thy\u2019s first letter?"
+  - dialogue: "So thou hast cometh  for thy\u2019s first stamp?"
   - dialogue: "I\u2019m just trying to graduate, I hasn\u2019t any intention of insulting
-      thee."
+      thou."
   - dialogue: "Ha! Clearly this is thy\u2019s first battle."
   - dialogue: "Don\u2019t worry I\u2019ll maketh this simple."
-  - dialogue: If thee doesn't defeat me, thee stands nay chance at leaving this school!
-  - dialogue: "Then I guess I hasn\u2019t a choice."
+  - dialogue: If thou doesn't defeat me, thee stands nary a chance at leaving this
+      school!
+  - dialogue: "Then I guess I haven\u2019t a choice."
   - dialogue: "I can\u2019t hold back!"
   - dialogue: Oh my! This shall be fun!
-  - dialogue: Draw your lute young bard!
+  - dialogue: Draw thy lute young bard!
   - dialogue: "Let\u2019s begin!"
   name1: Fibache
-  name2: Prof. Didgeridoo
+  name2: Professor Wrest
   talking: 02000000010000000200000002000000020000000100000001000000020000000200000002000000
   BPM: 0
   pressSpaceToContinue: 1

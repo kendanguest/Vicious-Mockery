@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - dialogue: "I\u2019m impressed!"
-  - dialogue: "Honestly, I didn\u2019t think thy stood a chance!"
-  - dialogue: "Though this battle isn\u2019t complete yet, disciple."
-  - dialogue: I appreciate thys concern but I shan't lose.
-  - dialogue: "I won\u2019t be leaving until I have thy letter!"
+  - dialogue: "Honestly, I didn\u2019t think thou stood a chance!"
+  - dialogue: "Though this battle isn\u2019t complete yet, apprentice."
+  - dialogue: I appreciate thy's concern but I shan't lose.
+  - dialogue: "I won\u2019t be leaving until I have thou's stamp!"
   name1: Fibache
-  name2: Prof. Didgeridoo
+  name2: Professor Wrest
   talking: 0200000002000000020000000100000001000000
   BPM: 0
   pressSpaceToContinue: 1

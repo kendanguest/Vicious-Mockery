@@ -18,7 +18,7 @@ MonoBehaviour:
   - dialogue: A longer rap battle would be a better decider.
   - dialogue: Yes, professor
   name1: Fibache
-  name2: Professor
+  name2: Professor Wrest
   talking: 02000000020000000200000001000000
   BPM: 0
   pressSpaceToContinue: 1
