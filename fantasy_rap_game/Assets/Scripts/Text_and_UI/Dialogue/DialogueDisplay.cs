@@ -87,8 +87,6 @@ public class DialogueDisplay : MonoBehaviour
             {
                 FindObjectOfType<DamageMitigationCheck>().terminateMinigame();
             }
-            // Plays a random blip SFX for the character.
-            blip.playBlip(nameI);
             // Checks to see if the current word is the internal character for newline.
             if (rap[i] == "_")
             {
@@ -113,6 +111,8 @@ public class DialogueDisplay : MonoBehaviour
             {
                 // Appends the current word to the line of dialogue.
                 dialogueText.text = dialogueText.text + rap[i];
+                // Plays a random blip SFX for the character (Not used right now, too jarring during rap sections).
+                // blip.playBlip(nameI);
             }
         }
         RSC.eraseLine();
