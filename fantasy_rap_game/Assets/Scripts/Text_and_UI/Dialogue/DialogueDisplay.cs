@@ -25,7 +25,7 @@ public class DialogueDisplay : MonoBehaviour
     private DeterminePointChange DPC;
     private WordRemover wordRemove;
     private string lookoutWord;
-    
+    private PlayBlip blip;
 
     private void Start()
     {
@@ -40,6 +40,7 @@ public class DialogueDisplay : MonoBehaviour
         }
         DPC = FindObjectOfType<DeterminePointChange>();
         wordRemove = FindObjectOfType<WordRemover>();
+        blip = FindObjectOfType<PlayBlip>();
     }
     private IEnumerator MoveThroughDialogue(DialogueObject dia)
     {
@@ -110,6 +111,8 @@ public class DialogueDisplay : MonoBehaviour
             {
                 // Appends the current word to the line of dialogue.
                 dialogueText.text = dialogueText.text + rap[i];
+                // Plays a random blip SFX for the character (Not used right now, too jarring during rap sections).
+                // blip.playBlip(nameI);
             }
         }
         RSC.eraseLine();
