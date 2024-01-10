@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - dialogue: Good work! Remember that if thine words rhyme, thy damage will be devistating.
-  - dialogue: Whenever it's not thy turn, scroll to prevent mine insults from reaching
-      thy cranium.
+  - dialogue: Whenever it's not thy turn, use the arrow keys to prevent mine insults
+      from reaching thy cranium.
   - dialogue: Make sure thy head isn't touching the red feather by the time the word
       shown is said.
   - dialogue: These bars might burn, be ready!

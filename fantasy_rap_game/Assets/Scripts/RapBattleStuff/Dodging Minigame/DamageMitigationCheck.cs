@@ -13,6 +13,7 @@ public class DamageMitigationCheck : MonoBehaviour
     public float damageOnHit;
     public float damageOnDodge;
     public pointsArrow meter;
+    public PointsUIController PUI;
     private bool isCurrentlyDodging;
     public GameObject fibacheHead;
     public GameObject parent;
@@ -22,6 +23,7 @@ public class DamageMitigationCheck : MonoBehaviour
     {
         terminate = false;
         meter = FindObjectOfType<pointsArrow>();
+        PUI = FindObjectOfType<PointsUIController>();
     }
 
     // Update is called once per frame
@@ -34,12 +36,13 @@ public class DamageMitigationCheck : MonoBehaviour
             if (isCurrentlyDodging)
             {
                 meter.points -= damageOnDodge;
+                PUI.displayPointChange(-(damageOnDodge), new List<int>(), "");
 
             }
             else
             {
                 meter.points -= damageOnHit;
-
+                PUI.displayPointChange(-(damageOnHit), new List<int>(), "");
             };
 
             Destroy(parent);

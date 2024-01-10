@@ -46,6 +46,11 @@ public class DeterminePointChange : MonoBehaviour
                     mods.Add(-2);
                 }
             }
+            // checks to see if the words are the exact same.
+            if (previous[previous.Count - 1] == word)
+            {
+                mod *= -1f;
+            }
         }
         // adds and resets the point values.
         if(word == "Uhhhh")

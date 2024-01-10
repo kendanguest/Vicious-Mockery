@@ -16,6 +16,8 @@ public class PointsUIController : MonoBehaviour
     public TMP_Text gameState1;
     public TMP_Text gameState2;
     private pointsArrow pointsA;
+    private bool rhyme = false;
+    private bool rhyme2 = false;
     private string currentCombo;
     // Start is called before the first frame update
     void Start()
@@ -40,22 +42,30 @@ public class PointsUIController : MonoBehaviour
         {
             currentCombo = currentCombo + "\nslip up!";
         }
+        // Determines if the word is the pushed response from the dodge minigame.
+        if (word == "" && points != 0)
+        {
+            currentCombo = currentCombo + "\noof!";
+        }
         // Adds new data to the combo text for all of the modifiers applied to the word.
         for (int i = 0; i < mod.Count; i++)
         {
-            if(mod[i] > 0)
+            if(mod[i] > 0 && rhyme == false)
             {
                 currentCombo = currentCombo + "\nRhyme Bonus!";
+                rhyme = true;
             }
-            if (mod[i] < 0)
+            if (mod[i] < 0 && rhyme2 == false)
             {
                 currentCombo = currentCombo + "\nRhythm Bonus!";
-            }
-            if (mod[i] > 1 || mod[i] < -1)
-            {
-                currentCombo = currentCombo + "\nx2!";
+                rhyme2 = true;
             }
 
+        }
+        // Removes the text if the point change is zero.
+        if (points == 0)
+        {
+            currentCombo = "";
         }
         // Checks one more time if it's a negative or positive bonus and applies it to the correct area.
         if(points < 0)
@@ -99,6 +109,8 @@ public class PointsUIController : MonoBehaviour
             gameState1.text = "Dead";
             gameState2.text = "even!";
         }
+        rhyme = false;
+        rhyme2 = false;
     }
 
 
