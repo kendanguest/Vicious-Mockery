@@ -21,6 +21,6 @@ public class MovingPlayer : MonoBehaviour
     void Update()
     {
         
-        transform.RotateAround(center.transform.position, Vector3.forward, speed* (Input.mouseScrollDelta.y+(Input.GetAxis("Horizontal")*keyboardNerfMultiplier*-1)));
+        transform.RotateAround(center.transform.position, Vector3.forward, speed* (Input.mouseScrollDelta.y+(Input.GetAxis("Horizontal")*keyboardNerfMultiplier*Time.deltaTime*-1)));
     }
 }

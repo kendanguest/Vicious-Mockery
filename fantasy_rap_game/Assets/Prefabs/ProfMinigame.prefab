@@ -677,7 +677,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2.5
   center: {fileID: 4822123099145298021}
-  keyboardNerfMultiplier: 1
+  keyboardNerfMultiplier: 20
 --- !u!1 &2709681168917931023
 GameObject:
   m_ObjectHideFlags: 0
