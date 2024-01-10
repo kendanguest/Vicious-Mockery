@@ -538,6 +538,7 @@ MonoBehaviour:
   damageOnHit: 5
   damageOnDodge: 0
   meter: {fileID: 0}
+  PUI: {fileID: 0}
   fibacheHead: {fileID: 1862622553791897153}
   parent: {fileID: 8159398327550616616}
 --- !u!212 &3528413509801160123
@@ -676,7 +677,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2.5
   center: {fileID: 4822123099145298021}
-  keyboardNerfMultiplier: 0.03
+  keyboardNerfMultiplier: 20
 --- !u!1 &2709681168917931023
 GameObject:
   m_ObjectHideFlags: 0
