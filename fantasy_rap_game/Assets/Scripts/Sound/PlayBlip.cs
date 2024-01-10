@@ -21,7 +21,7 @@ public class PlayBlip : MonoBehaviour
     {
         if (cha == 1)
         {
-            AudioSource.Play(MC1);
+            
         }
         else
         {
