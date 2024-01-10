@@ -62,12 +62,13 @@ public class DialogueDisplay : MonoBehaviour
         // Determines the interval between beats.
         float beat = 60.0f / BPM;
         int j = 0;
+        int nameI = 0;
         input = "Uhhhh";
         for (int i = 0; i < rap.Count; i++)
         {
             if(i == 0)
             {
-                nameDetermination(currentDialogue.name1, currentDialogue.name2, currentDialogue.talking[i]);
+                nameI = nameDetermination(currentDialogue.name1, currentDialogue.name2, currentDialogue.talking[i]);
             }
             // Waits the interval determined previously.
             yield return new WaitForSeconds(beat);
@@ -170,20 +171,23 @@ public class DialogueDisplay : MonoBehaviour
             StartCoroutine(MoveThroughRap(rap, dialogue.BPM));
         }
     }
-    public void nameDetermination(string name1, string name2, int talking)
+    public int nameDetermination(string name1, string name2, int talking)
     {
         // This function simply determines who is speaking.
         if(talking == 1)
         {
             dialogueNameText.text = name1;
+            return 1;
         }
         else if(talking == 2)
         {
             dialogueNameText.text = name2;
+            return 2;
         }
         else
         {
             dialogueNameText.text = "";
+            return 0;
         }
     }
     public void inputUpdate(string word)
