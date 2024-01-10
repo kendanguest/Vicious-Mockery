@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   word: Launder
   points: 6
-  partOfSpeech: ADJ
+  partOfSpeech: Noun
   suffix: 

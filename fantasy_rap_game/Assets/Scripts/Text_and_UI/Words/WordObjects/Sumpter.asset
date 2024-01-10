@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   word: Sumpter
   points: 8
-  partOfSpeech: ADJ
+  partOfSpeech: Noun
   suffix: 

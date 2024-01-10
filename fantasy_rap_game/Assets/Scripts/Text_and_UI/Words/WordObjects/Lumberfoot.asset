@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   word: Lumberfoot
   points: 6
-  partOfSpeech: ADJ
-  suffix: ed
+  partOfSpeech: Noun
+  suffix: 

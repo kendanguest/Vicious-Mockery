@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   word: Knave
   points: 4
-  partOfSpeech: ADJ
+  partOfSpeech: Noun
   suffix: 

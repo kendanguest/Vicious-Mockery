@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   word: Miscreant
   points: 8
-  partOfSpeech: ADJ
+  partOfSpeech: Noun
   suffix: 

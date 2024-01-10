@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1077e25b5cf71f4aba163dfacfa7cc1, type: 3}
   m_Name: Dogheart
   m_EditorClassIdentifier: 
-  word: Dogheart
+  word: Doghearted
   points: 8
-  partOfSpeech: ADj
-  suffix: ed
+  partOfSpeech: ADJ
+  suffix: 

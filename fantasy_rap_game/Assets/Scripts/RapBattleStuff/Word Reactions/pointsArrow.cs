@@ -1,3 +1,7 @@
+/*Auth: Vincent Hayes   
+ * LED: 1/10/24
+ * Desc: Wiggles progress arrow back and forth
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

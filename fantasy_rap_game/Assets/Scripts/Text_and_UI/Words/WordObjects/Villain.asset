@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   word: Villain
   points: 7
-  partOfSpeech: ADJ
-  suffix: ous
+  partOfSpeech: Noun
+  suffix: 

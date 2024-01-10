@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Britches
   m_EditorClassIdentifier: 
   word: Britches
-  points: 8
+  points: 1
   partOfSpeech: Noun
-  suffix: less
+  suffix: 
