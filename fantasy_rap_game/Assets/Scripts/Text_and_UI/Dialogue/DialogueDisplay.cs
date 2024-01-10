@@ -25,7 +25,7 @@ public class DialogueDisplay : MonoBehaviour
     private DeterminePointChange DPC;
     private WordRemover wordRemove;
     private string lookoutWord;
-    
+    private PlayBlip blip;
 
     private void Start()
     {
@@ -40,6 +40,7 @@ public class DialogueDisplay : MonoBehaviour
         }
         DPC = FindObjectOfType<DeterminePointChange>();
         wordRemove = FindObjectOfType<WordRemover>();
+        blip = FindObjectOfType<PlayBlip>();
     }
     private IEnumerator MoveThroughDialogue(DialogueObject dia)
     {
@@ -86,6 +87,8 @@ public class DialogueDisplay : MonoBehaviour
             {
                 FindObjectOfType<DamageMitigationCheck>().terminateMinigame();
             }
+            // Plays a random blip SFX for the character.
+            blip.playBlip(nameI);
             // Checks to see if the current word is the internal character for newline.
             if (rap[i] == "_")
             {
