@@ -43,7 +43,7 @@ public class PointsUIController : MonoBehaviour
             currentCombo = currentCombo + "\nslip up!";
         }
         // Determines if the word is the pushed response from the dodge minigame.
-        if (word == "")
+        if (word == "" && points != 0)
         {
             currentCombo = currentCombo + "\noof!";
         }
@@ -61,6 +61,11 @@ public class PointsUIController : MonoBehaviour
                 rhyme2 = true;
             }
 
+        }
+        // Removes the text if the point change is zero.
+        if (points == 0)
+        {
+            currentCombo = "";
         }
         // Checks one more time if it's a negative or positive bonus and applies it to the correct area.
         if(points < 0)

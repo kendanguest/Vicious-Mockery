@@ -36,13 +36,13 @@ public class DamageMitigationCheck : MonoBehaviour
             if (isCurrentlyDodging)
             {
                 meter.points -= damageOnDodge;
-                PUI.displayPointChange(damageOnDodge, new List<int>(), "");
+                PUI.displayPointChange(-(damageOnDodge), new List<int>(), "");
 
             }
             else
             {
                 meter.points -= damageOnHit;
-                PUI.displayPointChange(damageOnHit, new List<int>(), "");
+                PUI.displayPointChange(-(damageOnHit), new List<int>(), "");
             };
 
             Destroy(parent);
