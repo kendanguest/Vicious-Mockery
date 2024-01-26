@@ -48,9 +48,14 @@ public class DialogueDisplay : MonoBehaviour
         for(int i = 0; i < dia.dialogueLines.Length; i++)
         {
             nameDetermination(currentDialogue.name1, currentDialogue.name2, currentDialogue.talking[i]);
-            dialogueText.text = dia.dialogueLines[i].dialogue;
+            for(int j = 0; j < dia.dialogueLines[i].dialogue.Length; j++)
+            {
+                dialogueText.text += dia.dialogueLines[i].dialogue[j] + "";
+                yield return new WaitForSeconds(0.05f);
+            }
             // The dialogue pauses while it waits for you to press Space.
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+            dialogueText.text = "";
             // Buffer to not skip lines.
             yield return null;
         }
