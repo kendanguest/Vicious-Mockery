@@ -23,7 +23,7 @@ public class PointsUIController : MonoBehaviour
     void Start()
     {
         pointsA = FindObjectOfType<pointsArrow>();
-        gameState1.text = "Dead";
+        gameState1.text = "It's";
         gameState2.text = "even!";
     }
     // Called when the pointer updates, and adjusts UI accordingly.
@@ -106,7 +106,7 @@ public class PointsUIController : MonoBehaviour
         }
         else
         {
-            gameState1.text = "Dead";
+            gameState1.text = "It's";
             gameState2.text = "even!";
         }
         rhyme = false;
