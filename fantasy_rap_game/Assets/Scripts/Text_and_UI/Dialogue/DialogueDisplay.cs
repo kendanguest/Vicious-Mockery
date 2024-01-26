@@ -7,6 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.Collections.LowLevel.Unsafe;
 
 public class DialogueDisplay : MonoBehaviour
 {
@@ -76,6 +77,7 @@ public class DialogueDisplay : MonoBehaviour
             // Checks if the current word in the list is a player input and removes it as time has run out.
             if (rap[i].Substring(0, rap[i].Length - 1) == "[Input]")
             {
+                RSC.updateTextBoxWithSelectedWord(input);
                 rap[i] = input + rap[i].Substring(rap[i].Length - 1);
                 DPC.implementPoints(FindObjectOfType<wordGetter>().currentWord.GetComponent<WordCustomizer>().valueO, input);
                 Destroy(GameObject.FindGameObjectWithTag("Line"));
