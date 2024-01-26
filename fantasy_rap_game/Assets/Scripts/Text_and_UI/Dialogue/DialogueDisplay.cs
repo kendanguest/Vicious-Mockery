@@ -43,11 +43,13 @@ public class DialogueDisplay : MonoBehaviour
         wordRemove = FindObjectOfType<WordRemover>();
         blip = FindObjectOfType<PlayBlip>();
     }
+
     private IEnumerator MoveThroughDialogue(DialogueObject dia)
     {
         for(int i = 0; i < dia.dialogueLines.Length; i++)
         {
             nameDetermination(currentDialogue.name1, currentDialogue.name2, currentDialogue.talking[i]);
+            // This loop allows the dialogue to be shown one letter at a time.
             for(int j = 0; j < dia.dialogueLines[i].dialogue.Length; j++)
             {
                 dialogueText.text += dia.dialogueLines[i].dialogue[j] + "";
