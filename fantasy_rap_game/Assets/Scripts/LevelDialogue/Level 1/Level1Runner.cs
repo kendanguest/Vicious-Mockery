@@ -34,7 +34,6 @@ public class Level1Runner : MonoBehaviour
         SDM = FindObjectOfType<SpawnDodgeMinigame>();
         UI.SetActive(false);
         dialogue.currentDialogue = prefightDialogue;
-        dialogue.DisplayDialogue(prefightDialogue);
         StartCoroutine(Startlevel());
     }
     IEnumerator Startlevel()
@@ -43,7 +42,8 @@ public class Level1Runner : MonoBehaviour
         // This code looks like YandereDev programmed it, but it's as we say in the buisness, "it functions."
         float beat = 60f / 180f;
         line = 0;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1f);
+        dialogue.DisplayDialogue(prefightDialogue);
         UI.SetActive(true);
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(true);
