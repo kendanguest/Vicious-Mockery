@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1077e25b5cf71f4aba163dfacfa7cc1, type: 3}
-  m_Name: Saint_C
+  m_Name: Friend_C
   m_EditorClassIdentifier: 
-  word: Saint
-  points: -3
+  word: Friend
+  points: -4
   partOfSpeech: Noun
   suffix: 
