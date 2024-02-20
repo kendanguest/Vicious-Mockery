@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8338461952666679709}
   - component: {fileID: 4545649452243678825}
   - component: {fileID: 7360866733548198088}
-  - component: {fileID: 5541549518704818366}
   m_Layer: 0
   m_Name: WordController
   m_TagString: Untagged
@@ -47,98 +46,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   words:
-  - Britches
-  - Lute
-  - Coward
-  - Villain
-  - Rats
-  - Launder
-  - Ungentle
-  - Noggin
-  - Cottar
-  - Sumpter
-  - Hedge-born
-  - Sot
-  - Fraud
-  - Buffoon
-  - Servant
-  - Miscreant
-  - Lumberfooted
-  - Numpty
-  - Loon
-  - Bogus
-  - Churlish
-  - Vain
-  - Puny
-  - Craven
-  - Doghearted
-  - Jester
-  - Toad
-  - Grotesque
-  - Hideous
-  - Spineless
-  points:
-  - 4
-  - 2
-  - 5
-  - 7
-  - 5
-  - 3
-  - 5
-  - 3
-  - 5
-  - 4
-  - 6
-  - 4
-  - 3
-  - 5
-  - 4
-  - 4
-  - 3
-  - 2
-  - 2
-  - 4
-  - 3
-  - 3
-  - 4
-  - 6
-  - 8
-  - 4
-  - 5
-  - 5
-  - 3
-  - 4
-  partSpeechI:
-  - Noun
-  - Noun
-  - ADJ
-  - ADJ
-  - Noun
-  - ADJ
-  - ADJ
-  - Noun
-  - ADJ
-  - ADJ
-  - ADJ
-  - ADJ
-  - Noun
-  - ADJ
-  - ADJ
-  - ADJ
-  - ADJ
-  - Noun
-  - Noun
-  - ADJ
-  - ADJ
-  - ADJ
-  - ADJ
-  - ADJ
-  - ADJ
-  - Noun
-  - Noun
-  - ADJ
-  - ADJ
-  - ADJ
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  compliments: []
   prefab: {fileID: 2682021411880824350, guid: 73c2af4085c398748acbdb24181e634b, type: 3}
   lineOBJ: {fileID: 2080722779992245779, guid: 1de1e14e5dd85b14898bf8019edaf8a6, type: 3}
   BPM: 120
@@ -156,51 +94,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrow: {fileID: 0}
---- !u!114 &5541549518704818366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1208465118582678407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9197f8e8eeec8b4db599e78be07b172, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wordsC:
-  - Opulent
-  - Divine
-  - Enlightened
-  - Cunning
-  - Indubitable
-  - Paragon
-  - Virtuous
-  - Wellborn
-  - Illustrious
-  - Valiant
-  pointsC:
-  - -3
-  - -5
-  - -2
-  - -2
-  - -5
-  - -6
-  - -3
-  - -2
-  - -3
-  - -3
-  partSpeechIC:
-  - ADJ
-  - ADJ
-  - ADJ
-  - ADJ
-  - ADJ
-  - Noun
-  - ADJ
-  - ADJ
-  - ADJ
-  - ADJ
-  prefab: {fileID: 2682021411880824350, guid: 73c2af4085c398748acbdb24181e634b, type: 3}
-  BPM: 120
-  speed: 3
+  controller: {fileID: 0}
