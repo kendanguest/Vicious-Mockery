@@ -70,6 +70,7 @@ public class DialogueDisplay : MonoBehaviour
                     yield return new WaitForSeconds(0.02f);
                 }
             }
+            yield return new WaitForSeconds(0.1f);
             // The dialogue pauses while it waits for you to press Space.
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
             dialogueText.text = "";

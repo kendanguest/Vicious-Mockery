@@ -27,6 +27,7 @@ public class Level1Runner : MonoBehaviour
     public bool progress;
     public int line;
     public pointsArrow arrow;
+    public TransitionBehavior transition;
     // Start is called before the first frame update
     void Start()
     {
@@ -152,6 +153,9 @@ public class Level1Runner : MonoBehaviour
             dialogue.DisplayDialogue(postRapL);
         }
         yield return new WaitUntil(() => (progress == true));
+        UI.SetActive(false);
+        StartCoroutine(transition.fadeIn());
+        yield return new WaitForSeconds(3.5f);
         GetComponent<MenuFunctions>().PlayScene();
     }
 

@@ -16,11 +16,20 @@ public class TransitionBehavior : MonoBehaviour
     {
         // This script is really braindead, but it moves the black box out of the way essentially simulating a smooth transition.
         pos = square.GetComponent<Rigidbody2D>();
-        fadeOut();
+        StartCoroutine(fadeOut());
     }
 
-    public void fadeOut()
+    IEnumerator fadeOut()
     {
         pos.velocity = (new Vector3(0, -10, 0));
+        yield return new WaitForSeconds(2f);
+        pos.velocity = (new Vector3(0, 0, 0));
+    }
+
+    public IEnumerator fadeIn()
+    {
+        pos.velocity = (new Vector3(0, 10, 0));
+        yield return new WaitForSeconds(2f);
+        pos.velocity = (new Vector3(0, 0, 0));
     }
 }
