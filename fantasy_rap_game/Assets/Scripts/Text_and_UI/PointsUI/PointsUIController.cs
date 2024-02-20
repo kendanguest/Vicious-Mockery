@@ -15,6 +15,7 @@ public class PointsUIController : MonoBehaviour
     public TMP_Text enemyPointsZone;
     public TMP_Text gameState1;
     public TMP_Text gameState2;
+    public FollowCamera cam;
     private pointsArrow pointsA;
     private bool rhyme = false;
     private bool rhyme2 = false;
@@ -71,6 +72,7 @@ public class PointsUIController : MonoBehaviour
         if(points < 0)
         {
             enemyPointsZone.text = currentCombo;
+            cam.StartShake(0.5f, 1f);
         }
         else
         {
