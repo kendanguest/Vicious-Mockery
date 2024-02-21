@@ -33,21 +33,21 @@ public class PointsUIController : MonoBehaviour
     {
         enemyPointsZone.text = "";
         playerPointsZone.text = "";
-        // Determines if the point change is positive or negative and adds it to the combo text.
-        if(points > 0)
-        {
-            currentCombo = currentCombo + "+";
-        }
-        currentCombo = currentCombo + points.ToString() + "!";
+        // Determines if the point change is positive or negative and adds it to the combo text (Removed for gameplay improvements).
+        //if(points > 0)
+        //{
+        //    currentCombo = currentCombo + "+";
+        //}
+        //currentCombo = currentCombo + points.ToString() + "!";
         // Determines if the word is the filled-in response and adds a new line to the combo text.
         if (word == "Uhhhh")
         {
-            currentCombo = currentCombo + "\nslip up!";
+            currentCombo = currentCombo + "slip up!";
         }
         // Determines if the word is the pushed response from the dodge minigame.
         if (word == "" && points != 0)
         {
-            currentCombo = currentCombo + "\noof!";
+            currentCombo = currentCombo + "oof!";
         }
         // Adds new data to the combo text for all of the modifiers applied to the word.
         for (int i = 0; i < mod.Count; i++)

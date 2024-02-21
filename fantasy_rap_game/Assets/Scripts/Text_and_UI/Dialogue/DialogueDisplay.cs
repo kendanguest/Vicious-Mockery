@@ -105,7 +105,10 @@ public class DialogueDisplay : MonoBehaviour
             {
                 RSC.updateTextBoxWithSelectedWord(input);
                 rap[i] = input + rap[i].Substring(rap[i].Length - 1);
-                DPC.implementPoints(FindObjectOfType<wordGetter>().lastClickedWord.GetComponent<WordCustomizer>().valueO, input);
+                if(FindObjectOfType<wordGetter>().lastClickedWord != null)
+                    DPC.implementPoints(FindObjectOfType<wordGetter>().lastClickedWord.GetComponent<WordCustomizer>().valueO, input);
+                else
+                    DPC.implementPoints(0f, input);
                 Destroy(GameObject.FindGameObjectWithTag("Line"));
                 wordRemove.refreshAllKnownWords();
                 wordRemove.destroyAllKnownWords();

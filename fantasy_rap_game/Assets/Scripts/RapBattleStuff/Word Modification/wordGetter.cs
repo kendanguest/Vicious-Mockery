@@ -12,7 +12,7 @@ public class wordGetter : MonoBehaviour
     public DialogueDisplay text;
     public GameObject pointer;
     public GameObject currentWord;
-    public GameObject lastClickedWord;
+    public GameObject lastClickedWord = null;
     // Start is called before the first frame update
     void Start()
     {
