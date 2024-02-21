@@ -21,6 +21,7 @@ public class PointsUIController : MonoBehaviour
     private bool rhyme = false;
     private bool rhyme2 = false;
     private string currentCombo;
+    private int cclength;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,7 @@ public class PointsUIController : MonoBehaviour
     // Called when the pointer updates, and adjusts UI accordingly.
     public void displayPointChange(float points, List<int> mod, string word)
     {
+        cclength = 0;
         enemyPointsZone.text = "";
         playerPointsZone.text = "";
         // Determines if the point change is positive or negative and adds it to the combo text (Removed for gameplay improvements).
@@ -43,26 +45,50 @@ public class PointsUIController : MonoBehaviour
         if (word == "Uhhhh")
         {
             currentCombo = currentCombo + "slip up!";
+            cclength++;
         }
+        if(cclength > 0)
+        {
+            currentCombo = currentCombo + "\n";
+            cclength--;
+        }
+        
         // Determines if the word is the pushed response from the dodge minigame.
         if (word == "" && points != 0)
         {
             currentCombo = currentCombo + "oof!";
+            cclength++;
+        }
+        if (cclength > 0)
+        {
+            currentCombo = currentCombo + "\n";
+            cclength--;
         }
         // Adds new data to the combo text for all of the modifiers applied to the word.
         for (int i = 0; i < mod.Count; i++)
         {
             if(mod[i] > 0 && rhyme == false)
             {
-                currentCombo = currentCombo + "\nRhyme Bonus!";
+                currentCombo = currentCombo + "Rhyme Bonus!";
                 rhyme = true;
+                cclength++;
+            }
+            if (cclength > 0)
+            {
+                currentCombo = currentCombo + "\n";
+                cclength--;
             }
             if (mod[i] < 0 && rhyme2 == false)
             {
-                currentCombo = currentCombo + "\nRhythm Bonus!";
+                currentCombo = currentCombo + "Rhythm Bonus!";
                 rhyme2 = true;
+                cclength++;
             }
-
+            if (cclength > 0)
+            {
+                currentCombo = currentCombo + "\n";
+                cclength--;
+            }
         }
         // Removes the text if the point change is zero.
         if (points == 0)

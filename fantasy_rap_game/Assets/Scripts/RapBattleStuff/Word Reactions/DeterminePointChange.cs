@@ -57,6 +57,10 @@ public class DeterminePointChange : MonoBehaviour
         {
             value = -3f;
             previous.Add(word);
+            if(mod < 0f)
+            {
+                mod *= -1f;
+            }
         }
         else
         {
