@@ -47,6 +47,7 @@ public class DialogueDisplay : MonoBehaviour
     }
     private void Update()
     {
+        // Skips the current dialogue showcase and just shows the whole line.
         if(Input.GetKeyDown(KeyCode.Space) && dialoActive)
         {
             dialoActive = false;
@@ -70,6 +71,7 @@ public class DialogueDisplay : MonoBehaviour
                     yield return new WaitForSeconds(0.02f);
                 }
             }
+            // Buffers the skip input so it doesn't force skip dialogue.
             yield return new WaitForSeconds(0.1f);
             // The dialogue pauses while it waits for you to press Space.
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
@@ -103,7 +105,7 @@ public class DialogueDisplay : MonoBehaviour
             {
                 RSC.updateTextBoxWithSelectedWord(input);
                 rap[i] = input + rap[i].Substring(rap[i].Length - 1);
-                DPC.implementPoints(FindObjectOfType<wordGetter>().currentWord.GetComponent<WordCustomizer>().valueO, input);
+                DPC.implementPoints(FindObjectOfType<wordGetter>().lastClickedWord.GetComponent<WordCustomizer>().valueO, input);
                 Destroy(GameObject.FindGameObjectWithTag("Line"));
                 wordRemove.refreshAllKnownWords();
                 wordRemove.destroyAllKnownWords();

@@ -12,6 +12,7 @@ public class wordGetter : MonoBehaviour
     public DialogueDisplay text;
     public GameObject pointer;
     public GameObject currentWord;
+    public GameObject lastClickedWord;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,8 @@ public class wordGetter : MonoBehaviour
             currentWord = pointer.GetComponent<wordSelector>().closestWord;
             if (Input.GetMouseButtonDown(0))
             {
-                text.inputUpdate(currentWord.GetComponent<WordCustomizer>().wordO);
+                lastClickedWord = currentWord;
+                text.inputUpdate(lastClickedWord.GetComponent<WordCustomizer>().wordO);
             }
         }
     }

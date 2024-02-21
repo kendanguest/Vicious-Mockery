@@ -16,6 +16,7 @@ public class PointsUIController : MonoBehaviour
     public TMP_Text gameState1;
     public TMP_Text gameState2;
     public FollowCamera cam;
+    public GenerateNote note;
     private pointsArrow pointsA;
     private bool rhyme = false;
     private bool rhyme2 = false;
@@ -77,6 +78,7 @@ public class PointsUIController : MonoBehaviour
         else
         {
             playerPointsZone.text = currentCombo;
+            note.generateNote(points);
         }
         currentCombo = "";
         // This block of if statements will update the flavor text in the middle depending on how good or bad the player is doing.

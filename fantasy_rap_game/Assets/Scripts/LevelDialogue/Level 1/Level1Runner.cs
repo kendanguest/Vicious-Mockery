@@ -28,6 +28,7 @@ public class Level1Runner : MonoBehaviour
     public int line;
     public pointsArrow arrow;
     public TransitionBehavior transition;
+    public GenerateNote gnote;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +58,7 @@ public class Level1Runner : MonoBehaviour
         dialogue.currentDialogue = rap1;
         dialogue.DisplayDialogue(rap1);
         random.speed = 10;
+        gnote.speed = 10;
         yield return new WaitUntil(() => line == 0);
         newPlayerTurn(line, "ADJ", true);
         yield return new WaitUntil(() => line == 1);
@@ -98,6 +100,7 @@ public class Level1Runner : MonoBehaviour
         dialogue.currentDialogue = trueRap;
         MusicController.jukeboxSwitch();
         random.speed = 100;
+        gnote.speed = 100;
         dialogue.forceTooltipchange(false);
         yield return new WaitForSecondsRealtime(beat * 32);
         dialogue.DisplayDialogue(trueRap);

@@ -342,6 +342,59 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &425458803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 425458805}
+  - component: {fileID: 425458804}
+  m_Layer: 0
+  m_Name: MusicNoteCreator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &425458804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425458803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4043f2c6d52a8b41bcdba3f26c54a4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notes:
+  - {fileID: 21300000, guid: 7de7495761881744f9fd34fb3d082051, type: 3}
+  - {fileID: 21300000, guid: 9abe7c4145a6959488bb5cc04893ae92, type: 3}
+  - {fileID: 21300000, guid: dd037bd715d068c4c8f54ad7d15da69c, type: 3}
+  - {fileID: 21300000, guid: ba267beb2308e974d935eef7348c09d9, type: 3}
+  - {fileID: 21300000, guid: b2b1686852bc9314299fb1a7d91490a1, type: 3}
+  prefab: {fileID: 1129207872733782087, guid: 0029b0714401b1d4b89716dbc66934dd, type: 3}
+  BPM: 120
+  speed: 100
+--- !u!4 &425458805
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425458803}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.5124383, y: -0.7759006, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &478257020
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,6 +644,7 @@ MonoBehaviour:
   gameState1: {fileID: 1877914635}
   gameState2: {fileID: 779563593}
   cam: {fileID: 1749271300}
+  note: {fileID: 425458804}
 --- !u!1001 &758922338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1902,6 +1956,7 @@ MonoBehaviour:
   line: 0
   arrow: {fileID: 254343612}
   transition: {fileID: 1234644988}
+  gnote: {fileID: 425458804}
 --- !u!114 &1561931586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3069,3 +3124,4 @@ SceneRoots:
   - {fileID: 1494987530}
   - {fileID: 585006802}
   - {fileID: 1368324798}
+  - {fileID: 425458805}
