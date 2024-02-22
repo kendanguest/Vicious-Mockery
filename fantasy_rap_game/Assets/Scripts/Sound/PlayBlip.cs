@@ -13,6 +13,7 @@ public class PlayBlip : MonoBehaviour
     public AudioClip PR2;
     public AudioClip PR3;
     public AudioClip PR4;
+    public AudioClip clock;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,5 +67,9 @@ public class PlayBlip : MonoBehaviour
             }
         }
 
+    }
+    public void playClock()
+    {
+        AudioSource.PlayOneShot(clock);
     }
 }

@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &34964616 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2237608065673664645, guid: 3558b286b9bb3e344a57564bf4984d3b, type: 3}
+  m_PrefabInstance: {fileID: 1246182766}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &254343611
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +435,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e1563233cfce40646812b39e60f02eca, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.9
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -643,14 +654,14 @@ MonoBehaviour:
   enemyPointsZone: {fileID: 261403650}
   gameState1: {fileID: 1877914635}
   gameState2: {fileID: 779563593}
-  playerFrame: {fileID: 0}
-  pwin: {fileID: 0}
-  pneutral: {fileID: 0}
-  plose: {fileID: 0}
-  enemyFrame: {fileID: 0}
-  ewin: {fileID: 0}
-  eneutral: {fileID: 0}
-  elose: {fileID: 0}
+  playerFrame: {fileID: 34964616}
+  pwin: {fileID: 2800000, guid: 5d422e519b57f6d4ba6e70a2fe88af25, type: 3}
+  pneutral: {fileID: 2800000, guid: f43c2da5ed0f0c34c9c16ed4fdba022a, type: 3}
+  plose: {fileID: 2800000, guid: 6233f6f365538134a83b5c4dfbf013c3, type: 3}
+  enemyFrame: {fileID: 1834694351}
+  ewin: {fileID: 2800000, guid: 02efef07ce311014a8f6ab38e03dda98, type: 3}
+  eneutral: {fileID: 2800000, guid: 9b32897377fd2f94885496fe0b3182a1, type: 3}
+  elose: {fileID: 2800000, guid: d0e25bbba80d88447a9c8c4b17262894, type: 3}
   cam: {fileID: 1749271300}
   note: {fileID: 425458804}
 --- !u!1001 &758922338
@@ -1060,7 +1071,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c91052bc1c51b5542a35ffff2d870e18, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.7
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1995,6 +2006,7 @@ MonoBehaviour:
   PR2: {fileID: 8300000, guid: 8f2d73ab85020f840821f527f5898f62, type: 3}
   PR3: {fileID: 8300000, guid: dcc5c772039f89c42a12e4b6002dd4f5, type: 3}
   PR4: {fileID: 8300000, guid: d733c673fe3d6614abcd0916b897cfc1, type: 3}
+  clock: {fileID: 8300000, guid: bd3c1b1c1a3b2104fa536b9519e8168b, type: 3}
 --- !u!82 &1766543608
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2106,6 +2118,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1834694351 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5605173612071395841, guid: 3558b286b9bb3e344a57564bf4984d3b, type: 3}
+  m_PrefabInstance: {fileID: 1246182766}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1877914634
 GameObject:
   m_ObjectHideFlags: 0

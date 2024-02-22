@@ -118,17 +118,20 @@ public class PointsUIController : MonoBehaviour
         // This block of if statements will update the flavor text in the middle depending on how good or bad the player is doing.
         if(pointsA.points > 10)
         {
-            if(pointsA.points > 50)
+            if (pointsA.points > 50)
             {
                 gameState1.text = "Total";
                 gameState2.text = "slaughter!";
+            }
+            else if (pointsA.points > 25)
+            {
+                playerFrame.texture = pwin;
+                enemyFrame.texture = elose;
             }
             else
             {
                 gameState1.text = "You're";
                 gameState2.text = "winning!";
-                playerFrame.texture = pwin;
-                enemyFrame.texture = elose;
             }
         }
         else if (pointsA.points < -10)
@@ -138,12 +141,15 @@ public class PointsUIController : MonoBehaviour
                 gameState1.text = "Complete";
                 gameState2.text = "loss!";
             }
+            else if (pointsA.points < -25)
+            {
+                playerFrame.texture = plose;
+                enemyFrame.texture = ewin;
+            }
             else
             {
                 gameState1.text = "You're";
                 gameState2.text = "losing!";
-                playerFrame.texture = plose;
-                enemyFrame.texture = ewin;
             }
         }
         else

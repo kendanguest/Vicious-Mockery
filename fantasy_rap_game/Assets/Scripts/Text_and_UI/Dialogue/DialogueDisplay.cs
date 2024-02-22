@@ -29,6 +29,7 @@ public class DialogueDisplay : MonoBehaviour
     private PlayBlip blip;
     private bool dialoActive;
     private string currentline;
+    private bool clockFlag;
 
     private void Start()
     {
@@ -92,6 +93,7 @@ public class DialogueDisplay : MonoBehaviour
         int j = 0;
         int nameI = 0;
         input = "Uhhhh";
+        clockFlag = true;
         for (int i = 0; i < rap.Count; i++)
         {
             if(i == 0)
@@ -112,6 +114,15 @@ public class DialogueDisplay : MonoBehaviour
                 Destroy(GameObject.FindGameObjectWithTag("Line"));
                 wordRemove.refreshAllKnownWords();
                 wordRemove.destroyAllKnownWords();
+            }
+            if (clockFlag && nameI == 1)
+            {
+                if(rap[i+4].Substring(0, rap[i+4].Length - 1) == "[Input]")
+                {
+                    clockFlag = false;
+                    blip.playClock();
+                }
+
             }
             // Checks if the current word is the trigger word for the enemy minigame.
             else if (rap[i].Substring(0, rap[i].Length - 1) == lookoutWord)
@@ -136,6 +147,7 @@ public class DialogueDisplay : MonoBehaviour
                 j++;
                 dialogueText.text = rap[i];
                 input = "Uhhhh";
+                clockFlag = true;
                 nameDetermination(currentDialogue.name1, currentDialogue.name2, currentDialogue.talking[j]);
             }
             else
