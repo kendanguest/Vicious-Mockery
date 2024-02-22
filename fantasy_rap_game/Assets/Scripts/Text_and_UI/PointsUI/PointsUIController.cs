@@ -7,7 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class PointsUIController : MonoBehaviour
 {
@@ -15,6 +15,14 @@ public class PointsUIController : MonoBehaviour
     public TMP_Text enemyPointsZone;
     public TMP_Text gameState1;
     public TMP_Text gameState2;
+    public RawImage playerFrame;
+    public Texture pwin;
+    public Texture pneutral;
+    public Texture plose;
+    public RawImage enemyFrame;
+    public Texture ewin;
+    public Texture eneutral;
+    public Texture elose;
     public FollowCamera cam;
     public GenerateNote note;
     private pointsArrow pointsA;
@@ -119,6 +127,8 @@ public class PointsUIController : MonoBehaviour
             {
                 gameState1.text = "You're";
                 gameState2.text = "winning!";
+                playerFrame.texture = pwin;
+                enemyFrame.texture = elose;
             }
         }
         else if (pointsA.points < -10)
@@ -132,12 +142,16 @@ public class PointsUIController : MonoBehaviour
             {
                 gameState1.text = "You're";
                 gameState2.text = "losing!";
+                playerFrame.texture = plose;
+                enemyFrame.texture = ewin;
             }
         }
         else
         {
             gameState1.text = "It's";
             gameState2.text = "even!";
+            playerFrame.texture = pneutral;
+            enemyFrame.texture = eneutral;
         }
         rhyme = false;
         rhyme2 = false;
