@@ -2006,7 +2006,7 @@ MonoBehaviour:
   PR2: {fileID: 8300000, guid: 8f2d73ab85020f840821f527f5898f62, type: 3}
   PR3: {fileID: 8300000, guid: dcc5c772039f89c42a12e4b6002dd4f5, type: 3}
   PR4: {fileID: 8300000, guid: d733c673fe3d6614abcd0916b897cfc1, type: 3}
-  clock: {fileID: 8300000, guid: bd3c1b1c1a3b2104fa536b9519e8168b, type: 3}
+  clock: {fileID: 8300000, guid: add379e83f9f97c4d967bc0fbb9e6fcb, type: 3}
 --- !u!82 &1766543608
 AudioSource:
   m_ObjectHideFlags: 0

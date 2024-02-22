@@ -96,7 +96,7 @@ public class DialogueDisplay : MonoBehaviour
         clockFlag = true;
         for (int i = 0; i < rap.Count; i++)
         {
-            if(i == 0)
+            if (i == 0)
             {
                 nameI = nameDetermination(currentDialogue.name1, currentDialogue.name2, currentDialogue.talking[i]);
             }
