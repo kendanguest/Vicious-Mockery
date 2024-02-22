@@ -88,7 +88,7 @@ public class PointsUIController : MonoBehaviour
             }
             if (mod[i] < 0 && rhyme2 == false)
             {
-                currentCombo = currentCombo + "Rhythm Bonus!";
+                currentCombo = currentCombo + "Motif Bonus!";
                 rhyme2 = true;
                 cclength++;
             }
