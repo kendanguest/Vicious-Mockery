@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Unity.Collections.LowLevel.Unsafe;
+using UnityEngine.UI;
 
 public class DialogueDisplay : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class DialogueDisplay : MonoBehaviour
     public TextProgressor textP;
     public RapShadowController RSC;
     public int level;
+    public RawImage pframe;
+    public RawImage eframe;
     private List<string> rap = new List<string>();
     private string input = "Uhhhh";
     private DeterminePointChange DPC;
@@ -223,16 +226,22 @@ public class DialogueDisplay : MonoBehaviour
         if(talking == 1)
         {
             dialogueNameText.text = name1;
+            eframe.color = Color.gray;
+            pframe.color = Color.white;
             return 1;
         }
         else if(talking == 2)
         {
             dialogueNameText.text = name2;
+            pframe.color = Color.gray;
+            eframe.color = Color.white;
             return 2;
         }
         else
         {
             dialogueNameText.text = "";
+            eframe.color = Color.gray;
+            pframe.color = Color.gray;
             return 0;
         }
     }
