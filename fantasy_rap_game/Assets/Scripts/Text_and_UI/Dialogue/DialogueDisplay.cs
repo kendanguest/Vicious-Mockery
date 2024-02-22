@@ -65,7 +65,7 @@ public class DialogueDisplay : MonoBehaviour
         {
             dialoActive = true;
             currentline = dia.dialogueLines[i].dialogue;
-            nameDetermination(currentDialogue.name1, currentDialogue.name2, currentDialogue.talking[i]);
+            int nameI = nameDetermination(currentDialogue.name1, currentDialogue.name2, currentDialogue.talking[i]);
             // This loop allows the dialogue to be shown one letter at a time.
             for(int j = 0; j < dia.dialogueLines[i].dialogue.Length; j++)
             {
@@ -73,6 +73,8 @@ public class DialogueDisplay : MonoBehaviour
                 {
                     dialogueText.text += dia.dialogueLines[i].dialogue[j] + "";
                     yield return new WaitForSeconds(0.02f);
+                    // Plays a random blip SFX for the character.
+                    // blip.playBlip(nameI);
                 }
             }
             // Buffers the skip input so it doesn't force skip dialogue.
@@ -157,8 +159,7 @@ public class DialogueDisplay : MonoBehaviour
             {
                 // Appends the current word to the line of dialogue.
                 dialogueText.text = dialogueText.text + rap[i];
-                // Plays a random blip SFX for the character (Not used right now, too jarring during rap sections).
-                // blip.playBlip(nameI);
+                
             }
         }
         RSC.eraseLine();
