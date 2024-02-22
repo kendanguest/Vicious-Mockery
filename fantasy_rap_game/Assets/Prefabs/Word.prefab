@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1894007875783037795}
   - component: {fileID: -1305009255841078261}
   - component: {fileID: 39831807210214625}
+  - component: {fileID: -6029219121466116404}
   m_Layer: 0
   m_Name: Word
   m_TagString: Word
@@ -240,3 +241,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2682021411880824350}
   m_Mesh: {fileID: 0}
+--- !u!114 &-6029219121466116404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2682021411880824350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 305cf16579b4b9a49b5913814d4ae1c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reset: 0
+  dontStartOnSpawn: 1
+  speed: 2
+  duration: 2
+  RotationIntensity: 10
+  ScaleIntensity: 0.5

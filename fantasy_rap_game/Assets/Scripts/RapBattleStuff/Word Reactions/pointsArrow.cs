@@ -1,4 +1,4 @@
-/*Auth: Vincent Hayes   
+/*Auth: August Rossano
  * LED: 1/10/24
  * Desc: Wiggles progress arrow back and forth
  */

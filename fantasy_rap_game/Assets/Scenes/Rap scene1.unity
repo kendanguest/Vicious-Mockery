@@ -643,6 +643,14 @@ MonoBehaviour:
   enemyPointsZone: {fileID: 261403650}
   gameState1: {fileID: 1877914635}
   gameState2: {fileID: 779563593}
+  playerFrame: {fileID: 0}
+  pwin: {fileID: 0}
+  pneutral: {fileID: 0}
+  plose: {fileID: 0}
+  enemyFrame: {fileID: 0}
+  ewin: {fileID: 0}
+  eneutral: {fileID: 0}
+  elose: {fileID: 0}
   cam: {fileID: 1749271300}
   note: {fileID: 425458804}
 --- !u!1001 &758922338
@@ -1795,6 +1803,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: TempMenu
+--- !u!1 &1743715537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1743715539}
+  - component: {fileID: 1743715538}
+  m_Layer: 0
+  m_Name: ParticleSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1743715538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743715537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65a96ebdaee30fa40bb486ee43765ec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 323
+  prefab: {fileID: 7711344925276007526, guid: fe8447b1b4955ec46a8d2d8fa6a5574d, type: 3}
+--- !u!4 &1743715539
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743715537}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 223.20215, y: 103.43045, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1749271296
 GameObject:
   m_ObjectHideFlags: 0
@@ -2925,3 +2979,4 @@ SceneRoots:
   - {fileID: 585006802}
   - {fileID: 1368324798}
   - {fileID: 425458805}
+  - {fileID: 1743715539}

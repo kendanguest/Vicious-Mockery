@@ -51,6 +51,9 @@ public class wordSelector : MonoBehaviour
         transform.localScale = new Vector3(1, 1, (difference).magnitude);
         //makes the spotlight rotate the right way
         transform.rotation = Quaternion.Euler(new Vector3((Mathf.Rad2Deg * (Mathf.Atan2(-difference.y, difference.x))), 90, 0));
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            closestWord.GetComponent<PoppingAnimation>().reset = true;
+        }
     }
 }
