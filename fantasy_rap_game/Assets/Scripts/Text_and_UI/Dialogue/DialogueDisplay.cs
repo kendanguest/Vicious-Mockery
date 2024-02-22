@@ -115,9 +115,9 @@ public class DialogueDisplay : MonoBehaviour
                 wordRemove.refreshAllKnownWords();
                 wordRemove.destroyAllKnownWords();
             }
-            if (clockFlag && nameI == 1)
+            if (clockFlag && i + 4 <= rap.Count)
             {
-                if(rap[i+4].Substring(0, rap[i+4].Length - 1) == "[Input]")
+                if(rap[i+4].Substring(0, rap[i+4].Length - 1) == "[Input]" || rap[i + 4].Substring(0, rap[i + 4].Length - 1) == lookoutWord)
                 {
                     clockFlag = false;
                     blip.playClock();
