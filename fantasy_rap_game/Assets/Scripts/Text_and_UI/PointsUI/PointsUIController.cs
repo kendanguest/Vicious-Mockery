@@ -66,7 +66,21 @@ public class PointsUIController : MonoBehaviour
         // Adds new data to the combo text for all of the modifiers applied to the word.
         for (int i = 0; i < mod.Count; i++)
         {
-            if(mod[i] > 0 && rhyme == false)
+            if (mod[i] == 0)
+            {
+                currentCombo = currentCombo + "Duplicate word penalty!";
+                rhyme = true;
+                rhyme2 = true;
+            }
+            if (cclength > 0)
+            {
+                currentCombo = currentCombo + "\n";
+                cclength--;
+            }
+        }
+        for (int i = 0; i < mod.Count; i++)
+        {
+            if (mod[i] > 0 && rhyme == false)
             {
                 currentCombo = currentCombo + "Rhyme Bonus!";
                 rhyme = true;
@@ -88,6 +102,7 @@ public class PointsUIController : MonoBehaviour
                 currentCombo = currentCombo + "\n";
                 cclength--;
             }
+            
         }
         // Removes the text if the point change is zero.
         if (points == 0)
@@ -108,7 +123,7 @@ public class PointsUIController : MonoBehaviour
             cheer.playCheer();
         }
         currentCombo = "";
-        // This block of if statements will update the flavor text in the middle depending on how good or bad the player is doing.
+        // This block of if statements will update the portraits depending on how good or bad the player is doing.
         
         if (pointsA.points > 25)
         {

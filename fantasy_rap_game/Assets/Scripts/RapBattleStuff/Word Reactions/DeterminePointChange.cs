@@ -50,6 +50,7 @@ public class DeterminePointChange : MonoBehaviour
             if (previous[previous.Count - 1] == word)
             {
                 mod *= -1f;
+                mods.Add(0);
             }
         }
         // adds and resets the point values.
