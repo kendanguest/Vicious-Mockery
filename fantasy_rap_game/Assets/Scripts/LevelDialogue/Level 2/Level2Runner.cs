@@ -9,6 +9,8 @@ public class Level2Runner : MonoBehaviour
     public DialogueDisplay dialogue;
     public GameObject UI;
     public DialogueObject prefightDialogue;
+    public DialogueObject trueRap;
+    public DialogueObject postRapW;
     public wordRandomizer random;
     public RapShadowController RSC;
     public SpawnDodgeMinigame SDM;
@@ -18,6 +20,7 @@ public class Level2Runner : MonoBehaviour
     public pointsArrow arrow;
     public TransitionBehavior transition;
     public GenerateNote gnote;
+    public MenuFunctions menuFunctions;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +41,29 @@ public class Level2Runner : MonoBehaviour
         float beat = 60f / 180f;
         line = 0;
         yield return new WaitForSeconds(1f);
+        dialogue.DisplayDialogue(prefightDialogue);
+        UI.SetActive(true);
+        yield return new WaitUntil(() => (progress == true));
+        UI.SetActive(true);
+        progress = false;
+        line = 0;
+        dialogue.currentDialogue = trueRap;
+        dialogue.DisplayDialogue(trueRap);
+        yield return new WaitUntil(() => line == 0);
+        newPlayerTurn(line, "Noun", false);
+        yield return new WaitUntil(() => line == 1);
+        newEnemyTurn(line, 120, "that");
+        yield return new WaitUntil(() => (progress == true));
+        UI.SetActive(true);
+        progress = false;
+        line = 0;
+        dialogue.DisplayDialogue(postRapW);
+        yield return new WaitUntil(() => (progress == true));
+        UI.SetActive(false);
+        StartCoroutine(transition.fadeIn());
+        yield return new WaitForSeconds(3.5f);
+        menuFunctions.sceneName = "Rap scene3";
+        GetComponent<MenuFunctions>().PlayScene();
     }
 
     private void newPlayerTurn(int line, string type, bool append)

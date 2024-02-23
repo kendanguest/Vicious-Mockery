@@ -10,6 +10,8 @@ using UnityEngine;
 public class TextProgressor : MonoBehaviour
 {
     public Level1Runner level1;
+    public Level2Runner level2;
+    public Level3Runner level3;
     public void progressText(int level)
     {
         // Progresses the dialogue further.
@@ -19,11 +21,11 @@ public class TextProgressor : MonoBehaviour
         }
         else if (level == 2)
         {
-
+            level2.progress = true;
         }
         else if (level == 3)
         {
-
+            level3.progress = true;
         }
     }
     public void linecount(int level)
@@ -35,11 +37,11 @@ public class TextProgressor : MonoBehaviour
         }
         else if (level == 2)
         {
-
+            level2.line += 1;
         }
         else if (level == 3)
         {
-
+            level3.line += 1;
         }
     }
 }

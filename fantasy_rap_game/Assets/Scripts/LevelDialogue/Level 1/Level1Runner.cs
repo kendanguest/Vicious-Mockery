@@ -29,6 +29,7 @@ public class Level1Runner : MonoBehaviour
     public pointsArrow arrow;
     public TransitionBehavior transition;
     public GenerateNote gnote;
+    public MenuFunctions menuFunctions;
     // Start is called before the first frame update
     void Start()
     {
@@ -149,11 +150,13 @@ public class Level1Runner : MonoBehaviour
         {
             dialogue.currentDialogue = postRapW;
             dialogue.DisplayDialogue(postRapW);
+            menuFunctions.sceneName = "Rap scene2";
         }
         else
         {
             dialogue.currentDialogue = postRapL;
             dialogue.DisplayDialogue(postRapL);
+            menuFunctions.sceneName = "TempMenu";
         }
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(false);

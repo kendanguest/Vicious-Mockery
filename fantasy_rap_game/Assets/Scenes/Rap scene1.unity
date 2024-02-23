@@ -1898,7 +1898,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c91052bc1c51b5542a35ffff2d870e18, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 946348997521ee1458bb37518de27ca5, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.3
   m_Pitch: 1
@@ -2467,7 +2467,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c0776fec74acae74da96c1c6d92ecbb4, type: 2}
   m_sharedMaterial: {fileID: 3981569955167728084, guid: c0776fec74acae74da96c1c6d92ecbb4, type: 2}
@@ -2638,7 +2638,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c0776fec74acae74da96c1c6d92ecbb4, type: 2}
   m_sharedMaterial: {fileID: 3981569955167728084, guid: c0776fec74acae74da96c1c6d92ecbb4, type: 2}
@@ -3000,6 +3000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level1: {fileID: 1561931585}
+  level2: {fileID: 0}
 --- !u!114 &1561931587
 MonoBehaviour:
   m_ObjectHideFlags: 0

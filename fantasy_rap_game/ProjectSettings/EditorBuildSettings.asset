@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rap scene1.unity
     guid: 3f6d130bd115d8a44bc017523fdd07ac
+  - enabled: 1
+    path: Assets/Scenes/Rap scene2.unity
+    guid: bebf607b9b8cc3245977b0a3158f5050
+  - enabled: 1
+    path: Assets/Scenes/Rap scene3.unity
+    guid: 758292f22b857ca44bad4fde97b480cf
   m_configObjects: {}
