@@ -1,3 +1,8 @@
+/*
+ * Name: Jackson Miller
+ * Date: 2/23/24
+ * Desc: Plays-Character specific blips for non-rap sections and also plays the clock SFX when time is running out.
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,6 +30,7 @@ public class PlayBlip : MonoBehaviour
     {
         
     }
+    //Randomly plays 1 of 4 blips depending on the inputted character.
     public void playBlip(int cha)
     {
         int i = Random.Range(1, 4);
@@ -68,6 +74,7 @@ public class PlayBlip : MonoBehaviour
         }
 
     }
+    // This is one line. It plays a sound effect.
     public void playClock()
     {
         AudioSource.PlayOneShot(clock);
