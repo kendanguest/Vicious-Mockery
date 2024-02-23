@@ -1,7 +1,7 @@
 /*
  * Name: Jackson Miller
  * Date: 2/23/24
- * Desc: Plays-Character specific blips for non-rap sections and also plays the clock SFX when time is running out.
+ * Desc: Plays Character specific blips for non-rap sections and also plays the clock SFX when time is running out.
  */
 using System.Collections;
 using System.Collections.Generic;

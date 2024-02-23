@@ -11,6 +11,7 @@ public class DeterminePointChange : MonoBehaviour
 {
     public pointsArrow arrow;
     public PointsUIController controller;
+    public RhymeUI rhymeUI;
     private float mod = 1f;
     private List<string> previous = new List<string>();
     private List<int> mods = new List<int>();
@@ -69,6 +70,7 @@ public class DeterminePointChange : MonoBehaviour
         }
         arrow.points += (value * mod);
         controller.displayPointChange(value * mod, mods, word);
+        rhymeUI.newWord(word);
         mods.Clear();
         mod = 1f;
     }
