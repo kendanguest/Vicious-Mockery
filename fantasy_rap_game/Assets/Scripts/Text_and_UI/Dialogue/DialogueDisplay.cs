@@ -73,7 +73,7 @@ public class DialogueDisplay : MonoBehaviour
                 {
                     dialogueText.text += dia.dialogueLines[i].dialogue[j] + "";
                     yield return new WaitForSeconds(0.02f);
-                    // Plays a random blip SFX for the character.
+                    // Plays a random blip SFX for the character (removed, too jarring).
                     // blip.playBlip(nameI);
                 }
             }
