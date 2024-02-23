@@ -541,6 +541,7 @@ MonoBehaviour:
   PUI: {fileID: 0}
   fibacheHead: {fileID: 1862622553791897153}
   parent: {fileID: 8159398327550616616}
+  starPrefab: {fileID: 6579210317911758409, guid: 8d4396d8ce112574d8211690a8d4abbf, type: 3}
 --- !u!212 &3528413509801160123
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -583,7 +584,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3f95d2ccf98a0f74fa1233cd1163943f, type: 3}
-  m_Color: {r: 1, g: 0.5226415, b: 0.5226415, a: 0.38431373}
+  m_Color: {r: 1, g: 0.35283017, b: 0.35283017, a: 0.7372549}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

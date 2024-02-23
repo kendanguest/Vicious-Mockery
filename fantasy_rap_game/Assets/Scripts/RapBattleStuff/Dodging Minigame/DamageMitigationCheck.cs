@@ -18,6 +18,7 @@ public class DamageMitigationCheck : MonoBehaviour
     public GameObject fibacheHead;
     public GameObject parent;
     private bool terminate;
+    public GameObject starPrefab;
 
     void Start()
     {
@@ -37,6 +38,8 @@ public class DamageMitigationCheck : MonoBehaviour
             {
                 meter.points -= damageOnDodge;
                 PUI.displayPointChange(-(damageOnDodge), new List<int>(), "");
+                starPrefab.GetComponent<ParticleSystem>().Play();
+                Instantiate(starPrefab);
 
             }
             else
