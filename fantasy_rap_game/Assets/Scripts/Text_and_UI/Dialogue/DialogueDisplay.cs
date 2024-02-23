@@ -120,9 +120,9 @@ public class DialogueDisplay : MonoBehaviour
                 wordRemove.refreshAllKnownWords();
                 wordRemove.destroyAllKnownWords();
             }
-            if (clockFlag && i + 5 <= rap.Count)
+            if (clockFlag && i + 4 <= rap.Count)
             {
-                if(rap[i+5].Substring(0, rap[i+5].Length - 1) == "[Input]" || rap[i + 5].Substring(0, rap[i + 5].Length - 1) == lookoutWord)
+                if(rap[i + 4].Substring(0, rap[i + 4].Length - 1) == "[Input]" || rap[i + 4].Substring(0, rap[i + 4].Length - 1) == lookoutWord)
                 {
                     clockFlag = false;
                     blip.playClock();
