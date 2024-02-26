@@ -116,7 +116,7 @@ public class Level1Runner : MonoBehaviour
         yield return new WaitUntil(() => line == 4);
         newEnemyTurn(line, 120, "glass");
         yield return new WaitUntil(() => line == 5);
-        newPlayerTurn(line, "ADJ", false);
+        newPlayerTurn(line, "Noun", false);
         yield return new WaitUntil(() => line == 6);
         newPlayerTurn(line, "ADJ", true);
         yield return new WaitUntil(() => line == 7);

@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: Level1PreFight
   m_EditorClassIdentifier: 
   dialogueLines:
-  - dialogue: "So thou hast cometh for thy\u2019s first stamp?"
-  - dialogue: "I\u2019m just trying to graduate, I hasn\u2019t any intention of insulting
-      thou."
-  - dialogue: "Ha! Clearly this is thou\u2019s first battle."
+  - dialogue: So thou arriveth for thy first stamp?
+  - dialogue: I be just trying to graduate, i had no intent of insulting thou.
+  - dialogue: Ha! This is clearly thy first broil!
   - dialogue: "Don\u2019t worry I\u2019ll maketh this simple."
   - dialogue: If thou doesn't defeat me, thee stands nary a chance at leaving this
       school!
