@@ -5,6 +5,7 @@
  */
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Level1Runner : MonoBehaviour
@@ -30,11 +31,13 @@ public class Level1Runner : MonoBehaviour
     public TransitionBehavior transition;
     public GenerateNote gnote;
     public MenuFunctions menuFunctions;
+    public TMP_Text getReady;
     // Start is called before the first frame update
     void Start()
     {
         // This starts the Coroutine.
         SDM = FindObjectOfType<SpawnDodgeMinigame>();
+        getReady.text = "";
         UI.SetActive(false);
         dialogue.currentDialogue = prefightDialogue;
         StartCoroutine(Startlevel());
@@ -95,6 +98,7 @@ public class Level1Runner : MonoBehaviour
         dialogue.currentDialogue = bridge;
         dialogue.DisplayDialogue(bridge);
         yield return new WaitUntil(() => (progress == true));
+        getReady.text = "Get Ready!";
         UI.SetActive(true);
         progress = false;
         line = 0;
@@ -104,6 +108,7 @@ public class Level1Runner : MonoBehaviour
         gnote.speed = 100;
         dialogue.forceTooltipchange(false);
         yield return new WaitForSecondsRealtime(beat * 32);
+        getReady.text = "";
         dialogue.DisplayDialogue(trueRap);
         yield return new WaitUntil(() => line == 0);
         newEnemyTurn(line, 120, "up");
