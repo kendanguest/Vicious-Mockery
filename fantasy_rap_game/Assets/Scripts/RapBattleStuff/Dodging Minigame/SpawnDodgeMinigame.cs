@@ -13,11 +13,12 @@ public class SpawnDodgeMinigame : MonoBehaviour
     public GameObject prefab;
     public DialogueDisplay dia;
 
-    public void startDodgeGame(int bpm, string word)
+    public void startDodgeGame(int bpm,int speed, string word)
     {
         var clone = Instantiate(prefab);
         dia.updateLookoutVar(word);
         clone.GetComponentInChildren<DamageMitigationCheck>().selfUpdate(bpm);
+        clone.GetComponentInChildren<Spining>().selfUpdate(bpm, speed);
         clone.GetComponent<recieveTextData>().recieveText(word); 
     }
 }

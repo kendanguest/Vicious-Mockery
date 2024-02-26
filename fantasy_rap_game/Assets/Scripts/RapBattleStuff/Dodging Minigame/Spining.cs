@@ -35,7 +35,12 @@ public class Spining : MonoBehaviour
        
 
     }
+    public void selfUpdate(int bpmO, int speeds)
+    {
+        beatsPerMinute = bpmO;
+        speed = speeds;
+    }
 
 
-   
+
 }

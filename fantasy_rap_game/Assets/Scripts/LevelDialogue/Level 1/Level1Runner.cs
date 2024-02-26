@@ -111,15 +111,15 @@ public class Level1Runner : MonoBehaviour
         getReady.text = "";
         dialogue.DisplayDialogue(trueRap);
         yield return new WaitUntil(() => line == 0);
-        newEnemyTurn(line, 120, "up");
+        newEnemyTurn(line, 180, "up");
         yield return new WaitUntil(() => line == 1);
-        newEnemyTurn(line, 120, "enough");
+        newEnemyTurn(line, 180, "enough");
         yield return new WaitUntil(() => line == 2);
-        newEnemyTurn(line, 120, "goodbye");
+        newEnemyTurn(line, 180, "goodbye");
         yield return new WaitUntil(() => line == 3);
-        newEnemyTurn(line, 120, "class");
+        newEnemyTurn(line, 180, "class");
         yield return new WaitUntil(() => line == 4);
-        newEnemyTurn(line, 120, "glass");
+        newEnemyTurn(line, 180, "glass");
         yield return new WaitUntil(() => line == 5);
         newPlayerTurn(line, "Noun", false);
         yield return new WaitUntil(() => line == 6);
@@ -131,13 +131,13 @@ public class Level1Runner : MonoBehaviour
         yield return new WaitUntil(() => line == 9);
         newPlayerTurn(line, "Noun", false);
         yield return new WaitUntil(() => line == 10);
-        newEnemyTurn(line, 120, "start");
+        newEnemyTurn(line, 180, "start");
         yield return new WaitUntil(() => line == 11);
-        newEnemyTurn(line, 120, "apart");
+        newEnemyTurn(line, 180, "apart");
         yield return new WaitUntil(() => line == 12);
-        newEnemyTurn(line, 120, "champion");
+        newEnemyTurn(line, 180, "champion");
         yield return new WaitUntil(() => line == 13);
-        newEnemyTurn(line, 120, "alien");
+        newEnemyTurn(line, 180, "alien");
         yield return new WaitUntil(() => line == 14);
         newPlayerTurn(line, "ADJ", true);
         yield return new WaitUntil(() => line == 15);
@@ -181,6 +181,6 @@ public class Level1Runner : MonoBehaviour
     {
         // Updates the shadow line and spawns the dodge minigame.
         RSC.shadowRap(line);
-        SDM.startDodgeGame(bpm, insultWord);
+        SDM.startDodgeGame(bpm, bpm*3, insultWord);
     }
 }

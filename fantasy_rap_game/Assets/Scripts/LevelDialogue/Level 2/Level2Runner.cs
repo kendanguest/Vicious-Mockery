@@ -75,7 +75,7 @@ public class Level2Runner : MonoBehaviour
     {
         // Updates the shadow line and spawns the dodge minigame.
         RSC.shadowRap(line);
-        SDM.startDodgeGame(bpm, insultWord);
+        SDM.startDodgeGame(bpm, bpm*3, insultWord);
     }
     IEnumerator SpeedControl()
     {
