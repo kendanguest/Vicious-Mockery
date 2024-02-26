@@ -13,10 +13,20 @@ MonoBehaviour:
   m_Name: Prefight2
   m_EditorClassIdentifier: 
   dialogueLines:
-  - dialogue: Sup loser. You're a loser aren't you?!?!?!?
-  - dialogue: MASSIVE dirt eater over here.
+  - dialogue: Oi gang, lay thy eyes on this individual!
+  - dialogue: Prithee, goblins, by your leave for I might not but pass through.
+  - dialogue: Pass?? What might thou be bid big human lad?
+  - dialogue: Mine name is Fibache, I do lack nought moe than to study for mine bard
+      exam.
+  - dialogue: Well well well Fibache, thou dare cross our path while we partake with
+      our college activities.
+  - dialogue: Sorry, yet I never resolve to attend with thy activities.
+  - dialogue: Ohoho, thou art a teacher's companion? Then thou buy an apple for thy
+      suck up professor!
+  - dialogue: Then we shall dual to see whom hath the better tongue.
+  - dialogue: "Prepare thy empty headed words big man!\r"
   name1: Fibache
   name2: Gob Frat
-  talking: 0200000002000000
+  talking: 020000000100000002000000010000000200000001000000020000000100000002000000
   BPM: 0
   pressSpaceToContinue: 1
