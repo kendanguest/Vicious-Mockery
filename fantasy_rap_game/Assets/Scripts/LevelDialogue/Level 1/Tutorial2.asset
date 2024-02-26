@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: Tutorial2
   m_EditorClassIdentifier: 
   dialogueLines:
-  - dialogue: Good work! Remember that if thy words rhyme, thy damage will be devastating.
+  - dialogue: Good work! Remember that if thy words rhyme, thou shall deal augmented
+      damage.
   - dialogue: Whenever it's not thy turn, use the scroll wheel to prevent mine insults
       from reaching thy cranium.
   - dialogue: Make sure thy head isn't touching the red feather by the time the word
       shown is said.
-  - dialogue: These bars might burn, be ready!
+  - dialogue: These bars might sear, be content!
   name1: Fibache
   name2: Professor Wrest
   talking: 02000000020000000200000002000000

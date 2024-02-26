@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - dialogue: So thou arriveth for thy first stamp?
-  - dialogue: I be just trying to graduate, i had no intent of insulting thou.
+  - dialogue: I be just trying to graduate, I had no intent of insulting thou.
   - dialogue: Ha! This is clearly thy first broil!
-  - dialogue: "Don\u2019t worry I\u2019ll maketh this simple."
-  - dialogue: If thou doesn't defeat me, thee stands nary a chance at leaving this
-      school!
-  - dialogue: "Then I guess I haven\u2019t a choice."
-  - dialogue: "I can\u2019t hold back!"
+  - dialogue: Worry not, I shall compose this simple!
+  - dialogue: If thou canst not defeat me, thou do not stand a chance at leaving
+      this place of learning!
+  - dialogue: Then I guess I lack a choice.
+  - dialogue: I wont bear back!
   - dialogue: Oh my! This shall be fun!
   - dialogue: Draw thy lute young bard!
-  - dialogue: "Let\u2019s begin!"
+  - dialogue: Allow us to begin!
   name1: Fibache
   name2: Professor Wrest
   talking: 02000000010000000200000002000000020000000100000001000000020000000200000002000000
