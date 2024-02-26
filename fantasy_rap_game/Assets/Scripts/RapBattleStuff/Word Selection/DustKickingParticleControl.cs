@@ -1,3 +1,6 @@
+//August Rossano
+//2-26-24
+//Spawns particles whenever you click the mouse! How neat and novel!
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;

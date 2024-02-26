@@ -1,3 +1,7 @@
+//August Rossano
+//2-26-24
+//Moves something forward slightly upon being created. What fun.
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

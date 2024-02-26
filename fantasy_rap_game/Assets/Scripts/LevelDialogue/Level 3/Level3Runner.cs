@@ -1,3 +1,8 @@
+/*
+ * Name: Jackson Miller
+ * Date: 2/26/23
+ * Desc: Runs all the Dialogue for level 3 in a sequence.
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,13 +34,9 @@ public class Level3Runner : MonoBehaviour
         StartCoroutine(Startlevel());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     IEnumerator Startlevel()
     {
+        // This is exactly the same thing as done in level 1. Fun.
         float beat = 60f / 180f;
         line = 0;
         yield return new WaitForSeconds(1f);

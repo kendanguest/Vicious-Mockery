@@ -1,3 +1,7 @@
+//August Rossano
+//2-26-24
+//In the name of the world, I shall force the hands of time to stop.
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

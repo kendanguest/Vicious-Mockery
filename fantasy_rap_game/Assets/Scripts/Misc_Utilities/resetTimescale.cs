@@ -1,20 +1,15 @@
+/*
+ * Name: Jackson Miller
+ * Date: 2/26/23
+ * Desc: This script is just used to reset the time that is frozen when accessing the pause menu.
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class resetTimescale : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // This is a function just so onclick can call it.
     public void resetTime()
     {
         Time.timeScale = 1.0f;
