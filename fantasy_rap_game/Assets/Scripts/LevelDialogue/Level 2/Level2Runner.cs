@@ -48,15 +48,12 @@ public class Level2Runner : MonoBehaviour
         progress = false;
         line = 0;
         dialogue.currentDialogue = trueRap;
-        dialogue.DisplayDialogue(trueRap);
-        yield return new WaitUntil(() => line == 0);
-        newPlayerTurn(line, "Noun", false);
-        yield return new WaitUntil(() => line == 1);
-        newEnemyTurn(line, 120, "that");
+        StartCoroutine(SpeedControl());
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(true);
         progress = false;
         line = 0;
+        MusicController.jukeboxSwitchBack();
         dialogue.DisplayDialogue(postRapW);
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(false);
@@ -79,4 +76,13 @@ public class Level2Runner : MonoBehaviour
         RSC.shadowRap(line);
         SDM.startDodgeGame(bpm, insultWord);
     }
-}
+    IEnumerator SpeedControl()
+    {
+        MusicController.jukeboxSwitch();
+        dialogue.DisplayDialogue(trueRap);
+        yield return new WaitUntil(() => line == 0);
+        newPlayerTurn(line, "Noun", false);
+        yield return new WaitUntil(() => line == 1);
+        newEnemyTurn(line, 120, "that");
+    }
+    }
