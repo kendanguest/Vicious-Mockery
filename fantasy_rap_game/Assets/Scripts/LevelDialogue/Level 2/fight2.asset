@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: fight2
   m_EditorClassIdentifier: 
   dialogueLines:
-  - dialogue: Thy outfits looks unkempt and thy brow is a [Input]!
-  - dialogue: Thy grades are moe than [Input].
-  - dialogue: Thy gang is nought yet [Input].
-  - dialogue: Thy shoon are raggedy and thy shirt is thrifted!
+  - dialogue: Thy grades are moe than [Input],
+  - dialogue: and thy brow is a [Input].
+  - dialogue: Thy outfits look shabby and thy gang is nought yet [Input].
   - dialogue: Thy dorm is messy and filled with muck.
-  - dialogue: Thy puny existence causes meself uplifted,
+  - dialogue: Thy shoon are raggedy and thy shirt is thrifted!
   - dialogue: and thy tongue is spitting nought yet guck!
   - dialogue: Thy goblin activities remind me of a [Input]!
   - dialogue: Didst thou dress to impress or to look as a [Input]?
@@ -30,6 +29,6 @@ MonoBehaviour:
   - dialogue: Thou are such a suck-up their wish is thy command!
   name1: Fibache
   name2: Gob Frat
-  talking: 01000000010000000100000001000000020000000200000002000000020000000100000001000000010000000100000002000000020000000200000002000000
-  BPM: 140
+  talking: 0100000001000000020000000200000002000000020000000100000001000000010000000100000002000000020000000200000002000000
+  BPM: 160
   pressSpaceToContinue: 0
