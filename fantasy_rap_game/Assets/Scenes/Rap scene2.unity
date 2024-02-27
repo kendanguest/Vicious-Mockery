@@ -3013,6 +3013,7 @@ MonoBehaviour:
   prefightDialogue: {fileID: 11400000, guid: 08ea9866746c6544b87ebbbee99120f8, type: 2}
   trueRap: {fileID: 11400000, guid: a23f01e6f0d658f45a00f67b101be32e, type: 2}
   postRapW: {fileID: 11400000, guid: f2b87a54ab6585547b4234f2eb16c3cf, type: 2}
+  postRapL: {fileID: 11400000, guid: aff8932e430f44844aba5bb1d09c1a45, type: 2}
   random: {fileID: 1903012571}
   RSC: {fileID: 1246182768}
   SDM: {fileID: 920462367}
@@ -3024,6 +3025,11 @@ MonoBehaviour:
   gnote: {fileID: 425458804}
   menuFunctions: {fileID: 1561931588}
   getReady: {fileID: 1567872387}
+  blip: {fileID: 1766543607}
+  clock140: {fileID: 8300000, guid: 64c01fd434f32c44cb61ba2cb2d14456, type: 3}
+  clock160: {fileID: 8300000, guid: fa5cf927774d66e42a45fbd724a5d7bb, type: 3}
+  clock180: {fileID: 8300000, guid: 81ae6202789867944a2b5239cd94e36c, type: 3}
+  clock200: {fileID: 8300000, guid: 449f4f290e6a8714d9fdbd0a49bb918c, type: 3}
 --- !u!1 &1567872386
 GameObject:
   m_ObjectHideFlags: 0

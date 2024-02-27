@@ -32,6 +32,9 @@ public class Level1Runner : MonoBehaviour
     public GenerateNote gnote;
     public MenuFunctions menuFunctions;
     public TMP_Text getReady;
+    public PlayBlip blip;
+    public AudioClip clock120;
+    public AudioClip clock180;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +44,7 @@ public class Level1Runner : MonoBehaviour
         UI.SetActive(false);
         dialogue.currentDialogue = prefightDialogue;
         StartCoroutine(Startlevel());
+        blip.clock = clock120;
     }
     IEnumerator Startlevel()
     {
@@ -102,6 +106,7 @@ public class Level1Runner : MonoBehaviour
         UI.SetActive(true);
         progress = false;
         line = 0;
+        blip.clock = clock180;
         dialogue.currentDialogue = trueRap;
         MusicController.jukeboxSwitch();
         random.speed = 100;

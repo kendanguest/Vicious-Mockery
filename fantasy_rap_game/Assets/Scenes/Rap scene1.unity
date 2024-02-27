@@ -3160,6 +3160,9 @@ MonoBehaviour:
   gnote: {fileID: 425458804}
   menuFunctions: {fileID: 1561931588}
   getReady: {fileID: 359794719}
+  blip: {fileID: 1766543607}
+  clock120: {fileID: 8300000, guid: fd7e1860d112a43418faad20cb98cf0a, type: 3}
+  clock180: {fileID: 8300000, guid: 81ae6202789867944a2b5239cd94e36c, type: 3}
 --- !u!114 &1561931586
 MonoBehaviour:
   m_ObjectHideFlags: 0

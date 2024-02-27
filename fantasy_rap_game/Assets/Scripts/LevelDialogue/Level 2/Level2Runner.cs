@@ -17,6 +17,7 @@ public class Level2Runner : MonoBehaviour
     public DialogueObject prefightDialogue;
     public DialogueObject trueRap;
     public DialogueObject postRapW;
+    public DialogueObject postRapL;
     public wordRandomizer random;
     public RapShadowController RSC;
     public SpawnDodgeMinigame SDM;
@@ -28,6 +29,11 @@ public class Level2Runner : MonoBehaviour
     public GenerateNote gnote;
     public MenuFunctions menuFunctions;
     public TMP_Text getReady;
+    public PlayBlip blip;
+    public AudioClip clock140;
+    public AudioClip clock160;
+    public AudioClip clock180;
+    public AudioClip clock200;
     private int denom = 140;
     private float beat = 60f / 140f;
     // Start is called before the first frame update
@@ -39,6 +45,7 @@ public class Level2Runner : MonoBehaviour
         UI.SetActive(false);
         dialogue.currentDialogue = prefightDialogue;
         StartCoroutine(Startlevel());
+        blip.clock = clock140;
     }
 
     IEnumerator Startlevel()
@@ -68,6 +75,7 @@ public class Level2Runner : MonoBehaviour
         newPlayerTurn(line, "Noun", false);
         yield return new WaitUntil(() => line == 3);
         speedup(20);
+        blip.clock = clock160;
         newEnemyTurn(line, denom, "muck");
         yield return new WaitUntil(() => line == 4);
         newEnemyTurn(line, denom, "thrifted");
@@ -75,6 +83,7 @@ public class Level2Runner : MonoBehaviour
         newEnemyTurn(line, denom, "guck");
         yield return new WaitUntil(() => line == 6);
         speedup(20);
+        blip.clock = clock180;
         newPlayerTurn(line, "Noun", false);
         yield return new WaitUntil(() => line == 7);
         newPlayerTurn(line, "Noun", false);
@@ -84,6 +93,7 @@ public class Level2Runner : MonoBehaviour
         newPlayerTurn(line, "ADJ", false);
         yield return new WaitUntil(() => line == 10);
         speedup(20);
+        blip.clock = clock200;
         newEnemyTurn(line, denom, "class");
         yield return new WaitUntil(() => line == 11);
         newEnemyTurn(line, denom, "hand");
@@ -96,12 +106,22 @@ public class Level2Runner : MonoBehaviour
         progress = false;
         line = 0;
         MusicController.jukeboxSwitchBack();
-        dialogue.DisplayDialogue(postRapW);
+        if (arrow.points > 15)
+        {
+            dialogue.currentDialogue = postRapW;
+            dialogue.DisplayDialogue(postRapW);
+            menuFunctions.sceneName = "Rap scene3";
+        }
+        else 
+        {
+            dialogue.currentDialogue = postRapL;
+            dialogue.DisplayDialogue(postRapL);
+            menuFunctions.sceneName = "Rap scene2";
+        }
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(false);
         StartCoroutine(transition.fadeIn());
         yield return new WaitForSeconds(3.5f);
-        menuFunctions.sceneName = "Rap scene3";
         GetComponent<MenuFunctions>().PlayScene();
     }
 
