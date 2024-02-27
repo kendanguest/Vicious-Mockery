@@ -13,9 +13,16 @@ MonoBehaviour:
   m_Name: postfight2
   m_EditorClassIdentifier: 
   dialogueLines:
-  - dialogue: critter alert.
+  - dialogue: Thou... thou got quite the tongue on thou human.
+  - dialogue: ...thanks?
+  - dialogue: Thou should'st join our fraternity, human, thou would fit in.
+  - dialogue: Thanks, yet I hast no interest in joining gamma omega beta.
+  - dialogue: Thou trying to pass thy bard exam?
+  - dialogue: Ay.
+  - dialogue: Good luck, the headmaster shall not hie primrose on thou.
+  - dialogue: ...Thanks fellows.
   name1: Fibache
   name2: Gob Frat
-  talking: 01000000
+  talking: 0200000001000000020000000100000002000000010000000200000001000000
   BPM: 0
   pressSpaceToContinue: 1
