@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a74498676d8404896b25905418fbbb, type: 3}
+  m_Name: fight2
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - dialogue: Thy outfits looks unkempt and thy brow is a [Input]!
+  - dialogue: Thy grades are moe than [Input].
+  - dialogue: Thy gang is nought yet [Input].
+  - dialogue: Thy shoon are raggedy and thy shirt is thrifted!
+  - dialogue: Thy dorm is messy and filled with muck.
+  - dialogue: Thy puny existence causes meself uplifted,
+  - dialogue: and thy tongue is spitting nought yet guck!
+  - dialogue: Thy goblin activities remind me of a [Input]!
+  - dialogue: Didst thou dress to impress or to look as a [Input]?
+  - dialogue: Thy basic taste in class causes thyself look [Input].
+  - dialogue: And thy gaudy chains are naught but [Input]!
+  - dialogue: Thy student debt causes thee look middle class.
+  - dialogue: Thou attend moe classes than fingers on mine hand.
+  - dialogue: Didst thou bid for an extension, didst thou not pass?
+  - dialogue: Thou are such a suck-up their wish is thy command!
+  name1: Fibache
+  name2: Gob Frat
+  talking: 01000000010000000100000001000000020000000200000002000000020000000100000001000000010000000100000002000000020000000200000002000000
+  BPM: 140
+  pressSpaceToContinue: 0
