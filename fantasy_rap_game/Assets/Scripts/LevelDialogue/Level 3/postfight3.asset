@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: postfight3
   m_EditorClassIdentifier: 
   dialogueLines:
-  - dialogue: 'I am a hacker i will hack you: execute hack hack hack hack hacking'
-  - dialogue: no
+  - dialogue: Onward to graduation I go, it seems your spirit died long ago.
+  - dialogue: A stamp for thee, it seems my rhymes are centuries  out of date.
   name1: Fibache
   name2: Rithimus Dominus
-  talking: 0200000001000000
+  talking: 0100000002000000
   BPM: 0
   pressSpaceToContinue: 1
