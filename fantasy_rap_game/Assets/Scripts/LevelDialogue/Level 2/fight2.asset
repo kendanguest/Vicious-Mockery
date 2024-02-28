@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: fight2
   m_EditorClassIdentifier: 
   dialogueLines:
-  - dialogue: Thy  grades are moe than [Input],
-  - dialogue: Thy gang is nought yet [Input].
-  - dialogue: Thy outfits looks like a dreary [Input],
-  - dialogue: and thy brow is a cowardly [Input].
+  - dialogue: Thy filthy grades are many moe than [Input],
+  - dialogue: Thy gang is nought yet a platoon of [Input].
+  - dialogue: Thy outfits looks thou shelled it from a [Input],
+  - dialogue: and thy brow is a branded an utter [Input].
   - dialogue: Thy shoon are raggedy and thy shirt is thrifted!
   - dialogue: Thy dorm is messy and filled with muck.
   - dialogue: Thy puny existence causes meself uplifted,
