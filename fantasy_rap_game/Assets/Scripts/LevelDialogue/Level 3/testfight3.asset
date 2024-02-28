@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: testfight3
   m_EditorClassIdentifier: 
   dialogueLines:
-  - dialogue: 'Thou thought thee could waltz through mine halls with thy rhymes? '
+  - dialogue: Thou thought thee could waltz through mine rhymes.
   - dialogue: Not on mine clock thou insolent bard!
   - dialogue: Apologies headmaster, but while school is the end of your [Input] journey
       it is merely the beginning of mine.
