@@ -534,8 +534,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64fa03c4bcc6efc4e8a3b99eebd6a8c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  happyFace: {fileID: 0}
-  angryFace: {fileID: 0}
+  happyFace: {fileID: 2709681168917931023}
+  angryFace: {fileID: 3698169911147932010}
   bpm: 120
   damageOnHit: 5
   damageOnDodge: 0
@@ -667,7 +667,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.3
 --- !u!114 &5857828168620399455
 MonoBehaviour:
   m_ObjectHideFlags: 0
