@@ -33,7 +33,6 @@ public class Level2Runner : MonoBehaviour
     public AudioClip clock140;
     public AudioClip clock160;
     public AudioClip clock180;
-    public AudioClip clock200;
     private int denom = 140;
     private float beat = 60f / 140f;
     // Start is called before the first frame update
@@ -64,7 +63,7 @@ public class Level2Runner : MonoBehaviour
         MusicController.jukeboxSwitch();
         getReady.text = "Get Ready!";
         dialogue.forceTooltipchange(false);
-        yield return new WaitForSecondsRealtime(beat * 14);
+        yield return new WaitForSecondsRealtime(beat * 8);
         getReady.text = "";
         dialogue.DisplayDialogue(trueRap);
         yield return new WaitUntil(() => line == 0);
