@@ -1754,7 +1754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 614aee6ccc8da9047a12e4f8399baa69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8159398327550616616, guid: a929d36940a80e14593a01ec49daf65b, type: 3}
+  prefab: {fileID: 8159398327550616616, guid: 519a936389e46c04487c55e0be280316, type: 3}
   dia: {fileID: 1246182767}
 --- !u!4 &920462368
 Transform:
@@ -1828,7 +1828,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingOrder: -5
   m_Sprite: {fileID: 21300000, guid: 2949b84f5c541204888507b784f7d049, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
