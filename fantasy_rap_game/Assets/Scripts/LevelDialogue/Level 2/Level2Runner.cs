@@ -64,7 +64,7 @@ public class Level2Runner : MonoBehaviour
         MusicController.jukeboxSwitch();
         getReady.text = "Get Ready!";
         dialogue.forceTooltipchange(false);
-        yield return new WaitForSecondsRealtime(beat * 14);
+        yield return new WaitForSecondsRealtime(beat * 8);
         getReady.text = "";
         dialogue.DisplayDialogue(trueRap);
         yield return new WaitUntil(() => line == 0);
