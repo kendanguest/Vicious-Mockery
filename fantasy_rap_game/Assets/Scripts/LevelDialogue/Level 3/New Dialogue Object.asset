@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: New Dialogue Object
   m_EditorClassIdentifier: 
   dialogueLines: []
-  name1: 
-  name2: 
-  talking: 
+  name1: 'Fibache '
+  name2: Headmaster Rhyme
+  talking: 02000000020000000100000001000000
   BPM: 0
   pressSpaceToContinue: 0
