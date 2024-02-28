@@ -9,6 +9,8 @@ using UnityEngine;
 
 public class DamageMitigationCheck : MonoBehaviour
 {
+    public GameObject happyFace;
+    public GameObject angryFace;
     public int bpm;
     public float damageOnHit;
     public float damageOnDodge;
@@ -31,6 +33,14 @@ public class DamageMitigationCheck : MonoBehaviour
     void Update()
 
     {
+        if (happyFace.active==true)
+        {
+            isCurrentlyDodging = true;
+        }else if (angryFace.active==true)
+        {
+            isCurrentlyDodging= false;
+        }
+
         
         if (terminate)
         {
@@ -51,14 +61,14 @@ public class DamageMitigationCheck : MonoBehaviour
             Destroy(parent);
         };
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    /* private void OnTriggerEnter2D(Collider2D collision)
     {
         isCurrentlyDodging = false;
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
          isCurrentlyDodging = true;
-    }
+    }*/
 
     public void selfUpdate(int bpmO)
     {
