@@ -15,8 +15,11 @@ MonoBehaviour:
   dialogueLines:
   - dialogue: Hail Headmaster, I have come to claim mine final graduation stamp.
   - dialogue: So I can finally venture forth and spread mirth with mine verse.
+  - dialogue: Oho! A new challenger!
+  - dialogue: Join upon me young bard, allow us see if thou forsooth deserve the
+      title!
   name1: Fibache
   name2: Rithimus Dominus
-  talking: 0100000001000000
+  talking: 01000000010000000200000002000000
   BPM: 0
   pressSpaceToContinue: 1

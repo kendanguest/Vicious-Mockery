@@ -14,9 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - dialogue: Onward to graduation I go, it seems your spirit died long ago.
-  - dialogue: A stamp for thee, it seems my rhymes are centuries  out of date.
+  - dialogue: A stamp for thee, it seems my rhymes are centuries out of date.
+  - dialogue: Hie fourth, thou've earned this victory.
+  - dialogue: Freedom at last! I spread mine lyrics with the rest of the denizens
+      of this orb!
   name1: Fibache
   name2: Rithimus Dominus
-  talking: 0100000002000000
+  talking: 01000000020000000200000001000000
   BPM: 0
   pressSpaceToContinue: 1

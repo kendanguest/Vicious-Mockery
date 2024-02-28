@@ -15,9 +15,10 @@ MonoBehaviour:
   dialogueLines:
   - dialogue: Thou hast woven tails of folly and mirth, but in mine realm, only the
       dark arts of verse prevail.
-  - dialogue: Apologies Headmaster, I will strive to improve
+  - dialogue: Now aroint thee, thy sour brow is disturbing mine vibe!
+  - dialogue: Apologies Headmaster, I will strive to improve...
   name1: Fibache
   name2: Rithimus Dominus
-  talking: 0200000001000000
+  talking: 020000000100000002000000
   BPM: 0
   pressSpaceToContinue: 1

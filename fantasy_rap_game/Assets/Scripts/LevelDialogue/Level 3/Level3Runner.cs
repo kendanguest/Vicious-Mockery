@@ -15,6 +15,7 @@ public class Level3Runner : MonoBehaviour
     public DialogueObject prefightDialogue;
     public DialogueObject trueRap;
     public DialogueObject postRapW;
+    public DialogueObject postRapL;
     public wordRandomizer random;
     public RapShadowController RSC;
     public SpawnDodgeMinigame SDM;
@@ -40,7 +41,7 @@ public class Level3Runner : MonoBehaviour
     IEnumerator Startlevel()
     {
         // This is exactly the same thing as done in level 1. Fun.
-        float beat = 60f / 180f;
+        float beat = 60f / 190f;
         line = 0;
         yield return new WaitForSeconds(6f);
         dialogue.DisplayDialogue(prefightDialogue);
@@ -50,11 +51,25 @@ public class Level3Runner : MonoBehaviour
         progress = false;
         line = 0;
         dialogue.currentDialogue = trueRap;
+        MusicController.jukeboxSwitch();
+        getReady.text = "Get Ready!";
+        dialogue.forceTooltipchange(false);
+        yield return new WaitForSecondsRealtime(beat * 8);
+        getReady.text = "";
         dialogue.DisplayDialogue(trueRap);
         yield return new WaitUntil(() => line == 0);
-        newEnemyTurn(line, 120, "please");
+        newEnemyTurn(line, 190, "rhymes");
         yield return new WaitUntil(() => line == 1);
+        newEnemyTurn(line, 190, "bard");
+        yield return new WaitUntil(() => line == 2);
+        newPlayerTurn(line, "ADJ", false);
+        yield return new WaitUntil(() => line == 3);
         newPlayerTurn(line, "Noun", false);
+        yield return new WaitUntil(() => line == 4);
+        newEnemyTurn(line, 190, "mediocrity");
+        yield return new WaitUntil(() => line == 5);
+        newEnemyTurn(line, 190, "here");
+
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(true);
         progress = false;
