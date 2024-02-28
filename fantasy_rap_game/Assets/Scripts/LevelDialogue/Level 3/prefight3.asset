@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: prefight3
   m_EditorClassIdentifier: 
   dialogueLines:
-  - dialogue: HOW DID YOU GET IN MY HOUSE!
-  - dialogue: give me your liver.
+  - dialogue: Hail Headmaster, I have come to claim mine final graduation stamp.
+  - dialogue: So I can finally venture forth and spread mirth with mine verse.
   name1: Fibache
   name2: Rithimus Dominus
-  talking: 0200000002000000
+  talking: 0100000001000000
   BPM: 0
   pressSpaceToContinue: 1

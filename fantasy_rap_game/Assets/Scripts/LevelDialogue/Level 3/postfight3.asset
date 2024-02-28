@@ -16,7 +16,7 @@ MonoBehaviour:
   - dialogue: 'I am a hacker i will hack you: execute hack hack hack hack hacking'
   - dialogue: no
   name1: Fibache
-  name2: Mr. Lich
+  name2: Rithimus Dominus
   talking: 0200000001000000
   BPM: 0
   pressSpaceToContinue: 1

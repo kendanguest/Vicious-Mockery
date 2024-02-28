@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: testfight3
   m_EditorClassIdentifier: 
   dialogueLines:
-  - dialogue: GET OUT OF MY HOUSE please.
-  - dialogue: I will not do that you [Input].
+  - dialogue: 'Thou thought thee could waltz through mine halls with thy rhymes? '
+  - dialogue: "Not on mine clock thou insolent \u201Cbard\u201D!"
   name1: Fibache
-  name2: Mr. Lich
-  talking: 0200000001000000
+  name2: Rithimus Dominus
+  talking: 0200000002000000
   BPM: 180
   pressSpaceToContinue: 0
