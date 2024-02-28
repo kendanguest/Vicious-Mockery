@@ -5,6 +5,7 @@
  */
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Level3Runner : MonoBehaviour
@@ -24,11 +25,13 @@ public class Level3Runner : MonoBehaviour
     public TransitionBehavior transition;
     public GenerateNote gnote;
     public MenuFunctions menuFunctions;
+    public TMP_Text getReady;
     // Start is called before the first frame update
     void Start()
     {
         // This starts the Coroutine.
         SDM = FindObjectOfType<SpawnDodgeMinigame>();
+        getReady.text = "";
         UI.SetActive(false);
         dialogue.currentDialogue = prefightDialogue;
         StartCoroutine(Startlevel());

@@ -33,7 +33,6 @@ public class Level2Runner : MonoBehaviour
     public AudioClip clock140;
     public AudioClip clock160;
     public AudioClip clock180;
-    public AudioClip clock200;
     private int denom = 140;
     private float beat = 60f / 140f;
     // Start is called before the first frame update
