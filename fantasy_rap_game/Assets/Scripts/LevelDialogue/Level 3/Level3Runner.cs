@@ -39,7 +39,7 @@ public class Level3Runner : MonoBehaviour
         // This is exactly the same thing as done in level 1. Fun.
         float beat = 60f / 180f;
         line = 0;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(6f);
         dialogue.DisplayDialogue(prefightDialogue);
         UI.SetActive(true);
         yield return new WaitUntil(() => (progress == true));
@@ -60,7 +60,7 @@ public class Level3Runner : MonoBehaviour
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(false);
         StartCoroutine(transition.fadeIn());
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(8.5f);
         menuFunctions.sceneName = "TempMenu";
         GetComponent<MenuFunctions>().PlayScene();
     }

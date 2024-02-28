@@ -52,7 +52,7 @@ public class Level1Runner : MonoBehaviour
         // This code looks like YandereDev programmed it, but it's as we say in the buisness, "it functions."
         float beat = 60f / 180f;
         line = 0;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(6f);
         dialogue.DisplayDialogue(prefightDialogue);
         UI.SetActive(true);
         yield return new WaitUntil(() => (progress == true));
@@ -161,17 +161,19 @@ public class Level1Runner : MonoBehaviour
             dialogue.currentDialogue = postRapW;
             dialogue.DisplayDialogue(postRapW);
             menuFunctions.sceneName = "Rap scene2";
+            transition.aftertext = "Fibache leaves the classroom triumphant...";
         }
         else
         {
             dialogue.currentDialogue = postRapL;
             dialogue.DisplayDialogue(postRapL);
             menuFunctions.sceneName = "TempMenu";
+            transition.aftertext = "Fibache returns home defeated...";
         }
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(false);
         StartCoroutine(transition.fadeIn());
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(8.5f);
         GetComponent<MenuFunctions>().PlayScene();
     }
 

@@ -5,11 +5,15 @@
  */
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class TransitionBehavior : MonoBehaviour
 {
     public GameObject square;
+    public string beforetext;
+    public string aftertext;
+    public TMP_Text text;
     private Rigidbody2D pos;
     // Start is called before the first frame update
     void Start()
@@ -21,6 +25,9 @@ public class TransitionBehavior : MonoBehaviour
 
     IEnumerator fadeOut()
     {
+        text.text = beforetext;
+        yield return new WaitForSeconds(5f);
+        text.text = "";
         pos.velocity = (new Vector3(0, -10, 0));
         yield return new WaitForSeconds(2f);
         pos.velocity = (new Vector3(0, 0, 0));
@@ -31,5 +38,6 @@ public class TransitionBehavior : MonoBehaviour
         pos.velocity = (new Vector3(0, 10, 0));
         yield return new WaitForSeconds(2f);
         pos.velocity = (new Vector3(0, 0, 0));
+        text.text = aftertext;
     }
 }

@@ -52,7 +52,7 @@ public class Level2Runner : MonoBehaviour
     {
         // This is exactly the same thing as done in level 1. Fun.
         line = 0;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(6f);
         dialogue.DisplayDialogue(prefightDialogue);
         UI.SetActive(true);
         yield return new WaitUntil(() => (progress == true));
@@ -111,17 +111,19 @@ public class Level2Runner : MonoBehaviour
             dialogue.currentDialogue = postRapW;
             dialogue.DisplayDialogue(postRapW);
             menuFunctions.sceneName = "Rap scene3";
+            transition.aftertext = "Fibache makes his way past the Gob Frat...";
         }
         else 
         {
             dialogue.currentDialogue = postRapL;
             dialogue.DisplayDialogue(postRapL);
             menuFunctions.sceneName = "Rap scene2";
+            transition.aftertext = "Fibache returns home defeated...";
         }
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(false);
         StartCoroutine(transition.fadeIn());
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(8.5f);
         GetComponent<MenuFunctions>().PlayScene();
     }
 
