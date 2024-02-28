@@ -33,6 +33,7 @@ public class DialogueDisplay : MonoBehaviour
     private bool dialoActive;
     private string currentline;
     private bool clockFlag;
+    private float beat = 60.0f;
 
     private void Start()
     {
@@ -94,7 +95,7 @@ public class DialogueDisplay : MonoBehaviour
     private IEnumerator MoveThroughRap(List<string> rap, int BPM)
     {
         // Determines the interval between beats.
-        float beat = 60.0f / BPM;
+        beat = 60.0f / BPM;
         int j = 0;
         int nameI = 0;
         input = "Uhhhh";
@@ -251,6 +252,10 @@ public class DialogueDisplay : MonoBehaviour
         // Updates the word that will be submitted with the current word selected.
         input = word;
         RSC.updateTextBoxWithSelectedWord(word);
+    }
+    public void bpmUpdate(int BPM)
+    {
+        beat = 60.0f / BPM;
     }
     public void updateLookoutVar(string word)
     {

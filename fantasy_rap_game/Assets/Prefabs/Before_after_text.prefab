@@ -167,7 +167,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Fibache heads into class for another day of bard college...
+  m_text: If you're reading this text. Please evacuate immediately.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c0776fec74acae74da96c1c6d92ecbb4, type: 2}
   m_sharedMaterial: {fileID: 3981569955167728084, guid: c0776fec74acae74da96c1c6d92ecbb4, type: 2}

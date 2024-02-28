@@ -75,6 +75,7 @@ public class Level2Runner : MonoBehaviour
         newPlayerTurn(line, "Noun", false);
         yield return new WaitUntil(() => line == 3);
         speedup(20);
+        dialogue.bpmUpdate(denom);
         blip.clock = clock160;
         newEnemyTurn(line, denom, "muck");
         yield return new WaitUntil(() => line == 4);
@@ -83,6 +84,7 @@ public class Level2Runner : MonoBehaviour
         newEnemyTurn(line, denom, "guck");
         yield return new WaitUntil(() => line == 6);
         speedup(20);
+        dialogue.bpmUpdate(denom);
         blip.clock = clock180;
         newPlayerTurn(line, "Noun", false);
         yield return new WaitUntil(() => line == 7);
@@ -93,6 +95,7 @@ public class Level2Runner : MonoBehaviour
         newPlayerTurn(line, "ADJ", false);
         yield return new WaitUntil(() => line == 10);
         speedup(20);
+        dialogue.bpmUpdate(denom);
         blip.clock = clock200;
         newEnemyTurn(line, denom, "class");
         yield return new WaitUntil(() => line == 11);
