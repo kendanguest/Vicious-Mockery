@@ -3,6 +3,7 @@
  * Date: 12/4/23
  * Desc: Runs all the Dialogue for level 1 in a sequence.
  */
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -34,7 +35,6 @@ public class Level1Runner : MonoBehaviour
     public TMP_Text getReady;
     public PlayBlip blip;
     public AudioClip clock120;
-    public AudioClip clock180;
     // Start is called before the first frame update
     void Start()
     {
@@ -106,7 +106,6 @@ public class Level1Runner : MonoBehaviour
         UI.SetActive(true);
         progress = false;
         line = 0;
-        blip.clock = clock180;
         dialogue.currentDialogue = trueRap;
         MusicController.jukeboxSwitch();
         random.speed = 100;

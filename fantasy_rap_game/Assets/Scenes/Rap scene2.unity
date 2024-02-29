@@ -435,7 +435,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.6, y: 0.5}
+  m_AnchoredPosition: {x: 3.6, y: 0.45}
   m_SizeDelta: {x: 17, y: 9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &261403650
@@ -3137,7 +3137,6 @@ MonoBehaviour:
   clock140: {fileID: 8300000, guid: 64c01fd434f32c44cb61ba2cb2d14456, type: 3}
   clock160: {fileID: 8300000, guid: fa5cf927774d66e42a45fbd724a5d7bb, type: 3}
   clock180: {fileID: 8300000, guid: 81ae6202789867944a2b5239cd94e36c, type: 3}
-  clock200: {fileID: 8300000, guid: 449f4f290e6a8714d9fdbd0a49bb918c, type: 3}
 --- !u!1 &1567872386
 GameObject:
   m_ObjectHideFlags: 0
@@ -3495,7 +3494,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

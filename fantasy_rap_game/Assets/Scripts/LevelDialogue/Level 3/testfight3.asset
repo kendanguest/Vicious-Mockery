@@ -13,28 +13,28 @@ MonoBehaviour:
   m_Name: testfight3
   m_EditorClassIdentifier: 
   dialogueLines:
-  - dialogue: Thou thought thee could waltz through mine rhymes.
+  - dialogue: Thou thought thee could waltz through mine halls with thy rhymes?
   - dialogue: Not on mine clock thou insolent bard!
-  - dialogue: Apologies headmaster, but while school is the end of your [Input] journey
-      it is merely the beginning of mine.
-  - dialogue: 'They call you The Headmaster of Rhyme, but you are nothing but a [Input]
-      and waste of my time. '
-  - dialogue: "Thine \u201CRhymes\u201D are nothing but a cacophony of mediocrity."
+  - dialogue: Apologies headmaster, but while school ends your [Input] journey tis
+      the beginning of mine.
+  - dialogue: They call you The Headmaster of Rhyme, but you are nothing but a [Input]
+      and waste of my time.
+  - dialogue: Thine rhymes are nothing but a cacophony of mediocrity.
   - dialogue: "But have no fear, you\u2019ll find no diploma here."
   - dialogue: I expected someone clever and noble, but it seems you are merely a
-      [Input] and horrible
+      [Input] and horrible.
   - dialogue: Why do you hide away in these dusty halls like a [Input]?
-  - dialogue: Thou verses lack venom, lack the bite. No Diploma for thee, not in
-      my sight.
+  - dialogue: Thou verses lack venom, lack the bite.
+  - dialogue: No Diploma for thee, not in my sight.
   - dialogue: Thine verses lack Darkness, they lack sting, no diploma for thee, to
       that I cling.
   - dialogue: Mine verses are vibrant and noble while yours are [Input].
   - dialogue: "Thou\u2019s skull is agape and your robe is [Input]."
   - dialogue: Thou rhymes are a mess, jumbled and mixed, a bard like thee can never
       be fixed.
-  - dialogue: Thine rhymes spark naught but disappointment and thou art a mere [Input]
+  - dialogue: Thine rhymes spark naught but disappointment and thou art a mere [Input].
   name1: Fibache
   name2: Rithimus Dominus
-  talking: 0200000002000000010000000100000002000000020000000100000001000000020000000200000001000000010000000200000001000000
+  talking: 020000000200000001000000010000000200000002000000010000000100000002000000020000000200000001000000010000000200000001000000
   BPM: 190
   pressSpaceToContinue: 0

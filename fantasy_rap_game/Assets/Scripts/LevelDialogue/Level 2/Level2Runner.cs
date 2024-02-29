@@ -69,7 +69,7 @@ public class Level2Runner : MonoBehaviour
         yield return new WaitUntil(() => line == 0);
         newPlayerTurn(line, "ADJ", false);
         yield return new WaitUntil(() => line == 1);
-        newPlayerTurn(line, "ADJ", false);
+        newPlayerTurn(line, "Noun", true);
         yield return new WaitUntil(() => line == 2);
         newPlayerTurn(line, "Noun", false);
         yield return new WaitUntil(() => line == 3);

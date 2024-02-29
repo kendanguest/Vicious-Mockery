@@ -18,8 +18,9 @@ MonoBehaviour:
   - dialogue: Oho! A new challenger!
   - dialogue: Join upon me young bard, allow us see if thou forsooth deserve the
       title!
+  - dialogue: I shall discover thou mine resolve, headmaster!
   name1: Fibache
   name2: Rithimus Dominus
-  talking: 01000000010000000200000002000000
+  talking: 0100000001000000020000000200000001000000
   BPM: 0
   pressSpaceToContinue: 1

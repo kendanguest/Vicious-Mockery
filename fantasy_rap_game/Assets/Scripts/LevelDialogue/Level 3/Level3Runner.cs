@@ -54,7 +54,7 @@ public class Level3Runner : MonoBehaviour
         MusicController.jukeboxSwitch();
         getReady.text = "Get Ready!";
         dialogue.forceTooltipchange(false);
-        yield return new WaitForSecondsRealtime(beat * 8);
+        yield return new WaitForSecondsRealtime(beat * 16);
         getReady.text = "";
         dialogue.DisplayDialogue(trueRap);
         yield return new WaitUntil(() => line == 0);
@@ -69,17 +69,47 @@ public class Level3Runner : MonoBehaviour
         newEnemyTurn(line, 190, "mediocrity");
         yield return new WaitUntil(() => line == 5);
         newEnemyTurn(line, 190, "here");
-
+        yield return new WaitUntil(() => line == 6);
+        newPlayerTurn(line, "Noun", false);
+        yield return new WaitUntil(() => line == 7);
+        newPlayerTurn(line, "Noun", false);
+        yield return new WaitUntil(() => line == 8);
+        newEnemyTurn(line, 190, "bite");
+        yield return new WaitUntil(() => line == 9);
+        newEnemyTurn(line, 190, "sight");
+        yield return new WaitUntil(() => line == 10);
+        newEnemyTurn(line, 190, "cling");
+        yield return new WaitUntil(() => line == 11);
+        newPlayerTurn(line, "ADJ", false);
+        yield return new WaitUntil(() => line == 12);
+        newPlayerTurn(line, "ADJ", false);
+        yield return new WaitUntil(() => line == 13);
+        newEnemyTurn(line, 190, "fixed");
+        yield return new WaitUntil(() => line == 14);
+        newPlayerTurn(line, "Noun", false);
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(true);
         progress = false;
         line = 0;
-        dialogue.DisplayDialogue(postRapW);
+        MusicController.jukeboxSwitchBack();
+        if (arrow.points > 20)
+        {
+            dialogue.currentDialogue = postRapW;
+            dialogue.DisplayDialogue(postRapW);
+            menuFunctions.sceneName = "TempMenu";
+            transition.aftertext = "And just like that, Fibache recieved his final stamp of approval and graduates from bard college.";
+        }
+        else
+        {
+            dialogue.currentDialogue = postRapL;
+            dialogue.DisplayDialogue(postRapL);
+            menuFunctions.sceneName = "Rap scene3";
+            transition.aftertext = "Fibache returns home defeated...";
+        }
         yield return new WaitUntil(() => (progress == true));
         UI.SetActive(false);
         StartCoroutine(transition.fadeIn());
         yield return new WaitForSeconds(8.5f);
-        menuFunctions.sceneName = "TempMenu";
         GetComponent<MenuFunctions>().PlayScene();
     }
 
