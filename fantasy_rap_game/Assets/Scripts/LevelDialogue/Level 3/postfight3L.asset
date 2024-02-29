@@ -19,6 +19,6 @@ MonoBehaviour:
   - dialogue: Apologies Headmaster, I will strive to improve...
   name1: Fibache
   name2: Rithimus Dominus
-  talking: 020000000100000002000000
+  talking: 020000000200000001000000
   BPM: 0
   pressSpaceToContinue: 1
