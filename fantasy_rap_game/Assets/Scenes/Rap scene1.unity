@@ -994,7 +994,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6d8ba6df43161f44e8a7138820734819, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a75c235bc8b977e47b797c94dce50431, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
@@ -3173,7 +3173,6 @@ MonoBehaviour:
   getReady: {fileID: 359794719}
   blip: {fileID: 1766543607}
   clock120: {fileID: 8300000, guid: fd7e1860d112a43418faad20cb98cf0a, type: 3}
-  clock180: {fileID: 8300000, guid: 81ae6202789867944a2b5239cd94e36c, type: 3}
 --- !u!114 &1561931586
 MonoBehaviour:
   m_ObjectHideFlags: 0
